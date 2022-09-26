@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspace>
+    <project>
+        <path>$WS_DIR$\First.ewp</path>
+    </project>
+    <project>
+        <path>C:\Users\Home\Documents\GitHub\stm32Labs\Lab1\iarproject.ewp</path>
+    </project>
+    <project>
+        <path>C:\Users\Home\Documents\GitHub\POIP\Task1\Task1.ewp</path>
+    </project>
+    <batchBuild />
+</workspace>
