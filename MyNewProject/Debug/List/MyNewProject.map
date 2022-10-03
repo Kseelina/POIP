@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V9.30.1.335/W64 for ARM                  30/Sep/2022  18:42:18
+# IAR ELF Linker V9.30.1.335/W64 for ARM                  03/Oct/2022  18:55:48
 # Copyright 2007-2022 IAR Systems AB.
 #
 #    Output file  =  R:\POIP\POIP\MyNewProject\Debug\Exe\MyNewProject.out
@@ -62,18 +62,18 @@ No sections matched the following patterns:
   .intvec   ro code   0x800'0000    0x40  vector_table_M.o [4]
                     - 0x800'0040    0x40
 
-"P1":                               0xfc
-  .text     ro code   0x800'0040    0x74  main.o [1]
-  .text     ro code   0x800'00b4    0x22  fpinit_M.o [3]
-  .text     ro code   0x800'00d6     0x2  vectortrap_M.o [4]
-  .text     ro code   0x800'00d8    0x1e  cmain.o [4]
-  .text     ro code   0x800'00f6     0x4  low_level_init.o [2]
-  .text     ro code   0x800'00fa     0x4  exit.o [2]
-  .rodata   const     0x800'00fe     0x1  unwind_debug.o [5]
-  .text     ro code   0x800'0100     0xa  cexit.o [4]
-  .text     ro code   0x800'010c    0x14  exit.o [5]
-  .text     ro code   0x800'0120    0x1c  cstartup_M.o [4]
-                    - 0x800'013c    0xfc
+"P1":                              0x150
+  .text     ro code   0x800'0040    0xc8  main.o [1]
+  .text     ro code   0x800'0108    0x22  fpinit_M.o [3]
+  .text     ro code   0x800'012a     0x2  vectortrap_M.o [4]
+  .text     ro code   0x800'012c    0x1e  cmain.o [4]
+  .text     ro code   0x800'014a     0x4  low_level_init.o [2]
+  .text     ro code   0x800'014e     0x4  exit.o [2]
+  .rodata   const     0x800'0152     0x1  unwind_debug.o [5]
+  .text     ro code   0x800'0154     0xa  cexit.o [4]
+  .text     ro code   0x800'0160    0x14  exit.o [5]
+  .text     ro code   0x800'0174    0x1c  cstartup_M.o [4]
+                    - 0x800'0190   0x150
 
 "P2":                             0x2000
   CSTACK             0x2000'0000  0x2000  <Block>
@@ -84,7 +84,7 @@ Unused ranges:
 
          From           To      Size
          ----           --      ----
-   0x800'013c   0x803'ffff  0x3'fec4
+   0x800'0190   0x803'ffff  0x3'fe70
   0x2000'2000  0x2001'ffff  0x1'e000
 
 
@@ -100,9 +100,9 @@ command line/config:
     Total:
 
 R:\POIP\POIP\MyNewProject\Debug\Obj: [1]
-    main.o                116
+    main.o                200
     -------------------------------------------
-    Total:                116
+    Total:                200
 
 dl7M_tln.a: [2]
     exit.o                  4
@@ -133,7 +133,7 @@ shb_l.a: [5]
     Gaps                    3
     Linker created                        8'192
 -----------------------------------------------
-    Grand Total:          315        1    8'192
+    Grand Total:          399        1    8'192
 
 
 *******************************************************************************
@@ -142,31 +142,32 @@ shb_l.a: [5]
 
 Entry                       Address  Size  Type      Object
 -----                       -------  ----  ----      ------
-?main                    0x800'00d9        Code  Gb  cmain.o [4]
-BusFault_Handler         0x800'00d7        Code  Wk  vectortrap_M.o [4]
+?main                    0x800'012d        Code  Gb  cmain.o [4]
+BusFault_Handler         0x800'012b        Code  Wk  vectortrap_M.o [4]
 CSTACK$$Base            0x2000'0000         --   Gb  - Linker created -
 CSTACK$$Limit           0x2000'2000         --   Gb  - Linker created -
-DebugMon_Handler         0x800'00d7        Code  Wk  vectortrap_M.o [4]
-HardFault_Handler        0x800'00d7        Code  Wk  vectortrap_M.o [4]
-MemManage_Handler        0x800'00d7        Code  Wk  vectortrap_M.o [4]
-NMI_Handler              0x800'00d7        Code  Wk  vectortrap_M.o [4]
-PendSV_Handler           0x800'00d7        Code  Wk  vectortrap_M.o [4]
+DebugMon_Handler         0x800'012b        Code  Wk  vectortrap_M.o [4]
+Delay(int)               0x800'0041  0x14  Code  Gb  main.o [1]
+HardFault_Handler        0x800'012b        Code  Wk  vectortrap_M.o [4]
+MemManage_Handler        0x800'012b        Code  Wk  vectortrap_M.o [4]
+NMI_Handler              0x800'012b        Code  Wk  vectortrap_M.o [4]
+PendSV_Handler           0x800'012b        Code  Wk  vectortrap_M.o [4]
 Region$$Table$$Base             0x0         --   Gb  - Linker created -
 Region$$Table$$Limit            0x0         --   Gb  - Linker created -
-SVC_Handler              0x800'00d7        Code  Wk  vectortrap_M.o [4]
-SysTick_Handler          0x800'00d7        Code  Wk  vectortrap_M.o [4]
-UsageFault_Handler       0x800'00d7        Code  Wk  vectortrap_M.o [4]
-__cmain                  0x800'00d9        Code  Gb  cmain.o [4]
-__exit                   0x800'010d  0x14  Code  Gb  exit.o [5]
-__iar_debug_exceptions   0x800'00fe   0x1  Data  Gb  unwind_debug.o [5]
-__iar_init_vfp           0x800'00b5        Code  Gb  fpinit_M.o [3]
-__iar_program_start      0x800'0121        Code  Gb  cstartup_M.o [4]
-__low_level_init         0x800'00f7   0x4  Code  Gb  low_level_init.o [2]
+SVC_Handler              0x800'012b        Code  Wk  vectortrap_M.o [4]
+SysTick_Handler          0x800'012b        Code  Wk  vectortrap_M.o [4]
+UsageFault_Handler       0x800'012b        Code  Wk  vectortrap_M.o [4]
+__cmain                  0x800'012d        Code  Gb  cmain.o [4]
+__exit                   0x800'0161  0x14  Code  Gb  exit.o [5]
+__iar_debug_exceptions   0x800'0152   0x1  Data  Gb  unwind_debug.o [5]
+__iar_init_vfp           0x800'0109        Code  Gb  fpinit_M.o [3]
+__iar_program_start      0x800'0175        Code  Gb  cstartup_M.o [4]
+__low_level_init         0x800'014b   0x4  Code  Gb  low_level_init.o [2]
 __vector_table           0x800'0000        Data  Gb  vector_table_M.o [4]
-_call_main               0x800'00e5        Code  Gb  cmain.o [4]
-_exit                    0x800'0101        Code  Gb  cexit.o [4]
-exit                     0x800'00fb   0x4  Code  Gb  exit.o [2]
-main                     0x800'0041  0x66  Code  Gb  main.o [1]
+_call_main               0x800'0139        Code  Gb  cmain.o [4]
+_exit                    0x800'0155        Code  Gb  cexit.o [4]
+exit                     0x800'014f   0x4  Code  Gb  exit.o [2]
+main                     0x800'0055  0xa6  Code  Gb  main.o [1]
 
 
 [1] = R:\POIP\POIP\MyNewProject\Debug\Obj
@@ -175,7 +176,7 @@ main                     0x800'0041  0x66  Code  Gb  main.o [1]
 [4] = rt7M_tl.a
 [5] = shb_l.a
 
-    315 bytes of readonly  code memory
+    399 bytes of readonly  code memory
       1 byte  of readonly  data memory
   8'192 bytes of readwrite data memory
 

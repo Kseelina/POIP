@@ -1,6 +1,6 @@
-#include "rccregisters.hpp" // ДЛя модуля RCC
+#include "rccregisters.hpp" // Для модуля RCC
 #include "gpiocregisters.hpp" // регистр для порта с
-
+//Функция задержки
 void Delay(int zaderjka)
 {
   for (int i=0; i<zaderjka;++i)
@@ -12,35 +12,42 @@ void Delay(int zaderjka)
   }
   
 }
-
+//Главная функция
 int main()
 {
   //Подать тактирование на порт С
   RCC::AHB1ENR::GPIOCEN::Enable::Set();
-  //Порт в режим вывода перевести c.5 c.8 c.9
   
-  GPIOC::MODER::MODER5::Output::Set();
+  //Порт в режим вывода перевести c.5 c.8 c.9
+  GPIOC::MODER::MODER7::Output::Set(); 
   GPIOC::MODER::MODER8::Output::Set(); 
   GPIOC::MODER::MODER9::Output::Set(); 
-  // Зачешь светодиод на порте С.8
+  // Зажечь светодиоды
   uint8_t i = 0; 
-  while(true)
+  while(true)// цикл для бесконечного моргания светодиодом
   {
     i++;
-    Delay(1000000); 
-    if (i%2==0) 
+    
+    
+    if (i%2==0)  // Условие на загорание/тушение светодиода
     {
+      GPIOC::ODR::ODR7::High::Set(); // загорается светодиод
+      Delay(2000000);  // Вызов функции задержки
       GPIOC::ODR::ODR8::High::Set(); // загорается светодиод
-      GPIOC::ODR::ODR9::Low::Set();  // светодиод тухнет 
+      Delay(2000000);  // Вызов функции задержки
+      GPIOC::ODR::ODR9::High::Set();  // светодиод тухнет 
+      Delay(2000000);  // Вызов функции задержки
     }
     else 
     {
-      GPIOC::ODR::ODR9::High::Set(); // загорается светодиод
+      GPIOC::ODR::ODR7::Low::Set();  // светодиод тухнет 
+      Delay(2000000);  // Вызов функции задержки
       GPIOC::ODR::ODR8::Low::Set();  // светодиод тухнет 
+      Delay(2000000);  // Вызов функции задержки
+      GPIOC::ODR::ODR9::Low::Set();  // светодиод тухнет 
+      Delay(2000000);  // Вызов функции задержки
     } 
   }
  
  
-  
-  return 0;
 }

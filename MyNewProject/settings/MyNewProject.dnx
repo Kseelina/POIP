@@ -15,21 +15,6 @@
         <Enabled>0</Enabled>
         <ShowSource>1</ShowSource>
     </Trace1>
-    <Interrupts>
-        <Enabled>1</Enabled>
-    </Interrupts>
-    <MemConfig>
-        <Base>1</Base>
-        <Manual>0</Manual>
-        <Ddf>1</Ddf>
-        <TypeViol>0</TypeViol>
-        <Stop>1</Stop>
-    </MemConfig>
-    <Simulator>
-        <Freq>10000000</Freq>
-        <FreqHi>0</FreqHi>
-        <MultiCoreRunAll>1</MultiCoreRunAll>
-    </Simulator>
     <PlDriver>
         <FirstRun>0</FirstRun>
         <MemConfigValue>R:\Program\IAR\arm\CONFIG\debugger\ST\STM32F411RC.ddf</MemConfigValue>
@@ -37,17 +22,17 @@
     <StLinkDriver>
         <stlinkserialNo>38FF6D064B46323645412543</stlinkserialNo>
         <stlinkfoundProbes />
-        <stlinkResetStyle>0</stlinkResetStyle>
-        <stlinkResetStrategy>0</stlinkResetStrategy>
         <LeaveTargetRunning>_ 0</LeaveTargetRunning>
         <CStepIntDis>_ 0</CStepIntDis>
+        <stlinkResetStyle>0</stlinkResetStyle>
+        <stlinkResetStrategy>0</stlinkResetStrategy>
     </StLinkDriver>
     <ArmDriver>
-        <EnableCache>0</EnableCache>
         <EnforceMemoryConfiguration>1</EnforceMemoryConfiguration>
+        <EnableCache>0</EnableCache>
     </ArmDriver>
     <DebugChecksum>
-        <Checksum>3926127468</Checksum>
+        <Checksum>4106247445</Checksum>
     </DebugChecksum>
     <Exceptions>
         <StopOnUncaught>_ 0</StopOnUncaught>
@@ -78,6 +63,21 @@
         <ITMportsLogFile>0</ITMportsLogFile>
         <ITMlogFile>$PROJ_DIR$\ITM.log</ITMlogFile>
     </SWOTraceHWSettings>
+    <Interrupts>
+        <Enabled>1</Enabled>
+    </Interrupts>
+    <MemConfig>
+        <Base>1</Base>
+        <Manual>0</Manual>
+        <Ddf>1</Ddf>
+        <TypeViol>0</TypeViol>
+        <Stop>1</Stop>
+    </MemConfig>
+    <Simulator>
+        <Freq>10000000</Freq>
+        <FreqHi>0</FreqHi>
+        <MultiCoreRunAll>1</MultiCoreRunAll>
+    </Simulator>
     <Trace2>
         <Enabled>0</Enabled>
         <ShowSource>0</ShowSource>

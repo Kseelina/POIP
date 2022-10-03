@@ -1,0 +1,162 @@
+// suppress inspection "AsciiDocLinkResolve" for whole file
+
+= Отчёт по первой программе (23.09.22)
+
+:description: MyFirstProject.
+:keywords: AsciiDoc
+:imagesdir: MyFirstProjectImg
+:figure-caption: Рисунок
+:table-caption: Таблица
+
+[.notes]
+== Создание проекта
+Для создания проекта в программном обеспечении (ПО) IAR, нажмём Project->Create New Project:
+
+.Создание нового проекта
+image::CreateNewProject.png[width=500]
+
+Далее создаём функцию main на языке С++ и выбираем путь куда сохраним новосозданный проект.
+
+.Создание функции main на языке С++
+image::Create_main.png[width=500]
+--
+Таким образом появился новый пустой проект.
+
+.Новый проект
+image::NewProject.png[width=500]
+--
+<<<
+=== Работа с терминалом
+Создадим первую программу:
+
+
+[source, c]
+#include <iostream>
+int main()
+{
+signed char i=127;
+i=i+1;
+std::cout<<(int)i << std::endl;
+return 0;
+}
+
+[.notes]
+И, для того чтобы, просмотреть результат вывода воспользуемся терминалом. Для этого выберем View->Terminal I/O. Откроется терминал в котором будет результат:
+
+.Результат вывода в терминал
+image::Terminal.png[]
+
+Как так, что прибавив 1 к 127 получили не 128 а отрицательное число?
+Дело в том что char является двух байтовым числом, т.е. имеет 8 бит:
+
+image::Calc.png[]
+
+"signed" указывает на то что тип знаковый, т.е. если максимальное значение типа char = 255, то знаковый char = 127, т.к. первый бит выделяется под знак.
+Таким образом, при прибавлении к 127 единицы получили, что первый бит = 1, а все остальные нули, т.е. получили самое маленькое значение знакового char:
+
+image::Calc1.png[]
+
+Т.о. корректное использование типов данных позволяет избегать ошибок.
+[Типы данных]
+.Типы данных
+[options="header"]
+|=====================
+|Тип|Количество бит|Диапазон
+|unsigned char (без знаковый)|8        |0...255
+|signed char (знаковый)|8        |-128...127
+|char16_t (символ в кодировке Unicode)|16               |0...65 535
+|char32_t (символ в кодировке Unicode)|32               |0...4 294 967 295
+|unsigned int (без знаковый)|В зависимости от архитектуры процессора может занимать 2 байта (16 бит) или 4 байта (32 бита)|0...65 535 (для 2 байт), 0...4 294 967 295 (для 4 байт)
+|signed int (знаковый)|В зависимости от архитектуры процессора может занимать 2 байта (16 бит) или 4 байта (32 бита)               |–32 768...32767 (при 2 байтах) или от −2 147 483 648...2 147 483 647 (при 4 байтах)
+|float (вещественное число ординарной точности с плавающей точкой)|32               |- 3.4E-38...3.4E+38
+|double (вещественное число двойной точности с плавающей точкой)|64               |- 1.7E-308...1.7E+308
+|=====================
+
+== Выбор контролера
+Для того чтобы можно было загружать код в плату необходимо настроить проект под наш микроконтроллер. Для этого нажмём правой кнопкой мыши по проекту и выберем Options->General Options->Target.
+Выберем "Device" ST STM32F411RC. На вкладке Debugger выберем Driver "ST-LINK". И на вкладке ST-LINK выберем "SWD".
+
+
+image::STM32F411RC.png[]
+image::ST_LINK.png[]
+image::SWD.png[]
+
+=== Подключение платы
+
+Плату необходимо подключить через отладчик, ибо он перепрошивает микроконтроллер.
+
+.Подключение платы через отладчик по USB
+image::ConnectBoard.png[]
+
+=== Первая программа на плате
+Для проверки работоспособности платы загрузим код из stm32Labs->Lab1->iarproject.ewd.
+
+[source, c++]
+#include "rccregisters.hpp" // for RCC
+#include "gpioaregisters.hpp" // for GPIOA
+#include "gpiocregisters.hpp" // for GPIOÑ
+std::uint32_t SystemCoreClock = 16'000'000U;
+extern "C" {
+int __low_level_init(void)
+{
+//Switch on external 16 MHz oscillator
+RCC::CR::HSION::On::Set();
+while (RCC::CR::HSIRDY::NotReady::IsSet())
+{
+}
+  //Switch system clock on external oscillator
+  RCC::CFGR::SW::Hsi::Set();
+  while (!RCC::CFGR::SWS::Hsi::IsSet())
+  {
+  }
+  RCC::APB2ENR::SYSCFGEN::Enable::Set();
+  return 1;
+}
+}
+void delay(int cycles)
+{
+for(int i = 0; i < cycles; ++i)
+{
+asm volatile("");
+}
+}
+int main()
+{
+//Подать тактирование на порт А
+RCC::AHB1ENR::GPIOAEN::Enable::Set() ;
+//Подать тактирование на порт С
+RCC::AHB1ENR::GPIOCEN::Enable::Set() ;
+//Порт 5.А на вывод
+GPIOA::MODER::MODER5::Output::Set() ;
+//Порт С.5, С.8, С.9 на вывод
+GPIOC::MODER::MODER5::Output::Set() ;
+GPIOC::MODER::MODER8::Output::Set() ;
+GPIOC::MODER::MODER9::Output::Set() ;
+  for(;;)
+  {
+     GPIOA::ODR::ODR5::High::Set();
+     GPIOC::ODR::ODR8::High::Set();
+     delay(1000000);
+     GPIOA::ODR::ODR5::Low::Set();
+     GPIOC::ODR::ODR8::Low::Set();
+     delay(1000000);
+  }
+  return 1;
+}
+
+Этот код позволяет мигать светодиодом.
+
+
+video::MiganieLED.mp4[]
+
+
+=== _forceinline
+_forceinline - это макрос, который позволяет не делать функцию
+как реальную, т.е. обычно при вызове функции компилятор идёт
+внутрь этой функции и выполняет действия содержащиеся в ней.
+Функция Set() из кода выше описывается функцией, которая находится
+в файле "fieldvaluebase.hpp".
+И для того, чтобы при отладке вместо функции Set() компилятор
+не вставлял содержимое этой функции и прописывается данный макрос.
+Этот макрос позволяет экономить ПЗУ.
+

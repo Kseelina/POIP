@@ -47,10 +47,10 @@
     <StLinkDriver>
         <stlinkserialNo>38FF6D064B46323645412543</stlinkserialNo>
         <stlinkfoundProbes />
-        <LeaveTargetRunning>_ 0</LeaveTargetRunning>
-        <CStepIntDis>_ 0</CStepIntDis>
         <stlinkResetStyle>0</stlinkResetStyle>
         <stlinkResetStrategy>0</stlinkResetStrategy>
+        <LeaveTargetRunning>_ 0</LeaveTargetRunning>
+        <CStepIntDis>_ 0</CStepIntDis>
     </StLinkDriver>
     <PlDriver>
         <FirstRun>0</FirstRun>
@@ -75,8 +75,8 @@
         <ITMlogFile>$PROJ_DIR$\ITM.log</ITMlogFile>
     </SWOTraceHWSettings>
     <ArmDriver>
-        <EnforceMemoryConfiguration>1</EnforceMemoryConfiguration>
         <EnableCache>0</EnableCache>
+        <EnforceMemoryConfiguration>1</EnforceMemoryConfiguration>
     </ArmDriver>
     <LogFile>
         <LoggingEnabled>_ 0</LoggingEnabled>
