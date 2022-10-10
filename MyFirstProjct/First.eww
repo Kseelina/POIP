@@ -7,6 +7,9 @@
         <path>C:\Users\Home\Documents\GitHub\stm32Labs\Lab1\iarproject.ewp</path>
     </project>
     <project>
+        <path>$WS_DIR$\..\MyFreeProject\MyFreeProject.ewp</path>
+    </project>
+    <project>
         <path>$WS_DIR$\..\MyNewProject\MyNewProject.ewp</path>
     </project>
     <batchBuild />
