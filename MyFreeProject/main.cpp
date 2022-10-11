@@ -34,6 +34,40 @@ int main()
  std::cout <<"unsigned int64 = "<< static_cast<int>(*ptrU64) << std::endl;
  std::cout <<"int64 = "<< static_cast<int>(*ptr64) << std::endl; 
  // Вывод адреса глобальной переменной j (значение указателя)
+ std::cout <<"адрес переменной j = " << ptrU16 << std::endl;
+ std::cout <<"адрес переменной j = " << ptrU32 << std::endl;
  std::cout <<"адрес переменной j = " << ptrU64 << std::endl;
+ //Увеличение каждого указателя на 1
+ ptrU8++;
+ ptr8++;
  
+ ptrU16++;
+ ptr16++;
+ 
+ ptrU32++;
+ ptr32++;
+ 
+ ptrU64++;
+ ptr64++;
+ // Вывод значений хранящихся в указателях прибавленных на 1   
+ std::cout<< std::endl;
+ std::cout <<"unsigned int8 = " << static_cast<int>(*ptrU8) << std::endl;
+ std::cout <<"int8 = "<< static_cast<int>(*ptr8) << std::endl;
+  
+ std::cout <<"unsigned int16 = "<< static_cast<int>(*ptrU16) << std::endl;
+ std::cout <<"int16 = "<< static_cast<int>(*ptr16) << std::endl;
+  
+ std::cout <<"unsigned int32 = "<< static_cast<int>(*ptrU32) << std::endl;
+ std::cout <<"int32 = "<< static_cast<int>(*ptr32) << std::endl;
+
+ std::cout <<"unsigned int64 = "<< static_cast<int>(*ptrU64) << std::endl;
+ std::cout <<"int64 = "<< static_cast<int>(*ptr64) << std::endl; 
+ 
+// Вывод следующего адреса указателя после j
+ std::cout <<"следущий адрес после j, для 16-байтового инта = " << ptrU16 << std::endl;
+ std::cout <<"следущий адрес после j, для 32-байтового инта = " << ptrU32 << std::endl;
+ std::cout <<"следущий адрес после j, для 64-байтового инта = " << ptrU64 << std::endl;
+  
+  
+  
 }
