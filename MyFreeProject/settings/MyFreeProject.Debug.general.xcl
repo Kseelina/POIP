@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "R:\Program\IAR\arm\bin\armPROC.dll" 
 
 "R:\Program\IAR\arm\bin\armSIM2.dll" 
@@ -10,16 +9,3 @@
 
 
 
-=======
-"R:\Program\IAR\arm\bin\armPROC.dll" 
-
-"R:\Program\IAR\arm\bin\armSIM2.dll" 
-
-"R:\POIP\POIP\MyFreeProject\Debug\Exe\MyFreeProject.out" 
-
---plugin="R:\Program\IAR\arm\bin\armbat.dll" 
-
-
-
-
->>>>>>> dd41c8f31af8845b72ebcb1cc09e39e9ec954adc

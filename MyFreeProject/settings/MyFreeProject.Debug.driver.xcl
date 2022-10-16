@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "--endian=little" 
 
 "--cpu=Cortex-M3" 
@@ -12,18 +11,3 @@
 
 
 
-=======
-"--endian=little" 
-
-"--cpu=Cortex-M3" 
-
-"--fpu=None" 
-
-"--semihosting" 
-
-"--multicore_nr_of_cores=1" 
-
-
-
-
->>>>>>> dd41c8f31af8845b72ebcb1cc09e39e9ec954adc
