@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <workspace>
     <project>
@@ -7,7 +8,31 @@
         <path>C:\Users\Home\Documents\GitHub\stm32Labs\Lab1\iarproject.ewp</path>
     </project>
     <project>
+        <path>$WS_DIR$\..\MyCantryProject\MyCantryProject.ewp</path>
+    </project>
+    <project>
+        <path>$WS_DIR$\..\MyFreeProject\MyFreeProject.ewp</path>
+    </project>
+    <project>
         <path>$WS_DIR$\..\MyNewProject\MyNewProject.ewp</path>
     </project>
     <batchBuild />
 </workspace>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<workspace>
+    <project>
+        <path>$WS_DIR$\First.ewp</path>
+    </project>
+    <project>
+        <path>C:\Users\Home\Documents\GitHub\stm32Labs\Lab1\iarproject.ewp</path>
+    </project>
+    <project>
+        <path>$WS_DIR$\..\MyFreeProject\MyFreeProject.ewp</path>
+    </project>
+    <project>
+        <path>$WS_DIR$\..\MyNewProject\MyNewProject.ewp</path>
+    </project>
+    <batchBuild />
+</workspace>
+>>>>>>> dd41c8f31af8845b72ebcb1cc09e39e9ec954adc

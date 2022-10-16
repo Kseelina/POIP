@@ -1,7 +1,37 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <userOverrides>
+    <override>
+        <path>R:\POIP\POIP\MyCantryProject\main.cpp</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
+        <path>R:\POIP\POIP\MyFreeProject\main.c</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
+        <path>R:\POIP\POIP\MyFreeProject\main.cpp</path>
+        <encoding>Win-1251</encoding>
+    </override>
     <override>
         <path>R:\POIP\POIP\MyNewProject\main.cpp</path>
         <encoding>Win-1251</encoding>
     </override>
 </userOverrides>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<userOverrides>
+    <override>
+        <path>R:\POIP\POIP\MyFreeProject\main.c</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
+        <path>R:\POIP\POIP\MyFreeProject\main.cpp</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
+        <path>R:\POIP\POIP\MyNewProject\main.cpp</path>
+        <encoding>Win-1251</encoding>
+    </override>
+</userOverrides>
+>>>>>>> dd41c8f31af8845b72ebcb1cc09e39e9ec954adc

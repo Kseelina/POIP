@@ -1,0 +1,41 @@
+##IAR Ninja build file
+
+
+#Rules
+rule COMPILER_XCL
+  command = R$:\Program\IAR\common\bin\XclFileGenerator.exe $xclcommand -f "$rspfile_name"
+  description = IAR_NEW_TOOL+++COMPILER_XCL+++$in+++R$:\Program\IAR\common\bin\XclFileGenerator.exe $flags
+  rspfile = $rspfile_name
+  rspfile_content = $flags
+
+rule INDEXER
+  command = R$:\Program\IAR\common\bin\SourceIndexer.exe $flags
+  depfile = $out.dep
+  description = IAR_NEW_TOOL+++INDEXER+++$out+++R$:\Program\IAR\common\bin\SourceIndexer.exe $flags
+
+rule MAKEBROWSE
+  command = R$:\Program\IAR\common\bin\makeBrowseData.exe $flags
+  description = IAR_NEW_TOOL+++MAKEBROWSE+++$out+++R$:\Program\IAR\common\bin\makeBrowseData.exe $flags
+
+rule PDBLINK
+  command = R$:\Program\IAR\common\bin\PbdLink.exe $flags
+  description = IAR_NEW_TOOL+++PDBLINK+++$out+++R$:\Program\IAR\common\bin\PbdLink.exe $flags
+
+
+
+#Build steps
+build R$:\POIP\POIP\MyCantryProject\Debug\BrowseInfo\main.xcl : COMPILER_XCL 
+  xclcommand = -source_file R$:\POIP\POIP\MyCantryProject\main.cpp -xcl_file R$:\POIP\POIP\MyCantryProject\Debug\BrowseInfo\main.xcl -macro_file R$:\POIP\POIP\MyCantryProject\Debug\BrowseInfo\main.tmp -icc_path R$:\Program\IAR\arm\bin\iccarm.exe
+  flags = R$:\POIP\POIP\MyCantryProject\main.cpp -o R$:\POIP\POIP\MyCantryProject\Debug\Obj\ --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config R$:\Program\IAR\arm\inc\c\DLib_Config_Normal.h -I R$:\POIP\POIP\MyCantryProject\AbstractHardware\Registers\STM32F411\ -I R$:\POIP\POIP\MyCantryProject\AbstractHardware\Registers\STM32F411\FieldValues\ -I R$:\POIP\POIP\MyCantryProject\AbstractHardware\Registers\ -I R$:\POIP\POIP\MyCantryProject\Common\ -I C$:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Registers\STM32F411\ -I C$:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Registers\STM32F411\FieldValues\ -I C$:\Users\Home\Documents\GitHub\CortexLib\Common\ -I C$:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Registers\ -Ol --c++ --no_exceptions --no_rtti --predef_macros R$:\POIP\POIP\MyCantryProject\Debug\BrowseInfo\main.tmp
+  rspfile_name = R$:\POIP\POIP\MyCantryProject\Debug\BrowseInfo\main.xcl.rsp
+
+build R$:\POIP\POIP\MyCantryProject\Debug\BrowseInfo\main.pbi : INDEXER R$:\POIP\POIP\MyCantryProject\Debug\BrowseInfo\main.xcl |  $
+R$:\POIP\POIP\MyCantryProject\main.cpp
+  flags = -out=R$:\POIP\POIP\MyCantryProject\Debug\BrowseInfo\main.pbi -f R$:\POIP\POIP\MyCantryProject\Debug\BrowseInfo\main.xcl
+
+build R$:\POIP\POIP\MyCantryProject\Debug\BrowseInfo\MyCantryProject.pbw : MAKEBROWSE R$:\POIP\POIP\MyCantryProject\Debug\BrowseInfo\MyCantryProject.pbd
+  flags = R$:\POIP\POIP\MyCantryProject\Debug\BrowseInfo\MyCantryProject.pbd -output R$:\POIP\POIP\MyCantryProject\Debug\BrowseInfo\MyCantryProject.pbw
+
+build R$:\POIP\POIP\MyCantryProject\Debug\BrowseInfo\MyCantryProject.pbd : PDBLINK R$:\POIP\POIP\MyCantryProject\Debug\BrowseInfo\main.pbi
+  flags = -M R$:\POIP\POIP\MyCantryProject\Debug\BrowseInfo\MyCantryProject.pbd R$:\POIP\POIP\MyCantryProject\Debug\BrowseInfo\main.pbi
+

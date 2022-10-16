@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.17">
+<title>Отчёт 3</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+</head>
+<body class="article">
+<div id="header">
+<h1>Отчёт 3</h1>
+</div>
+<div id="content">
+<div class="sect2">
+<h3 id="_типы_данных">Типы данных</h3>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph">
+<p>Так как на разных микроконтроллерах может использоваться разная архитектура,
+то и типы данных могут занимать разное количество памяти. Для того чтобы
+одна и таже программа могла использоваться на разных микроконтроллерах
+необходимо уточнять тип данных и сколько памяти он будет занимать.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>В С++ определены следующие типы данных:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="MyFreeProjectImg/DataTypes.png" alt="DataTypes">
+</div>
+<div class="title">Рисунок 1. Типы данных в С++</div>
+</div>
+<div class="paragraph">
+<p>Для микроконтроллера ST STM32F411RC типам данных соответствует следующая
+длина в байтах:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Таблица 1. Встроенные типы С++</caption>
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 10%;">
+<col style="width: 70%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Тип</th>
+<th class="tableblock halign-left valign-top">Длина</th>
+<th class="tableblock halign-left valign-top">Комментарий</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>bool</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Представляет значения, которые могут быть или <strong>true</strong>, или <strong>false</strong>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>char</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Используется для символов ASCII в старых строках в стиле C или в объектах std::string,
+которые никогда не будут преобразовываться в Юникод.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>unsigned char</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Аналог байта. В С++17 стандарте появился тип std::byte</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>int</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Целочисленное значение. Выбор по умолчанию для целых чисел</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>unsigned int</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Беззнаковое целое число</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>float</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Число с плавающей точкой, поддерживается аппаратно некоторыми микроконтроллерами</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>double</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Число с плавающей запятой двойной точности. Выбор по умолчанию для значений с плавающей
+точкой</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_модификаторы_типов_данных">Модификаторы типов данных</h3>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Таблица 2. Встроенные типа С++ модификаторы</caption>
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 10%;">
+<col style="width: 70%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Тип</th>
+<th class="tableblock halign-left valign-top">Длина</th>
+<th class="tableblock halign-left valign-top">Комментарий</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>short int</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Целочисленное знаковое значение укороченной длины</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>unsigned short int</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Целочисленное беззнаковое значение укороченной длины</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>long int</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Выбор по умолчанию для целочисленных значений. На платформах на которых int равен по
+длине unsigned short int может быть длиннее int</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>unsigned long int</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Целое число двойной длины. На платформах на которых int равен по длине unsigned short int может быть
+длиннее int</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>long double</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Число с плавающей точкой двойной точности	с двойной точностью </p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Так как такие длина типов данных зависит от микроконтроллера,
+то в программах имеет смысл использовать псевдонимы, такие как:</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+std::uint32_t
+</td>
+<td class="hdlist2">
+<p>целое беззнаковое длиной 32 бита</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+std::int64_t
+</td>
+<td class="hdlist2">
+<p>целое знаковое длинной 64 бита</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+std::uint8_t
+</td>
+<td class="hdlist2">
+<p>целое знаковое длинной 8 бит</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_пользовательские_типы">Пользовательские типы</h3>
+<div class="paragraph">
+<p>Так же в язык С++ имеется возможность определить свой тип данных,
+либо сделать псевдоним типа. Любой класс или структура,
+определенная разработчиком, будет являться пользовательским типом. Например:</p>
+</div>
+<div class="listingblock source">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="cpp"><span style="color:#080;font-weight:bold">template</span>&lt;<span style="color:#080;font-weight:bold">typename</span> T&gt;
+<span style="color:#080;font-weight:bold">struct</span> Complex
+{
+  Complex(T r, T im): real{r}, imaginary{im} {} ;
+  <span style="color:#088;font-weight:bold">operator</span> T { <span style="color:#080;font-weight:bold">return</span> sqrt(real*real + imaginary* imaginary) ;}
+  Complex <span style="color:#088;font-weight:bold">operator</span> +(Complex value)
+  {
+    <span style="color:#080;font-weight:bold">return</span> Complex(real+ value.real, imaginary + value.imaginary) ;
+  }
+  <span style="color:#088;font-weight:bold">private</span>:
+  T real; <span style="color:#777">//вещественная часть</span>
+  T imaginary <span style="color:#777">//мнимая часть</span>
+} ;
+
+<span style="color:#0a8;font-weight:bold">int</span> main()
+{
+  Complex&lt;<span style="color:#0a8;font-weight:bold">float</span>&gt; value1(<span style="color:#60E">3</span><span style="color:#60E">.0f</span>, <span style="color:#60E">4</span><span style="color:#60E">.0f</span>) ;
+  Complex&lt;<span style="color:#0a8;font-weight:bold">float</span>&gt; value1(<span style="color:#60E">1</span><span style="color:#60E">.0f</span>, <span style="color:#60E">2</span><span style="color:#60E">.0f</span>) ;
+  value1 += value2 ;
+  <span style="color:#080;font-weight:bold">return</span> <span style="color:#00D">0</span>;
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_псевдонимы_типов">Псевдонимы типов</h3>
+<div class="paragraph">
+<p>Заз мы не знаем заранее длину int, так как на разных платформах его длина
+может быть разной, и чтобы не путаться используют псевдонимы.
+Псевдоним можно вводить с помощью ключевого слова <strong>using</strong> ;</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="cpp"><span style="color:#088;font-weight:bold">auto</span> t = std::make_tuple(<span style="color:#00D">10</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Test</span><span style="color:#710">&quot;</span></span>, <span style="color:#60E">3</span><span style="color:#60E">.14</span>, <span style="color:#00D">2</span>U);  # <b class="conum">(1)</b>
+<span style="color:#088;font-weight:bold">using</span> tMytype = <span style="color:#088;font-weight:bold">decltype</span>(t) ;  # <b class="conum">(2)</b>
+<span style="color:#088;font-weight:bold">using</span> tShortType = std::tuple&lt;<span style="color:#0a8;font-weight:bold">int</span>, <span style="color:#0a8;font-weight:bold">string</span>, <span style="color:#0a8;font-weight:bold">double</span>, tU32&gt; ; # <b class="conum">(3)</b>
+
+<span style="color:#088;font-weight:bold">void</span> myfunction(tMyType &amp; value) {    # <b class="conum">(4)</b>
+  ...
+}
+
+
+<span style="color:#0a8;font-weight:bold">int</span> main() {
+  <span style="color:#088;font-weight:bold">using</span> tU32 = <span style="color:#0a8;font-weight:bold">unsigned</span> <span style="color:#0a8;font-weight:bold">int</span> ;  # <b class="conum">(5)</b>
+  tU32 i = <span style="color:#00D">10</span>U ;               # <b class="conum">(6)</b>
+
+  myfunction(t) ;              # <b class="conum">(7)</b>
+}</code></pre>
+</div>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="colist arabic">
+<ol>
+<li>
+<p>Определяем кортеж из 4 элементов разного типа</p>
+</li>
+<li>
+<p>Объявляем псевдоним типа, который имеет кортеж (тип выводится компилятором)</p>
+</li>
+<li>
+<p>Тоже самое что и (2) за исключением того, что указываем тип напрямую</p>
+</li>
+<li>
+<p>Объявляем функцию, принимающую аргумент типа, который имеет кортеж</p>
+</li>
+<li>
+<p>Объявляем псевдоним типа unsigned int</p>
+</li>
+<li>
+<p>Определяем переменную типа unsigned int</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_неявное_преобразование_типов">Неявное преобразование типов</h3>
+<div class="paragraph">
+<p>Компилятор может неявно преобразовывать один тип к другому типу.</p>
+</div>
+<div class="listingblock source">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="cpp"><span style="color:#088;font-weight:bold">auto</span> a = <span style="color:#00D">10</span>;    <span style="color:#777">// Литерал типа int</span>
+<span style="color:#088;font-weight:bold">auto</span> b = <span style="color:#00D">10</span>U;   <span style="color:#777">// Литерал типа беззнакового int</span>
+<span style="color:#088;font-weight:bold">auto</span> c = <span style="color:#00D">1</span><span style="color:#60E">0</span><span style="color:#60E">.0</span>;  <span style="color:#777">// Литерал типа double</span>
+<span style="color:#088;font-weight:bold">auto</span> d = <span style="color:#00D">1</span><span style="color:#60E">0</span><span style="color:#60E">.0f</span>; <span style="color:#777">// Литерал типа float</span>
+<span style="color:#088;font-weight:bold">auto</span> e = <span style="color:#069">true</span>;  <span style="color:#777">// Литерал типа bool</span>
+<span style="color:#088;font-weight:bold">auto</span> f = <span style="color:#00D">10LL</span>;  <span style="color:#777">// Литерал типа long long</span>
+<span style="color:#088;font-weight:bold">auto</span> f = <span style="color:#00D">10</span>ULL; <span style="color:#777">// Литерал типа беззнакового long long</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Но так лучше никогда не делать. Грамотно будет всегда явно указывать тип
+данных, чтобы в дальнейшем не было ошибок.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_явное_преобразование_типов">Явное преобразование типов</h3>
+<div class="paragraph">
+<p>Так как компилятор автоматически присваивая типы данных может сделать
+то, что не ожидается, то не нужно использовать неявное преобразование типа.</p>
+</div>
+<div class="paragraph">
+<p>Вместо этого, лучше указать компилятору явное преобразование из одного
+типа в другой.</p>
+</div>
+<div class="paragraph">
+<p>Для преобразований из одного типа в другой используют 4 вариантов преобразования:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>static_cast</p>
+</li>
+<li>
+<p>const_cast</p>
+</li>
+<li>
+<p>reinterpret_cast</p>
+</li>
+<li>
+<p>dynamic_cast</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_static_cast">static_cast</h3>
+<div class="paragraph">
+<p><strong>static_cast</strong> позволяет сделать приведение близких типов
+(целые, пользовательских типов которые могут создаваться из типов который
+приводится, и указатель на void* к указателю на любой тип).</p>
+</div>
+<div class="paragraph">
+<p>Проверка производится на уровне компиляции, так что в случае ошибки сообщение
+будет получено в момент сборки приложения или библиотеки.</p>
+</div>
+<div class="listingblock source">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="cpp"><span style="color:#088;font-weight:bold">auto</span> i = <span style="color:#080;font-weight:bold">static_cast</span>&lt;std::uint32_t&gt;(<span style="color:#00D">52534525</span>U);</code></pre>
+</div>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph">
+<p>static_cast - преобразовывает число, находящееся в круглых скобка к типу,
+прописанному в треугольных скобках.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_reinterpret_cast">reinterpret_cast</h3>
+<div class="paragraph">
+<p><strong>reinterpret_cast</strong> преобразует типы, несовместимыми друг с другом, например
+указатель преобразовать в целочисленный тип. Такое преобразование может
+любой тип данных преобразовать в лбой другой, поэтому необходимо использовать его
+только там где это необходимо и не злоупотреблять им, т.к. он может и
+преобразовать в другой тип то, что нам не нужно и получить ерунду.</p>
+</div>
+<div class="listingblock source">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="cpp"><span style="color:#088;font-weight:bold">auto</span> i = <span style="color:#080;font-weight:bold">reinterpret_cast</span>&lt;<span style="color:#088;font-weight:bold">volatile</span> uint32_t *&gt;(<span style="color:#02b">0x40010000</span>) ; # <b class="conum">(1)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>Преобразует адрес 0x40010000 в указатель типа volatile uint32_t</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_память">Память</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>ARM имеет общее адресное пространство для данных и команд.</p>
+</div>
+<div class="paragraph">
+<p>Ядро ARM имеет 4 Гбайт последовательной памяти с адресов 0x00000000 до 0xFFFFFFFF.</p>
+</div>
+<div class="paragraph">
+<p>Различные типы памяти могут быть расположены по эти адресам.
+Обычно микроконтроллер имеет постоянную память, из которой можно только
+читать (ПЗУ) и оперативную память, из которой можно читать и в которую можно
+писать (ОЗУ).</p>
+</div>
+<div class="paragraph">
+<p>Также часть адресов этой памяти отведены под регистры управления и
+регистры периферии.</p>
+</div>
+<div class="paragraph">
+<p>Микроконтроллер  на ядре Cortex M4 выполнен по Гарвардской архитектуре,
+память здесь разделена на три типа:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ПЗУ  (FLASH память в которой храниться программа)</p>
+</li>
+<li>
+<p>ОЗУ память для хранения временных данных (туда же можно по необходимости
+переместить программу и выполнить её из ОЗУ), память в которой находятся
+регистры отвечающие за настройку и работу с периферией</p>
+</li>
+<li>
+<p>Память для хранения постоянных данных ЕЕPROM.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Адресное пространство памяти программы (ПЗУ) находится по адресам
+<strong>0x00000000</strong> по <strong>0x1FFFFFFF</strong></p>
+</div>
+<div class="paragraph">
+<p>Адресное пространство ОЗУ находится по адресам
+<strong>0x20000000</strong> по <strong>0x3FFFFFFF</strong></p>
+</div>
+<div class="paragraph">
+<p>Адресное пространство для регистров периферии находится по адресам с
+<strong>0x40000000</strong>  по <strong>0x5FFFFFFF</strong></p>
+</div>
+<div class="sect2">
+<h3 id="_память_для_расположения_данных">Память для расположения данных</h3>
+<div class="paragraph">
+<p>Данные в памяти могут быть расположены 3 различными способами:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Локальные переменные, которые являются локальными в функции располагаются в
+регистрах или в стеке.</p>
+</li>
+</ul>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph">
+<p>Такие переменные "существуют" только внутри функции, как только функция
+закончится и вернется к вызывающему объекту, эти переменные становятся не
+валидными. Например переменные созданые в функции main() являются локальными и
+для них память выделяется только на момент выполнения этой функции, как только
+функция выполнится и закроется, переменные из памяти будет достать невозможно.</p>
+</div>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Глобальные переменные или статические переменные. В этом случае они
+инициализируются единожды.</p>
+</li>
+</ul>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph">
+<p>Static означает, что та память, которая была выделена под эту переменную не
+будет изменяться и закрепляется за этой переменной до конца работы приложения.
+Такая переменная создаётся в памяти процессора.</p>
+</div>
+<div class="listingblock source">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="cpp"><span style="color:#579">#include</span> <span style="color:#B44;font-weight:bold">&lt;iostream&gt;</span>
+
+<span style="color:#0a8;font-weight:bold">int</span> j=<span style="color:#00D">10</span>;   <span style="color:#777">// Глобальная переменная</span>
+<span style="color:#0a8;font-weight:bold">int</span> k =<span style="color:#00D">100</span>; <span style="color:#777">// Глобальная переменная</span>
+
+<span style="color:#0a8;font-weight:bold">int</span> main()
+{
+  <span style="color:#088;font-weight:bold">auto</span> i = <span style="color:#080;font-weight:bold">reinterpret_cast</span>&lt;<span style="color:#088;font-weight:bold">volatile</span> uint32_t *&gt;(<span style="color:#02b">0x40010000</span>); <span style="color:#777">// Локальная переменная</span>
+  <span style="color:#0a8;font-weight:bold">int</span>* k = <span style="color:#080;font-weight:bold">new</span> <span style="color:#0a8;font-weight:bold">int</span>(<span style="color:#00D">1</span>);  <span style="color:#777">// Динамическое размещение памяти</span>
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Динамически размещаемые данные. Данные создаваемые на Куче. Такие данные
+создаются с помощью например оператора "new".</p>
+</li>
+</ul>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph">
+<p>Если заранее не известно, сколько объектов нужно создать, и сколько памяти они
+будут отнимать, то придется создавать их динамически, например с помощью
+оператора new, в таком случае, объекты будут создаваться в куче.
+Куча - чревата ошибками и засорами памяти, так как после отработки той функции,
+где была выделена куча, куча не очистится из памяти, она всегда там будет
+хранить значения, данные кучи необходимо всегда очищать, а если этого забывать
+делать, то это приведёт к торможению программы вцелом.</p>
+</div>
+<div class="paragraph">
+<p>Поэтому кучи в дальнейших программах использовать не будем, для того чтобы
+не выделять под неё память: ПКМ&#8594;Linker&#8594;Config&#8594;кнопка Edit&#8230;&#8203;..&#8594;Stack/Heap Sizes.
+В "Heap" ставим "0":</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="MyFreeProjectImg/HeapInZero.png" alt="HeapInZero">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_указатели">Указатели</h3>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph">
+<p>Данные могут находится в ОЗУ или ПЗУ.
+Каждой переменной содержащей данные соответствует некий адрес памяти.
+К переменной можно обратиться непосредственно обращаясь к самой переменной,
+тогда мы можем напрямую писать или читать значение с адреса переменной,
+либо можно обратиться косвенно, через указатель или ссылку.
+Другими словами указатель - это объект, который указывает на адрес,
+где хранится перменая.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Пример для 1 байтового char</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="cpp"><span style="color:#579">#include</span> <span style="color:#B44;font-weight:bold">&lt;iostream&gt;</span>
+
+<span style="color:#0a8;font-weight:bold">int</span> j=<span style="color:#00D">256</span>; <span style="color:#777">// Глобальная переменная</span>
+
+<span style="color:#0a8;font-weight:bold">int</span> main()
+{
+  <span style="color:#0a8;font-weight:bold">char</span>* ptr =<span style="color:#080;font-weight:bold">reinterpret_cast</span>&lt;<span style="color:#0a8;font-weight:bold">char</span>*&gt;(&amp;j);
+  std::cout &lt;&lt; <span style="color:#080;font-weight:bold">static_cast</span>&lt;<span style="color:#0a8;font-weight:bold">int</span>&gt;(*ptr) &lt;&lt; std::endl;
+
+  ptr++;
+  std::cout &lt;&lt; <span style="color:#080;font-weight:bold">static_cast</span>&lt;<span style="color:#0a8;font-weight:bold">int</span>&gt;(*ptr) &lt;&lt; std::endl;
+}</code></pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="MyFreeProjectImg/Char.png" alt="Char">
+</div>
+</div>
+<div class="paragraph">
+<p>Пример для 2 байтового short</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="cpp"><span style="color:#579">#include</span> <span style="color:#B44;font-weight:bold">&lt;iostream&gt;</span>
+
+<span style="color:#0a8;font-weight:bold">int</span> j=<span style="color:#00D">256</span>; <span style="color:#777">// Глобальная переменная</span>
+
+<span style="color:#0a8;font-weight:bold">int</span> main()
+{
+  <span style="color:#0a8;font-weight:bold">short</span>* ptr =<span style="color:#080;font-weight:bold">reinterpret_cast</span>&lt;<span style="color:#0a8;font-weight:bold">short</span>*&gt;(&amp;j);
+  std::cout &lt;&lt; <span style="color:#080;font-weight:bold">static_cast</span>&lt;<span style="color:#0a8;font-weight:bold">int</span>&gt;(*ptr) &lt;&lt; std::endl;
+
+  ptr++;
+  std::cout &lt;&lt; <span style="color:#080;font-weight:bold">static_cast</span>&lt;<span style="color:#0a8;font-weight:bold">int</span>&gt;(*ptr) &lt;&lt; std::endl;
+}</code></pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="MyFreeProjectImg/Short.png" alt="Short">
+</div>
+</div>
+<div class="paragraph">
+<p>Из двух примеров можно сделать вывод, что указатель <strong>ptr</strong> смещается на то
+количество байт, которое относится к типу указателя.
+Если указатель был типа char, который занимает 1 байт, то <strong>ptr*
+прибавляет 1 байт.
+Если указатель был типа short, который занимает 2 байта, то *ptr</strong> прибавляет
+2 байта.
+По аналогии и для других типов, если <strong>ptr</strong> будет иметь тип int32, то при
+добавлении 1 "шагать" такой указатель будет каждые 4 байта.</p>
+</div>
+<div class="paragraph">
+<p>При объявлении массивов их данные располагаются друг за другом и под каждое
+значение отводится столько байт, сколько отводится под тип, которым объявляем
+массив.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="MyFreeProjectImg/Arr.png" alt="Arr">
+</div>
+</div>
+</div>
+</div>
+</div>
+<h1 id="_домашнее_задание" class="sect0">Домашнее задание</h1>
+<div class="sect1">
+<h2 id="_задание_1">Задание 1</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>long long - по умолчанию в компиляторе знаковый тип данных с максимальным
+положительным значением = 9223372036854775807.
+половина от этого значения = 4611686018427387903.
+знаковый long long занимает 8 байта.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="MyFreeProjectImg/Task1.png" alt="Task1">
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="cpp"><span style="color:#579">#include</span> <span style="color:#B44;font-weight:bold">&lt;iostream&gt;</span>
+
+<span style="color:#0a8;font-weight:bold">long</span> <span style="color:#0a8;font-weight:bold">long</span> j = <span style="color:#00D">9223372036854775807LL</span>/<span style="color:#00D">2LL</span>; <span style="color:#777">// Глобальная переменна</span>
+
+<span style="color:#0a8;font-weight:bold">int</span> main()
+{
+  std::cout &lt;&lt; j &lt;&lt; std::endl; <span style="color:#777">// Вывод половины от максимального начения</span>
+  std::cout &lt;&lt; <span style="color:#080;font-weight:bold">sizeof</span>(<span style="color:#0a8;font-weight:bold">long</span> <span style="color:#0a8;font-weight:bold">long</span>) &lt;&lt; std::endl; <span style="color:#777">// Определение количества байт, занимаемых типом</span>
+  std::cout &lt;&lt; LLONG_MAX &lt;&lt; std::endl; <span style="color:#777">// Опредеение максимального числа типа</span>
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_задание_2_3">Задание 2-3</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Создание и инициализация 8 указателей:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="MyFreeProjectImg/Task2.png" alt="Task2">
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="cpp"><span style="color:#579">#include</span> <span style="color:#B44;font-weight:bold">&lt;iostream&gt;</span>
+
+<span style="color:#0a8;font-weight:bold">long</span> <span style="color:#0a8;font-weight:bold">long</span> j = LLONG_MAX/<span style="color:#00D">2LL</span>; <span style="color:#777">// Глобальная переменная</span>
+
+<span style="color:#0a8;font-weight:bold">int</span> main()
+{
+  <span style="color:#777">// Определение размера и максимального числа типа long long</span>
+  std::cout &lt;&lt; <span style="color:#080;font-weight:bold">sizeof</span>(<span style="color:#0a8;font-weight:bold">long</span> <span style="color:#0a8;font-weight:bold">long</span>) &lt;&lt; std::endl;
+  std::cout &lt;&lt;LLONG_MAX &lt;&lt; std::endl;
+  <span style="color:#777">// Инициализация 8 указателей разных размеров типа int</span>
+  uint8_t* ptrU8 = <span style="color:#080;font-weight:bold">reinterpret_cast</span>&lt;uint8_t*&gt;(&amp;j);
+  int8_t* ptr8 = <span style="color:#080;font-weight:bold">reinterpret_cast</span>&lt;int8_t*&gt;(&amp;j);
+
+  uint16_t* ptrU16 = <span style="color:#080;font-weight:bold">reinterpret_cast</span>&lt;uint16_t*&gt;(&amp;j);
+  int16_t* ptr16 = <span style="color:#080;font-weight:bold">reinterpret_cast</span>&lt;int16_t*&gt;(&amp;j);
+
+  uint32_t* ptrU32 = <span style="color:#080;font-weight:bold">reinterpret_cast</span>&lt;uint32_t*&gt;(&amp;j);
+  int32_t* ptr32 = <span style="color:#080;font-weight:bold">reinterpret_cast</span>&lt;int32_t*&gt;(&amp;j);
+
+  uint64_t* ptrU64 = <span style="color:#080;font-weight:bold">reinterpret_cast</span>&lt;uint64_t*&gt;(&amp;j);
+  int64_t* ptr64 = <span style="color:#080;font-weight:bold">reinterpret_cast</span>&lt;int64_t*&gt;(&amp;j);
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_задание_4">Задание 4</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Вывод значений с указателей:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="MyFreeProjectImg/Task4.png" alt="Task4">
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="cpp"><span style="color:#579">#include</span> <span style="color:#B44;font-weight:bold">&lt;iostream&gt;</span>
+
+<span style="color:#0a8;font-weight:bold">long</span> <span style="color:#0a8;font-weight:bold">long</span> j = LLONG_MAX/<span style="color:#00D">2LL</span>; <span style="color:#777">// Глобальная переменная</span>
+
+<span style="color:#0a8;font-weight:bold">int</span> main()
+{
+<span style="color:#777">// Определение размера и максимального числа типа long long</span>
+    std::cout &lt;&lt;<span style="color:#080;font-weight:bold">sizeof</span>(<span style="color:#0a8;font-weight:bold">long</span> <span style="color:#0a8;font-weight:bold">long</span>) &lt;&lt;<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20"> байт занимает тип long long</span><span style="color:#710">&quot;</span></span>&lt;&lt; std::endl;
+    std::cout &lt;&lt;<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">MAX значение типа lonf long = </span><span style="color:#710">&quot;</span></span>&lt;&lt;LLONG_MAX &lt;&lt; std::endl;
+    std::cout &lt;&lt;<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">j = </span><span style="color:#710">&quot;</span></span>&lt;&lt;j &lt;&lt; std::endl; <span style="color:#777">// вывод переменной j</span>
+<span style="color:#777">// Инициализация 8 указателей разных размеров типа int</span>
+    uint8_t* ptrU8 = <span style="color:#080;font-weight:bold">reinterpret_cast</span>&lt;uint8_t*&gt;(&amp;j);
+    int8_t* ptr8 = <span style="color:#080;font-weight:bold">reinterpret_cast</span>&lt;int8_t*&gt;(&amp;j);
+
+    uint16_t* ptrU16 = <span style="color:#080;font-weight:bold">reinterpret_cast</span>&lt;uint16_t*&gt;(&amp;j);
+    int16_t* ptr16 = <span style="color:#080;font-weight:bold">reinterpret_cast</span>&lt;int16_t*&gt;(&amp;j);
+
+    uint32_t* ptrU32 = <span style="color:#080;font-weight:bold">reinterpret_cast</span>&lt;uint32_t*&gt;(&amp;j);
+    int32_t* ptr32 = <span style="color:#080;font-weight:bold">reinterpret_cast</span>&lt;int32_t*&gt;(&amp;j);
+
+    uint64_t* ptrU64 = <span style="color:#080;font-weight:bold">reinterpret_cast</span>&lt;uint64_t*&gt;(&amp;j);
+    int64_t* ptr64 = <span style="color:#080;font-weight:bold">reinterpret_cast</span>&lt;int64_t*&gt;(&amp;j);
+    std::cout&lt;&lt;std::endl;
+<span style="color:#777">// Вывод значений указателей</span>
+    std::cout &lt;&lt;<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">unsigned int8 = </span><span style="color:#710">&quot;</span></span> &lt;&lt; <span style="color:#080;font-weight:bold">static_cast</span>&lt;<span style="color:#0a8;font-weight:bold">int</span>&gt;(*ptrU8) &lt;&lt; std::endl; #<b class="conum">(1)</b>
+    std::cout &lt;&lt;<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">int8 = </span><span style="color:#710">&quot;</span></span>&lt;&lt; <span style="color:#080;font-weight:bold">static_cast</span>&lt;<span style="color:#0a8;font-weight:bold">int</span>&gt;(*ptr8) &lt;&lt; std::endl;            #<b class="conum">(2)</b>
+
+    std::cout &lt;&lt;<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">unsigned int16 = </span><span style="color:#710">&quot;</span></span>&lt;&lt; <span style="color:#080;font-weight:bold">static_cast</span>&lt;<span style="color:#0a8;font-weight:bold">int</span>&gt;(*ptrU16) &lt;&lt; std::endl;#<b class="conum">(3)</b>
+    std::cout &lt;&lt;<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">int8 = </span><span style="color:#710">&quot;</span></span>&lt;&lt; <span style="color:#080;font-weight:bold">static_cast</span>&lt;<span style="color:#0a8;font-weight:bold">int</span>&gt;(*ptr16) &lt;&lt; std::endl;           #<b class="conum">(4)</b>
+
+    std::cout &lt;&lt;<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">unsigned int32 = </span><span style="color:#710">&quot;</span></span>&lt;&lt; <span style="color:#080;font-weight:bold">static_cast</span>&lt;<span style="color:#0a8;font-weight:bold">int</span>&gt;(*ptrU32) &lt;&lt; std::endl;#<b class="conum">(5)</b>
+    std::cout &lt;&lt;<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">int8 = </span><span style="color:#710">&quot;</span></span>&lt;&lt; <span style="color:#080;font-weight:bold">static_cast</span>&lt;<span style="color:#0a8;font-weight:bold">int</span>&gt;(*ptr32) &lt;&lt; std::endl;           #<b class="conum">(6)</b>
+
+    std::cout &lt;&lt;<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">unsigned int64 = </span><span style="color:#710">&quot;</span></span>&lt;&lt; <span style="color:#080;font-weight:bold">static_cast</span>&lt;<span style="color:#0a8;font-weight:bold">int</span>&gt;(*ptrU64) &lt;&lt; std::endl;#<b class="conum">(7)</b>
+    std::cout &lt;&lt;<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">int64 = </span><span style="color:#710">&quot;</span></span>&lt;&lt; <span style="color:#080;font-weight:bold">static_cast</span>&lt;<span style="color:#0a8;font-weight:bold">int</span>&gt;(*ptr64) &lt;&lt; std::endl;          #<b class="conum">(8)</b>
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>unsigned int8 = 255 , так как тип имеет размерность = 1 байт, т.е. указатель
+может сослаться только на последние 8 бит числа j = 4611686018427387903.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="MyFreeProjectImg/Task4_1.png" alt="Task4 1">
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>int8 = -1 , так как тип знаковый имеет размерность = 1 байт, а т.к.
+число <strong>j</strong> больше максимально допустимого, то произошло переполнение, а т.к.
+первый бит отвечает за знак, а он = 1, то и значение числа будет отрицательным.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="MyFreeProjectImg/Task4_2.png" alt="Task4 2">
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>unsigned int16 = 65535 , по аналогии с вариантом #(1), но тут уже число
+2 байтовое, следовательно:</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="MyFreeProjectImg/Task4_3.png" alt="Task4 3">
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>unsigned int16 = -1 , по аналогии с вариантом #(2), но тут уже число
+2 байтовое.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>предполагаю, что в #&lt;6&gt; и #&lt;8&gt; будет по аналогии со 2.
+Почему в #&lt;5&gt; и #&lt;7&gt; = -1 я не знаю.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_задание_5">Задание 5</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Вывод значения указателя (адрес глобальной переменной):</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="MyFreeProjectImg/Task5.png" alt="Task5">
+</div>
+</div>
+<div class="paragraph">
+<p>Для этого в код выше допишем строчку:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="cpp">std::cout &lt;&lt;<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">адрес переменной j = </span><span style="color:#710">&quot;</span></span> &lt;&lt; ptrU64 &lt;&lt; std::endl;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_задание_6_8">Задание 6-8</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Увеличим каждый указатель на 1 и выведем значения:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="cpp"><span style="color:#579">#include</span> <span style="color:#B44;font-weight:bold">&lt;iostream&gt;</span>
+
+<span style="color:#0a8;font-weight:bold">long</span> <span style="color:#0a8;font-weight:bold">long</span> j = <span style="color:#00D">4294967295</span>; <span style="color:#777">// Глобальная переменная</span>
+
+<span style="color:#0a8;font-weight:bold">int</span> main()
+{
+  <span style="color:#777">// Определение размера и максимального числа типа long long</span>
+   std::cout &lt;&lt;<span style="color:#080;font-weight:bold">sizeof</span>(<span style="color:#0a8;font-weight:bold">long</span> <span style="color:#0a8;font-weight:bold">long</span>) &lt;&lt;<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20"> байт занимает тип long long</span><span style="color:#710">&quot;</span></span>&lt;&lt; std::endl;
+   std::cout &lt;&lt;<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">MAX значение типа lonf long = </span><span style="color:#710">&quot;</span></span>&lt;&lt;LLONG_MAX &lt;&lt; std::endl;
+   std::cout &lt;&lt;<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">j = </span><span style="color:#710">&quot;</span></span>&lt;&lt;j &lt;&lt; std::endl; <span style="color:#777">// вывод переменной j</span>
+  <span style="color:#777">// Инициализация 8 указателей разных размеров типа int</span>
+ uint8_t* ptrU8 = <span style="color:#080;font-weight:bold">reinterpret_cast</span>&lt;uint8_t*&gt;(&amp;j);
+ int8_t* ptr8 = <span style="color:#080;font-weight:bold">reinterpret_cast</span>&lt;int8_t*&gt;(&amp;j);
+
+ uint16_t* ptrU16 = <span style="color:#080;font-weight:bold">reinterpret_cast</span>&lt;uint16_t*&gt;(&amp;j);
+ int16_t* ptr16 = <span style="color:#080;font-weight:bold">reinterpret_cast</span>&lt;int16_t*&gt;(&amp;j);
+
+ uint32_t* ptrU32 = <span style="color:#080;font-weight:bold">reinterpret_cast</span>&lt;uint32_t*&gt;(&amp;j);
+ int32_t* ptr32 = <span style="color:#080;font-weight:bold">reinterpret_cast</span>&lt;int32_t*&gt;(&amp;j);
+
+ uint64_t* ptrU64 = <span style="color:#080;font-weight:bold">reinterpret_cast</span>&lt;uint64_t*&gt;(&amp;j);
+ int64_t* ptr64 = <span style="color:#080;font-weight:bold">reinterpret_cast</span>&lt;int64_t*&gt;(&amp;j);
+ std::cout&lt;&lt;std::endl;
+<span style="color:#777">// Вывод значений переменной j, хранящиеся в указателях</span>
+ std::cout &lt;&lt;<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">unsigned int8 = </span><span style="color:#710">&quot;</span></span> &lt;&lt; <span style="color:#080;font-weight:bold">static_cast</span>&lt;<span style="color:#0a8;font-weight:bold">int</span>&gt;(*ptrU8) &lt;&lt; std::endl;
+ std::cout &lt;&lt;<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">int8 = </span><span style="color:#710">&quot;</span></span>&lt;&lt; <span style="color:#080;font-weight:bold">static_cast</span>&lt;<span style="color:#0a8;font-weight:bold">int</span>&gt;(*ptr8) &lt;&lt; std::endl;
+
+ std::cout &lt;&lt;<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">unsigned int16 = </span><span style="color:#710">&quot;</span></span>&lt;&lt; <span style="color:#080;font-weight:bold">static_cast</span>&lt;<span style="color:#0a8;font-weight:bold">int</span>&gt;(*ptrU16) &lt;&lt; std::endl;
+ std::cout &lt;&lt;<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">int16 = </span><span style="color:#710">&quot;</span></span>&lt;&lt; <span style="color:#080;font-weight:bold">static_cast</span>&lt;<span style="color:#0a8;font-weight:bold">int</span>&gt;(*ptr16) &lt;&lt; std::endl;
+
+ std::cout &lt;&lt;<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">unsigned int32 = </span><span style="color:#710">&quot;</span></span>&lt;&lt; <span style="color:#080;font-weight:bold">static_cast</span>&lt;<span style="color:#0a8;font-weight:bold">int</span>&gt;(*ptrU32) &lt;&lt; std::endl;
+ std::cout &lt;&lt;<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">int32 = </span><span style="color:#710">&quot;</span></span>&lt;&lt; <span style="color:#080;font-weight:bold">static_cast</span>&lt;<span style="color:#0a8;font-weight:bold">int</span>&gt;(*ptr32) &lt;&lt; std::endl;
+
+ std::cout &lt;&lt;<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">unsigned int64 = </span><span style="color:#710">&quot;</span></span>&lt;&lt; <span style="color:#080;font-weight:bold">static_cast</span>&lt;<span style="color:#0a8;font-weight:bold">int</span>&gt;(*ptrU64) &lt;&lt; std::endl;
+ std::cout &lt;&lt;<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">int64 = </span><span style="color:#710">&quot;</span></span>&lt;&lt; <span style="color:#080;font-weight:bold">static_cast</span>&lt;<span style="color:#0a8;font-weight:bold">int</span>&gt;(*ptr64) &lt;&lt; std::endl;
+ <span style="color:#777">// Вывод адреса глобальной переменной j (значение указателя)</span>
+ std::cout &lt;&lt;<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">адрес переменной j = </span><span style="color:#710">&quot;</span></span> &lt;&lt; ptrU16 &lt;&lt; std::endl;
+ std::cout &lt;&lt;<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">адрес переменной j = </span><span style="color:#710">&quot;</span></span> &lt;&lt; ptrU32 &lt;&lt; std::endl;
+ std::cout &lt;&lt;<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">адрес переменной j = </span><span style="color:#710">&quot;</span></span> &lt;&lt; ptrU64 &lt;&lt; std::endl;
+ <span style="color:#777">//Увеличение каждого указателя на 1</span>
+ ptrU8++;
+ ptr8++;
+
+ ptrU16++;
+ ptr16++;
+
+ ptrU32++;
+ ptr32++;
+
+ ptrU64++;
+ ptr64++;
+ <span style="color:#777">// Вывод значений хранящихся в указателях прибавленных на 1</span>
+ std::cout&lt;&lt; std::endl;
+ std::cout &lt;&lt;<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">unsigned int8 = </span><span style="color:#710">&quot;</span></span> &lt;&lt; <span style="color:#080;font-weight:bold">static_cast</span>&lt;<span style="color:#0a8;font-weight:bold">int</span>&gt;(*ptrU8) &lt;&lt; std::endl;
+ std::cout &lt;&lt;<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">int8 = </span><span style="color:#710">&quot;</span></span>&lt;&lt; <span style="color:#080;font-weight:bold">static_cast</span>&lt;<span style="color:#0a8;font-weight:bold">int</span>&gt;(*ptr8) &lt;&lt; std::endl;
+
+ std::cout &lt;&lt;<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">unsigned int16 = </span><span style="color:#710">&quot;</span></span>&lt;&lt; <span style="color:#080;font-weight:bold">static_cast</span>&lt;<span style="color:#0a8;font-weight:bold">int</span>&gt;(*ptrU16) &lt;&lt; std::endl;
+ std::cout &lt;&lt;<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">int16 = </span><span style="color:#710">&quot;</span></span>&lt;&lt; <span style="color:#080;font-weight:bold">static_cast</span>&lt;<span style="color:#0a8;font-weight:bold">int</span>&gt;(*ptr16) &lt;&lt; std::endl;
+
+ std::cout &lt;&lt;<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">unsigned int32 = </span><span style="color:#710">&quot;</span></span>&lt;&lt; <span style="color:#080;font-weight:bold">static_cast</span>&lt;<span style="color:#0a8;font-weight:bold">int</span>&gt;(*ptrU32) &lt;&lt; std::endl;
+ std::cout &lt;&lt;<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">int32 = </span><span style="color:#710">&quot;</span></span>&lt;&lt; <span style="color:#080;font-weight:bold">static_cast</span>&lt;<span style="color:#0a8;font-weight:bold">int</span>&gt;(*ptr32) &lt;&lt; std::endl;
+
+ std::cout &lt;&lt;<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">unsigned int64 = </span><span style="color:#710">&quot;</span></span>&lt;&lt; <span style="color:#080;font-weight:bold">static_cast</span>&lt;<span style="color:#0a8;font-weight:bold">int</span>&gt;(*ptrU64) &lt;&lt; std::endl;
+ std::cout &lt;&lt;<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">int64 = </span><span style="color:#710">&quot;</span></span>&lt;&lt; <span style="color:#080;font-weight:bold">static_cast</span>&lt;<span style="color:#0a8;font-weight:bold">int</span>&gt;(*ptr64) &lt;&lt; std::endl;
+
+<span style="color:#777">// Вывод следующего адреса указателя после j</span>
+ std::cout &lt;&lt;<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">следущий адрес после j, для 16-байтового инта = </span><span style="color:#710">&quot;</span></span> &lt;&lt; ptrU16 &lt;&lt; std::endl;
+ std::cout &lt;&lt;<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">следущий адрес после j, для 32-байтового инта = </span><span style="color:#710">&quot;</span></span> &lt;&lt; ptrU32 &lt;&lt; std::endl;
+ std::cout &lt;&lt;<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">следущий адрес после j, для 64-байтового инта = </span><span style="color:#710">&quot;</span></span> &lt;&lt; ptrU64 &lt;&lt; std::endl;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>И получили вот такой результат:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>8 байт занимает тип long long
+MAX значение типа lonf long = 9223372036854775807
+j = 4294967295
+
+unsigned int8 = 255
+int8 = -1
+unsigned int16 = 65535
+int16 = -1
+unsigned int32 = -1
+int32 = -1
+unsigned int64 = -1
+int64 = -1
+адрес переменной j = 20000000
+адрес переменной j = 20000000
+адрес переменной j = 20000000
+
+unsigned int8 = 255    #<b class="conum">(1)</b>
+int8 = -1              #<b class="conum">(2)</b>
+unsigned int16 = 65535 #<b class="conum">(3)</b>
+int16 = -1             #<b class="conum">(4)</b>
+unsigned int32 = 0     #<b class="conum">(5)</b>
+int32 = 0              #<b class="conum">(6)</b>
+unsigned int64 = -1
+int64 = -1
+следущий адрес после j, для 16-байтового инта = 20000002  #<b class="conum">(7)</b>
+следущий адрес после j, для 32-байтового инта = 20000004  #<b class="conum">(8)</b>
+следущий адрес после j, для 64-байтового инта = 20000008  #<b class="conum">(9)</b></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>(1) и (2) по аналогии как в 4 задании, единственное что, это только то, что теперь он
+смотрит не на последние 8 бит, а на предпоследние:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="MyFreeProjectImg/Task8_1.png" alt="Task8 1">
+</div>
+</div>
+<div class="paragraph">
+<p>(3) и (4) по аналогии как в 4 задании, единственное что, это только то, что теперь он
+смотрит не на последние 2 байта, а на предпоследние:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="MyFreeProjectImg/Task8_2.png" alt="Task8 2">
+</div>
+</div>
+<div class="paragraph">
+<p>(5) и (6) так как число полностью вошло в 32 бита, то следующие 32 бита, после числа j, равны 0:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/Task8_3.png" alt="Task8 3">
+</div>
+</div>
+<div class="paragraph">
+<p>(7) - т.к. под запись данных отводится не меньше чем 1 байт, то и указатель "шагает" с
+каждым прибавлением на единицу не меньше чем на 1 байт. Так для 16-битного инта у которого
+размер под одно число отводится в 2 байта, с прибавлением указателя на адрес на 1, он
+будет переходить через 2 байта.
+(8) - Так как для 32-битного инта у которого размер под одно число отводится в 4 байта,
+с прибавлением указателя на адрес на 1, указатель будет переходить через 4 байта.
+(9) - Так как для 64-битного инта у которого размер под одно число отводится в 8 байта,
+с прибавлением указателя на адрес на 1, указатель будет переходить через 8 байта.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2022-10-11 22:37:39 +0500
+</div>
+</div>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  messageStyle: "none",
+  tex2jax: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]],
+    ignoreClass: "nostem|nolatexmath"
+  },
+  asciimath2jax: {
+    delimiters: [["\\$", "\\$"]],
+    ignoreClass: "nostem|noasciimath"
+  },
+  TeX: { equationNumbers: { autoNumber: "none" } }
+})
+MathJax.Hub.Register.StartupHook("AsciiMath Jax Ready", function () {
+  MathJax.InputJax.AsciiMath.postfilterHooks.Add(function (data, node) {
+    if ((node = data.script.parentNode) && (node = node.parentNode) && node.classList.contains("stemblock")) {
+      data.math.root.display = "block"
+    }
+    return data
+  })
+})
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
+</body>
+</html>

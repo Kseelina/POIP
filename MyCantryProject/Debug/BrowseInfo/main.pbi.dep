@@ -1,0 +1,64 @@
+R:\POIP\POIP\MyCantryProject\Debug\BrowseInfo\main.pbi: \
+  R:\POIP\POIP\MyCantryProject\main.cpp \
+  C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Registers\STM32F411\rccregisters.hpp \
+  C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Registers\STM32F411\FieldValues\rccfieldvalues.hpp \
+  C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Registers\fieldvalue.hpp \
+  R:\Program\IAR\arm\inc\cpp\cstddef R:\Program\IAR\arm\inc\c\stddef.h \
+  R:\Program\IAR\arm\inc\c\ycheck.h R:\Program\IAR\arm\inc\c\yvals.h \
+  R:\Program\IAR\arm\inc\c\DLib_Defaults.h \
+  R:\Program\IAR\arm\inc\c\DLib_Config_Normal.h \
+  R:\Program\IAR\arm\inc\c\DLib_Product.h \
+  R:\Program\IAR\arm\inc\c\ysizet.h R:\Program\IAR\arm\inc\cpp\limits \
+  R:\Program\IAR\arm\inc\cpp\cfloat R:\Program\IAR\arm\inc\c\float.h \
+  R:\Program\IAR\arm\inc\cpp\climits R:\Program\IAR\arm\inc\c\limits.h \
+  R:\Program\IAR\arm\inc\cpp\cmath R:\Program\IAR\arm\inc\c\math.h \
+  R:\Program\IAR\arm\inc\c\DLib_float_setup.h \
+  R:\Program\IAR\arm\inc\c\xtgmath.h \
+  R:\Program\IAR\arm\inc\cpp\xtr1common \
+  R:\Program\IAR\arm\inc\cpp\cstdlib R:\Program\IAR\arm\inc\c\stdlib.h \
+  R:\Program\IAR\arm\inc\c\DLib_Product_stdlib.h \
+  R:\Program\IAR\arm\inc\cpp\cwchar R:\Program\IAR\arm\inc\c\wchar.h \
+  R:\Program\IAR\arm\inc\cpp\xstddef R:\Program\IAR\arm\inc\c\xstddef0 \
+  R:\Program\IAR\arm\inc\cpp\initializer_list \
+  C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Registers\fieldvaluebase.hpp \
+  R:\Program\IAR\arm\inc\cpp\type_traits \
+  C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Registers\accessmode.hpp \
+  C:\Users\Home\Documents\GitHub\CortexLib\Common\susudefs.hpp \
+  R:\Program\IAR\arm\inc\cpp\algorithm \
+  R:\Program\IAR\arm\inc\cpp\xmemory R:\Program\IAR\arm\inc\cpp\xmemory0 \
+  R:\Program\IAR\arm\inc\cpp\cstdint R:\Program\IAR\arm\inc\c\stdint.h \
+  R:\Program\IAR\arm\inc\cpp\new R:\Program\IAR\arm\inc\cpp\exception \
+  R:\Program\IAR\arm\inc\cpp\xxexception \
+  R:\Program\IAR\arm\inc\c\xmemnew R:\Program\IAR\arm\inc\cpp\xutility \
+  R:\Program\IAR\arm\inc\cpp\utility R:\Program\IAR\arm\inc\cpp\iosfwd \
+  R:\Program\IAR\arm\inc\cpp\cstdio R:\Program\IAR\arm\inc\c\stdio.h \
+  R:\Program\IAR\arm\inc\cpp\cstring R:\Program\IAR\arm\inc\c\string.h \
+  R:\Program\IAR\arm\inc\c\DLib_Product_string.h \
+  R:\Program\IAR\arm\inc\c\xatomic.h R:\Program\IAR\arm\inc\cpp\cassert \
+  R:\Program\IAR\arm\inc\c\assert.h \
+  C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Registers\registerfield.hpp \
+  C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Registers\registerbase.hpp \
+  C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Registers\registertype.hpp \
+  C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Registers\register.hpp \
+  C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Registers\fieldvalue.hpp \
+  C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Registers\accessmode.hpp \
+  C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Registers\STM32F411\gpiocregisters.hpp \
+  C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Registers\STM32F411\FieldValues\gpiocfieldvalues.hpp \
+  R:\Program\IAR\arm\inc\cpp\iostream R:\Program\IAR\arm\inc\cpp\istream \
+  R:\Program\IAR\arm\inc\cpp\ostream R:\Program\IAR\arm\inc\cpp\ios \
+  R:\Program\IAR\arm\inc\cpp\xlocnum \
+  R:\Program\IAR\arm\inc\cpp\streambuf \
+  R:\Program\IAR\arm\inc\cpp\xiosbase R:\Program\IAR\arm\inc\cpp\xlocale \
+  R:\Program\IAR\arm\inc\cpp\clocale R:\Program\IAR\arm\inc\c\locale.h \
+  R:\Program\IAR\arm\inc\c\xctype.h \
+  R:\Program\IAR\arm\inc\c\xlocale_lconv.h \
+  R:\Program\IAR\arm\inc\cpp\cwctype R:\Program\IAR\arm\inc\c\wctype.h \
+  R:\Program\IAR\arm\inc\cpp\stdexcept \
+  R:\Program\IAR\arm\inc\cpp\xstring R:\Program\IAR\arm\inc\cpp\typeinfo \
+  R:\Program\IAR\arm\inc\cpp\xlocinfo R:\Program\IAR\arm\inc\cpp\cctype \
+  R:\Program\IAR\arm\inc\c\ctype.h R:\Program\IAR\arm\inc\cpp\ctime \
+  R:\Program\IAR\arm\inc\c\time.h R:\Program\IAR\arm\inc\c\time64.h \
+  R:\Program\IAR\arm\inc\cpp\system_error \
+  R:\Program\IAR\arm\inc\cpp\cerrno R:\Program\IAR\arm\inc\c\errno.h \
+  R:\Program\IAR\arm\inc\cpp\array R:\Program\IAR\arm\inc\cpp\iterator \
+  R:\Program\IAR\arm\inc\cpp\tuple
