@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V9.30.1.335/W64 for ARM                  14/Oct/2022  18:51:36
+# IAR ELF Linker V9.30.1.335/W64 for ARM                  26/Oct/2022  22:15:57
 # Copyright 2007-2022 IAR Systems AB.
 #
 #    Output file  =  R:\POIP\POIP\MyCantryProject\Debug\Exe\MyCantryProject.out
@@ -50,45 +50,65 @@ define block CSTACK with size = 8K, alignment = 8 { };
 define block HEAP with size = 8K, alignment = 8 { };
 "P2":  place in [from 0x2000'0000 to 0x2001'ffff] {
           rw, block CSTACK, block HEAP };
+initialize by copy { rw };
 
-No sections matched the following patterns:
+  Section            Kind         Address    Size  Object
+  -------            ----         -------    ----  ------
+"A0":                                        0x40
+  .intvec            ro code   0x800'0000    0x40  vector_table_M.o [5]
+                             - 0x800'0040    0x40
 
-  rw  in "P2"
+"P1":                                       0x164
+  .text              ro code   0x800'0040    0x34  main.o [1]
+  .text              ro code   0x800'0074    0x14  main.o [1]
+  .text              ro code   0x800'0088    0x14  main.o [1]
+  .text              ro code   0x800'009c    0x10  main.o [1]
+  .text              ro code   0x800'00ac    0x2a  copy_init3.o [5]
+  .text              ro code   0x800'00d6     0x2  vectortrap_M.o [5]
+  .text              ro code   0x800'00d8    0x28  data_init.o [5]
+  .text              ro code   0x800'0100    0x22  fpinit_M.o [4]
+  .iar.init_table    const     0x800'0124    0x14  - Linker created -
+  .rodata            const     0x800'0138     0x1  unwind_debug.o [6]
+  .text              ro code   0x800'013c    0x1e  cmain.o [5]
+  .text              ro code   0x800'015a     0x4  low_level_init.o [2]
+  .text              ro code   0x800'015e     0x4  exit.o [2]
+  .text              ro code   0x800'0164     0xa  cexit.o [5]
+  .text              ro code   0x800'0170    0x14  exit.o [6]
+  .text              ro code   0x800'0184    0x1c  cstartup_M.o [5]
+  Initializer bytes  const     0x800'01a0     0x4  <for P2-1>
+  .rodata            const     0x800'01a4     0x0  copy_init3.o [5]
+                             - 0x800'01a4   0x164
 
+"P2", part 1 of 2:                            0x4
+  P2-1                        0x2000'0000     0x4  <Init block>
+    .data            inited   0x2000'0000     0x4  main.o [1]
+                            - 0x2000'0004     0x4
 
-  Section   Kind         Address    Size  Object
-  -------   ----         -------    ----  ------
-"A0":                               0x40
-  .intvec   ro code   0x800'0000    0x40  vector_table_M.o [5]
-                    - 0x800'0040    0x40
-
-"P1":                               0xe0
-  .text     ro code   0x800'0040    0x22  fpinit_M.o [4]
-  .text     ro code   0x800'0062     0x2  vectortrap_M.o [5]
-  .text     ro code   0x800'0064    0x1e  cmain.o [5]
-  .text     ro code   0x800'0082     0x4  low_level_init.o [2]
-  .rodata   const     0x800'0086     0x1  unwind_debug.o [6]
-  .text     ro code   0x800'0088    0x1c  main.o [1]
-  .text     ro code   0x800'00a4     0x4  exit.o [2]
-  .text     ro code   0x800'00a8    0x14  main.o [1]
-  .text     ro code   0x800'00bc    0x14  main.o [1]
-  .text     ro code   0x800'00d0    0x14  main.o [1]
-  .text     ro code   0x800'00e4     0xa  cexit.o [5]
-  .text     ro code   0x800'00f0    0x14  exit.o [6]
-  .text     ro code   0x800'0104    0x1c  cstartup_M.o [5]
-                    - 0x800'0120    0xe0
-
-"P2":                             0x2000
-  CSTACK             0x2000'0000  0x2000  <Block>
-    CSTACK  uninit   0x2000'0000  0x2000  <Block tail>
-                   - 0x2000'2000  0x2000
+"P2", part 2 of 2:                         0x2000
+  CSTACK                      0x2000'0008  0x2000  <Block>
+    CSTACK           uninit   0x2000'0008  0x2000  <Block tail>
+                            - 0x2000'2008  0x2000
 
 Unused ranges:
 
          From           To      Size
          ----           --      ----
-   0x800'0120   0x803'ffff  0x3'fee0
-  0x2000'2000  0x2001'ffff  0x1'e000
+   0x800'01a4   0x803'ffff  0x3'fe5c
+  0x2000'0004  0x2000'0007       0x4
+  0x2000'2008  0x2001'ffff  0x1'dff8
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Copy (__iar_copy_init3)
+    1 source range, total size 0x4:
+           0x800'01a0   0x4
+    1 destination range, total size 0x4:
+          0x2000'0000   0x4
 
 
 
@@ -103,9 +123,9 @@ command line/config:
     Total:
 
 R:\POIP\POIP\MyCantryProject\Debug\Obj: [1]
-    main.o                 88
+    main.o                108        4        4
     -------------------------------------------
-    Total:                 88
+    Total:                108        4        4
 
 dl7M_tln.a: [2]
     exit.o                  4
@@ -125,11 +145,13 @@ m7M_tls.a: [4]
 rt7M_tl.a: [5]
     cexit.o                10
     cmain.o                30
+    copy_init3.o           42
     cstartup_M.o           28
+    data_init.o            40
     vector_table_M.o       64
     vectortrap_M.o          2
     -------------------------------------------
-    Total:                134
+    Total:                216
 
 shb_l.a: [6]
     exit.o                 20
@@ -137,10 +159,10 @@ shb_l.a: [6]
     -------------------------------------------
     Total:                 20        1
 
-    Gaps                    3
-    Linker created                        8'192
+    Gaps                    7        2
+    Linker created                  20    8'192
 -----------------------------------------------
-    Grand Total:          287        1    8'192
+    Grand Total:          393       27    8'196
 
 
 *******************************************************************************
@@ -149,37 +171,43 @@ shb_l.a: [6]
 
 Entry                       Address  Size  Type      Object
 -----                       -------  ----  ----      ------
-?main                    0x800'0065        Code  Gb  cmain.o [5]
-BusFault_Handler         0x800'0063        Code  Wk  vectortrap_M.o [5]
-CSTACK$$Base            0x2000'0000         --   Gb  - Linker created -
-CSTACK$$Limit           0x2000'2000         --   Gb  - Linker created -
-DebugMon_Handler         0x800'0063        Code  Wk  vectortrap_M.o [5]
-HardFault_Handler        0x800'0063        Code  Wk  vectortrap_M.o [5]
-MemManage_Handler        0x800'0063        Code  Wk  vectortrap_M.o [5]
-NMI_Handler              0x800'0063        Code  Wk  vectortrap_M.o [5]
-PendSV_Handler           0x800'0063        Code  Wk  vectortrap_M.o [5]
-Region$$Table$$Base             0x0         --   Gb  - Linker created -
-Region$$Table$$Limit            0x0         --   Gb  - Linker created -
-SVC_Handler              0x800'0063        Code  Wk  vectortrap_M.o [5]
-SysTick_Handler          0x800'0063        Code  Wk  vectortrap_M.o [5]
-UsageFault_Handler       0x800'0063        Code  Wk  vectortrap_M.o [5]
-__cmain                  0x800'0065        Code  Gb  cmain.o [5]
-__exit                   0x800'00f1  0x14  Code  Gb  exit.o [6]
-__iar_debug_exceptions   0x800'0086   0x1  Data  Gb  unwind_debug.o [6]
-__iar_init_vfp           0x800'0041        Code  Gb  fpinit_M.o [4]
-__iar_program_start      0x800'0105        Code  Gb  cstartup_M.o [5]
-__low_level_init         0x800'0083   0x4  Code  Gb  low_level_init.o [2]
+.iar.init_table$$Base    0x800'0124         --   Gb  - Linker created -
+.iar.init_table$$Limit   0x800'0138         --   Gb  - Linker created -
+?main                    0x800'013d        Code  Gb  cmain.o [5]
+BusFault_Handler         0x800'00d7        Code  Wk  vectortrap_M.o [5]
+CSTACK$$Base            0x2000'0008         --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'2008         --   Gb  - Linker created -
+DebugMon_Handler         0x800'00d7        Code  Wk  vectortrap_M.o [5]
+HardFault_Handler        0x800'00d7        Code  Wk  vectortrap_M.o [5]
+MemManage_Handler        0x800'00d7        Code  Wk  vectortrap_M.o [5]
+NMI_Handler              0x800'00d7        Code  Wk  vectortrap_M.o [5]
+PendSV_Handler           0x800'00d7        Code  Wk  vectortrap_M.o [5]
+Region$$Table$$Base      0x800'0124         --   Gb  - Linker created -
+Region$$Table$$Limit     0x800'0138         --   Gb  - Linker created -
+SVC_Handler              0x800'00d7        Code  Wk  vectortrap_M.o [5]
+SysTick_Handler          0x800'00d7        Code  Wk  vectortrap_M.o [5]
+UsageFault_Handler       0x800'00d7        Code  Wk  vectortrap_M.o [5]
+__cmain                  0x800'013d        Code  Gb  cmain.o [5]
+__exit                   0x800'0171  0x14  Code  Gb  exit.o [6]
+__iar_copy_init3         0x800'00ad  0x2a  Code  Gb  copy_init3.o [5]
+__iar_data_init3         0x800'00d9  0x28  Code  Gb  data_init.o [5]
+__iar_debug_exceptions   0x800'0138   0x1  Data  Gb  unwind_debug.o [6]
+__iar_init_vfp           0x800'0101        Code  Gb  fpinit_M.o [4]
+__iar_program_start      0x800'0185        Code  Gb  cstartup_M.o [5]
+__low_level_init         0x800'015b   0x4  Code  Gb  low_level_init.o [2]
 __vector_table           0x800'0000        Data  Gb  vector_table_M.o [5]
-_call_main               0x800'0071        Code  Gb  cmain.o [5]
-_exit                    0x800'00e5        Code  Gb  cexit.o [5]
-exit                     0x800'00a5   0x4  Code  Gb  exit.o [2]
-main                     0x800'0089  0x1c  Code  Gb  main.o [1]
-void FieldValueBase<GPIOC_MODER_MODER15_Values<GPIOC::MODER, (unsigned int)18, (unsigned int)2, ReadWriteMode, GPIOC::GPIOCMODERBase>, GPIOC::GPIOCMODERBase, (unsigned int)1>::Set<ReadWriteMode, void>()
-                         0x800'00bd  0x14  Code  Wk  main.o [1]
-void FieldValueBase<GPIOC_ODR_ODR9_Values<GPIOC::ODR, (unsigned int)9, (unsigned int)1, ReadWriteMode, GPIOC::GPIOCODRBase>, GPIOC::GPIOCODRBase, (unsigned int)1>::Set<ReadWriteMode, void>()
-                         0x800'00d1  0x14  Code  Wk  main.o [1]
-void FieldValueBase<RCC_AHB1ENR_GPIOCEN_Values<RCC::AHB1ENR, (unsigned int)2, (unsigned int)1, ReadWriteMode, RCC::RCCAHB1ENRBase>, RCC::RCCAHB1ENRBase, (unsigned int)1>::Set<ReadWriteMode, void>()
-                         0x800'00a9  0x14  Code  Wk  main.o [1]
+_call_main               0x800'0149        Code  Gb  cmain.o [5]
+_exit                    0x800'0165        Code  Gb  cexit.o [5]
+delay(int)               0x800'0041  0x12  Code  Gb  main.o [1]
+exit                     0x800'015f   0x4  Code  Gb  exit.o [2]
+main                     0x800'0053  0x1e  Code  Gb  main.o [1]
+void FieldValueBase<GPIOC_MODER_MODER15_Values<GPIOC::MODER, (unsigned int)14, (unsigned int)2, ReadWriteMode, GPIOC::GPIOCMODERBase>, GPIOC::GPIOCMODERBase, (unsigned int)1>::Set<ReadWriteMode, void>()
+                         0x800'0075  0x14  Code  Wk  main.o [1]
+void FieldValueBase<GPIOC_ODR_ODR7_Values<GPIOC::ODR, (unsigned int)7, (unsigned int)1, ReadWriteMode, GPIOC::GPIOCODRBase>, GPIOC::GPIOCODRBase, (unsigned int)0>::Set<ReadWriteMode, void>()
+                         0x800'009d  0x10  Code  Wk  main.o [1]
+void FieldValueBase<GPIOC_ODR_ODR7_Values<GPIOC::ODR, (unsigned int)7, (unsigned int)1, ReadWriteMode, GPIOC::GPIOCODRBase>, GPIOC::GPIOCODRBase, (unsigned int)1>::Set<ReadWriteMode, void>()
+                         0x800'0089  0x14  Code  Wk  main.o [1]
+zaderzka                0x2000'0000   0x4  Data  Gb  main.o [1]
 
 
 [1] = R:\POIP\POIP\MyCantryProject\Debug\Obj
@@ -189,9 +217,9 @@ void FieldValueBase<RCC_AHB1ENR_GPIOCEN_Values<RCC::AHB1ENR, (unsigned int)2, (u
 [5] = rt7M_tl.a
 [6] = shb_l.a
 
-    287 bytes of readonly  code memory
-      1 byte  of readonly  data memory
-  8'192 bytes of readwrite data memory
+    393 bytes of readonly  code memory
+     27 bytes of readonly  data memory
+  8'196 bytes of readwrite data memory
 
 Errors: none
 Warnings: none

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspace>
+    <project>
+        <path>$WS_DIR$\..\MyFirstProjct\First.ewp</path>
+    </project>
+    <project>
+        <path>$WS_DIR$\..\MyCantryProject\MyCantryProject.ewp</path>
+    </project>
+    <project>
+        <path>$WS_DIR$\MyFiveProject.ewp</path>
+    </project>
+    <batchBuild />
+</workspace>

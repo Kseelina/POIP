@@ -2,11 +2,30 @@
 #include "gpiocregisters.hpp" // регистр для порта с
 #include <iostream>
 #include <array> // библиотека для работы с массивами
-
+int32_t zaderzka = 1000000; // ?????????? ??? ??????? ????????
+  int delay(int value)
+{
+  for(int i = 0;i<value;++i)
+  {
+    volatile int j = i;
+  }
+}
 int arr[10]={1,2,3,4,5,6,7,8,9,0};
 int main()
 { 
-  RCC::AHB1ENR::GPIOCEN::Enable::Set();
+
+  GPIOC::MODER::MODER7::Output::Set(); // ?????? ???????????? ?? ?????????
+  
+  for(;;)
+  {
+    //----????????? ??????----------
+    delay(zaderzka);
+    GPIOC::ODR::ODR7::High::Set();
+    //----????????? ?? ??????-------
+    delay(zaderzka);
+    GPIOC::ODR::ODR7::Low::Set();
+  } 
+ /* RCC::AHB1ENR::GPIOCEN::Enable::Set();
   GPIOC::MODER::MODER9::Output::Set();
   
   GPIOC::ODR::ODR9::High::Set();
@@ -29,6 +48,6 @@ int main()
      
     //int& ref = arr[0]; 
       //std::cout << ref << std::endl;
-     
+     */
     return 1;
 }
