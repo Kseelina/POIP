@@ -1,0 +1,13 @@
+"R:\Program\IAR\arm\bin\armPROC.dll" 
+
+"R:\Program\IAR\arm\bin\armSIM2.dll" 
+
+"R:\POIP\POIP\MySixProject\Debug\Exe\MySixProject.out" 
+
+--plugin="R:\Program\IAR\arm\bin\armbat.dll" 
+
+--device_macro="R:\Program\IAR\arm/config/debugger/ST/STM32F4xx.dmac" 
+
+
+
+

@@ -9,5 +9,8 @@
     <project>
         <path>$WS_DIR$\MyFiveProject.ewp</path>
     </project>
+    <project>
+        <path>$WS_DIR$\..\MySixProject\MySixProject.ewp</path>
+    </project>
     <batchBuild />
 </workspace>
