@@ -8,4 +8,8 @@
         <path>R:\POIP\POIP\MySixProject\main.cpp</path>
         <encoding>Win-1251</encoding>
     </override>
+    <override>
+        <path>R:\POIP\POIP\Project_7\main.cpp</path>
+        <encoding>Win-1251</encoding>
+    </override>
 </userOverrides>

@@ -12,5 +12,8 @@
     <project>
         <path>$WS_DIR$\..\MySixProject\MySixProject.ewp</path>
     </project>
+    <project>
+        <path>$WS_DIR$\..\Project_7\Project_7.ewp</path>
+    </project>
     <batchBuild />
 </workspace>
