@@ -12,4 +12,24 @@
         <path>R:\POIP\POIP\Project_7\main.cpp</path>
         <encoding>Win-1251</encoding>
     </override>
+    <override>
+        <path>R:\POIP\POIP\Project_8\Hardware\Pin\LED.h</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
+        <path>R:\POIP\POIP\Project_8\Hardware\Pin\Togglable.h</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
+        <path>R:\POIP\POIP\Project_8\Hardware\Pin\pin.cpp</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
+        <path>R:\POIP\POIP\Project_8\Hardware\Pin\pin.h</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
+        <path>R:\POIP\POIP\Project_8\main.cpp</path>
+        <encoding>Win-1251</encoding>
+    </override>
 </userOverrides>

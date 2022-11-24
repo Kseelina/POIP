@@ -15,5 +15,8 @@
     <project>
         <path>$WS_DIR$\..\Project_7\Project_7.ewp</path>
     </project>
+    <project>
+        <path>$WS_DIR$\..\Project_8\Project_8.ewp</path>
+    </project>
     <batchBuild />
 </workspace>
