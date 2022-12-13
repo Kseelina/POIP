@@ -23,6 +23,8 @@ R:\POIP\POIP\Project_8\Hardware
 -I
 R:\POIP\POIP\Project_8\Hardware\Pin
 -I
+R:\POIP\POIP\Project_8\Components
+-I
 R:\Program\IAR\arm\inc\cpp
 -I
 R:\Program\IAR\arm\inc\c\aarch32
@@ -42,6 +44,8 @@ C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Registers
 R:\POIP\POIP\Project_8\Hardware
 -I
 R:\POIP\POIP\Project_8\Hardware\Pin
+-I
+R:\POIP\POIP\Project_8\Components
 -D__CHAR_BITS__=8
 -D__CHAR_MAX__=0xff
 -D__CHAR_MIN__=0

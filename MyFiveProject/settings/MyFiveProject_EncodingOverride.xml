@@ -13,6 +13,50 @@
         <encoding>Win-1251</encoding>
     </override>
     <override>
+        <path>R:\POIP\POIP\Project_8\Components\Button\Button.cpp</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
+        <path>R:\POIP\POIP\Project_8\Components\Button\Button.h</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
+        <path>R:\POIP\POIP\Project_8\Components\Button\IButton.h</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
+        <path>R:\POIP\POIP\Project_8\Components\Button\IPinReadable.h</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
+        <path>R:\POIP\POIP\Project_8\Components\ILED.h</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
+        <path>R:\POIP\POIP\Project_8\Components\LED\ILED.h</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
+        <path>R:\POIP\POIP\Project_8\Components\LED\LED.cpp</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
+        <path>R:\POIP\POIP\Project_8\Components\LED\LED.h</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
+        <path>R:\POIP\POIP\Project_8\Components\LED.cpp</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
+        <path>R:\POIP\POIP\Project_8\Components\LED.h</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
+        <path>R:\POIP\POIP\Project_8\Hardware\Pin\Fake.h</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
         <path>R:\POIP\POIP\Project_8\Hardware\Pin\LED.h</path>
         <encoding>Win-1251</encoding>
     </override>
@@ -21,11 +65,47 @@
         <encoding>Win-1251</encoding>
     </override>
     <override>
+        <path>R:\POIP\POIP\Project_8\Hardware\Pin\ipin.h</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
         <path>R:\POIP\POIP\Project_8\Hardware\Pin\pin.cpp</path>
         <encoding>Win-1251</encoding>
     </override>
     <override>
         <path>R:\POIP\POIP\Project_8\Hardware\Pin\pin.h</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
+        <path>R:\POIP\POIP\Project_8\Hardware\Pin\pinconfig.h</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
+        <path>R:\POIP\POIP\Project_8\Modes\AllMode\AllMode.cpp</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
+        <path>R:\POIP\POIP\Project_8\Modes\AllMode\AllMode.h</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
+        <path>R:\POIP\POIP\Project_8\Modes\ChessMode\ChessMode.cpp</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
+        <path>R:\POIP\POIP\Project_8\Modes\Garland.h</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
+        <path>R:\POIP\POIP\Project_8\Modes\IMode.h</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
+        <path>R:\POIP\POIP\Project_8\Modes\TreeMode\TreeMode.cpp</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
+        <path>R:\POIP\POIP\Project_8\Modes\TreeMode\TreeMode.h</path>
         <encoding>Win-1251</encoding>
     </override>
     <override>

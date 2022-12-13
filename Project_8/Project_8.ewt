@@ -2846,22 +2846,73 @@
         </settings>
     </configuration>
     <group>
+        <name>Components</name>
+        <group>
+            <name>Button</name>
+            <file>
+                <name>$PROJ_DIR$\Components\Button\Button.cpp</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Components\Button\IButton.h</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Components\Button\iPinReadable.h</name>
+            </file>
+        </group>
+        <group>
+            <name>LED</name>
+            <file>
+                <name>$PROJ_DIR$\Components\LED\ILED.h</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Components\LED\LED.cpp</name>
+            </file>
+        </group>
+    </group>
+    <group>
         <name>Hardware</name>
         <group>
             <name>Pin</name>
             <file>
-                <name>$PROJ_DIR$\Hardware\Pin\LED.h</name>
+                <name>$PROJ_DIR$\Hardware\Pin\Fake.h</name>
             </file>
             <file>
-                <name>$PROJ_DIR$\Hardware\Pin\pin.cpp</name>
+                <name>$PROJ_DIR$\Hardware\Pin\ipin.h</name>
             </file>
             <file>
                 <name>$PROJ_DIR$\Hardware\Pin\pin.h</name>
             </file>
             <file>
-                <name>$PROJ_DIR$\Hardware\Pin\Togglable.h</name>
+                <name>$PROJ_DIR$\Hardware\Pin\pinconfig.h</name>
             </file>
         </group>
+    </group>
+    <group>
+        <name>Modes</name>
+        <group>
+            <name>AllMode</name>
+            <file>
+                <name>$PROJ_DIR$\Modes\AllMode\AllMode.cpp</name>
+            </file>
+        </group>
+        <group>
+            <name>ChessMode</name>
+            <file>
+                <name>$PROJ_DIR$\Modes\ChessMode\ChessMode.cpp</name>
+            </file>
+        </group>
+        <group>
+            <name>TreeMode</name>
+            <file>
+                <name>$PROJ_DIR$\Modes\TreeMode\TreeMode.cpp</name>
+            </file>
+        </group>
+        <file>
+            <name>$PROJ_DIR$\Modes\Garland.h</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Modes\IMode.h</name>
+        </file>
     </group>
     <file>
         <name>$PROJ_DIR$\main.cpp</name>

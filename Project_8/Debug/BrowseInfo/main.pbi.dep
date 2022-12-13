@@ -46,13 +46,19 @@ R:\POIP\POIP\Project_8\Debug\BrowseInfo\main.pbi: \
   C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Registers\STM32F411\FieldValues\gpiocfieldvalues.hpp \
   C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Registers\STM32F411\gpioaregisters.hpp \
   C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Registers\STM32F411\FieldValues\gpioafieldvalues.hpp \
+  R:\POIP\POIP\Project_8\Hardware\Pin\pinconfig.h \
   R:\POIP\POIP\Project_8\Hardware\Pin\pin.h \
-  R:\Program\IAR\arm\inc\cpp\cinttypes \
-  R:\Program\IAR\arm\inc\c\inttypes.h \
-  R:\POIP\POIP\Project_8\Hardware\Pin\Togglable.h \
-  R:\POIP\POIP\Project_8\Hardware\Pin\LED.h \
-  R:\POIP\POIP\Project_8\Hardware\Pin\pin.h \
-  R:\Program\IAR\arm\inc\cpp\iostream R:\Program\IAR\arm\inc\cpp\istream \
+  R:\POIP\POIP\Project_8\Hardware\Pin\ipin.h \
+  R:\POIP\POIP\Project_8\Components\Button\IPinReadable.h \
+  R:\POIP\POIP\Project_8\Components\LED\LED.h \
+  R:\POIP\POIP\Project_8\Components\LED\ILED.h \
+  R:\POIP\POIP\Project_8\Hardware\Pin\ipin.h \
+  R:\POIP\POIP\Project_8\Components\Button\Button.h \
+  R:\POIP\POIP\Project_8\Components\Button\IButton.h \
+  R:\POIP\POIP\Project_8\Components\Button\iPinReadable.h \
+  R:\POIP\POIP\Project_8\Modes\AllMode\AllMode.h \
+  R:\POIP\POIP\Project_8\Modes\IMode.h R:\Program\IAR\arm\inc\cpp\array \
+  R:\Program\IAR\arm\inc\cpp\iterator R:\Program\IAR\arm\inc\cpp\istream \
   R:\Program\IAR\arm\inc\cpp\ostream R:\Program\IAR\arm\inc\cpp\ios \
   R:\Program\IAR\arm\inc\cpp\xlocnum \
   R:\Program\IAR\arm\inc\cpp\streambuf \
@@ -68,5 +74,12 @@ R:\POIP\POIP\Project_8\Debug\BrowseInfo\main.pbi: \
   R:\Program\IAR\arm\inc\c\time.h R:\Program\IAR\arm\inc\c\time64.h \
   R:\Program\IAR\arm\inc\cpp\system_error \
   R:\Program\IAR\arm\inc\cpp\cerrno R:\Program\IAR\arm\inc\c\errno.h \
-  R:\Program\IAR\arm\inc\cpp\array R:\Program\IAR\arm\inc\cpp\iterator \
-  R:\Program\IAR\arm\inc\cpp\tuple
+  R:\Program\IAR\arm\inc\cpp\tuple \
+  R:\POIP\POIP\Project_8\Components\LED\ILED.h \
+  R:\POIP\POIP\Project_8\Components\LED\iled.h \
+  R:\POIP\POIP\Project_8\Modes\ChessMode\ChessMode.h \
+  R:\POIP\POIP\Project_8\Components\LED\Iled.h \
+  R:\POIP\POIP\Project_8\Modes\TreeMode\TreeMode.h \
+  R:\POIP\POIP\Project_8\Modes\Garland.h \
+  R:\POIP\POIP\Project_8\Modes\IMode.h \
+  R:\Program\IAR\arm\inc\cpp\iostream
