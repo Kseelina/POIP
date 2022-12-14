@@ -80951,7 +80951,7 @@
         "display": "void IMode(const tArrayLeds &)",
         "location": {
           "column": "3",
-          "line": "14",
+          "line": "13",
           "path": "R:\\POIP\\POIP\\Project_8\\Modes\\IMode.h"
         },
         "name": "IMode",
@@ -80965,7 +80965,7 @@
         "display": "void Update(void)",
         "location": {
           "column": "16",
-          "line": "19",
+          "line": "18",
           "path": "R:\\POIP\\POIP\\Project_8\\Modes\\IMode.h"
         },
         "name": "Update",
@@ -80973,13 +80973,13 @@
         "scope": "IMode"
       },
       {
-        "ID": "c:IMode.h@318@S@IMode@F@Update#1@it",
+        "ID": "c:IMode.h@489@S@IMode@F@Update#1@it",
         "What": "VarDecl",
         "defdec": "Def",
         "display": "it",
         "location": {
           "column": "16",
-          "line": "21",
+          "line": "20",
           "path": "R:\\POIP\\POIP\\Project_8\\Modes\\IMode.h"
         },
         "name": "it",
@@ -80993,7 +80993,7 @@
         "display": "void Clear(void)",
         "location": {
           "column": "16",
-          "line": "27",
+          "line": "26",
           "path": "R:\\POIP\\POIP\\Project_8\\Modes\\IMode.h"
         },
         "name": "Clear",
@@ -81001,13 +81001,13 @@
         "scope": "IMode"
       },
       {
-        "ID": "c:IMode.h@429@S@IMode@F@Clear#1@it",
+        "ID": "c:IMode.h@634@S@IMode@F@Clear#1@it",
         "What": "VarDecl",
         "defdec": "Def",
         "display": "it",
         "location": {
           "column": "15",
-          "line": "29",
+          "line": "28",
           "path": "R:\\POIP\\POIP\\Project_8\\Modes\\IMode.h"
         },
         "name": "it",
@@ -81021,7 +81021,7 @@
         "display": "_leds",
         "location": {
           "column": "22",
-          "line": "44",
+          "line": "43",
           "path": "R:\\POIP\\POIP\\Project_8\\Modes\\IMode.h"
         },
         "name": "_leds",
@@ -81291,7 +81291,7 @@
     "scope": null
   },
   {
-    "ID": "c:ChessMode.cpp@151@S@ChessMode@F@Clear#1@i",
+    "ID": "c:ChessMode.cpp@305@S@ChessMode@F@Clear#1@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
@@ -101131,120 +101131,6 @@
     "scope": null
   },
   {
-    "ID": "c:@ST>4#T#T#N^type-parameter-0-0::Register:::Type#T@FieldValue",
-    "What": "ClassTemplate",
-    "defdec": "Def",
-    "display": "FieldValue<Field, Base, value, class>",
-    "location": {
-      "column": "8",
-      "line": "18",
-      "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\fieldvalue.hpp"
-    },
-    "members": [
-      {
-        "ID": "c:@ST>4#T#T#N^type-parameter-0-0::Register:::Type#T@FieldValue@Type",
-        "What": "TypeAliasDecl",
-        "defdec": "Def",
-        "display": "Type",
-        "location": {
-          "column": "9",
-          "line": "20",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\fieldvalue.hpp"
-        },
-        "name": "Type",
-        "origin": "user_include",
-        "scope": "FieldValue"
-      },
-      {
-        "ID": "c:@ST>4#T#T#N^type-parameter-0-0::Register:::Type#T@FieldValue@Mask",
-        "What": "VarDecl",
-        "defdec": "Def",
-        "display": "Mask",
-        "location": {
-          "column": "25",
-          "line": "21",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\fieldvalue.hpp"
-        },
-        "name": "Mask",
-        "origin": "user_include",
-        "scope": "FieldValue"
-      },
-      {
-        "ID": "c:@ST>4#T#T#N^type-parameter-0-0::Register:::Type#T@FieldValue@Value",
-        "What": "VarDecl",
-        "defdec": "Def",
-        "display": "Value",
-        "location": {
-          "column": "25",
-          "line": "22",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\fieldvalue.hpp"
-        },
-        "name": "Value",
-        "origin": "user_include",
-        "scope": "FieldValue"
-      },
-      {
-        "ID": "c:@ST>4#T#T#N^type-parameter-0-0::Register:::Type#T@FieldValue@Offset",
-        "What": "VarDecl",
-        "defdec": "Def",
-        "display": "Offset",
-        "location": {
-          "column": "25",
-          "line": "23",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\fieldvalue.hpp"
-        },
-        "name": "Offset",
-        "origin": "user_include",
-        "scope": "FieldValue"
-      },
-      {
-        "ID": "c:@ST>4#T#T#N^type-parameter-0-0::Register:::Type#T@FieldValue@BaseType",
-        "What": "TypeAliasDecl",
-        "defdec": "Def",
-        "display": "BaseType",
-        "location": {
-          "column": "9",
-          "line": "24",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\fieldvalue.hpp"
-        },
-        "name": "BaseType",
-        "origin": "user_include",
-        "scope": "FieldValue"
-      },
-      {
-        "ID": "c:@ST>4#T#T#N^type-parameter-0-0::Register:::Type#T@FieldValue@Access",
-        "What": "TypeAliasDecl",
-        "defdec": "Def",
-        "display": "Access",
-        "location": {
-          "column": "9",
-          "line": "25",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\fieldvalue.hpp"
-        },
-        "name": "Access",
-        "origin": "user_include",
-        "scope": "FieldValue"
-      },
-      {
-        "ID": "c:@ST>4#T#T#N^type-parameter-0-0::Register:::Type#T@FieldValue@FieldType",
-        "What": "TypeAliasDecl",
-        "defdec": "Def",
-        "display": "FieldType",
-        "location": {
-          "column": "9",
-          "line": "26",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\fieldvalue.hpp"
-        },
-        "name": "FieldType",
-        "origin": "user_include",
-        "scope": "FieldValue"
-      }
-    ],
-    "name": "FieldValue",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
     "ID": "c:gpiocregisters.hpp@372@macro@GPIOCREGISTERS_HPP",
     "What": "MacroDef",
     "defdec": "Def",
@@ -104115,6 +104001,66 @@
       }
     ],
     "name": "GPIOC",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@S@NoAccess",
+    "What": "Struct",
+    "defdec": "Def",
+    "display": "NoAccess",
+    "location": {
+      "column": "8",
+      "line": "8",
+      "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\accessmode.hpp"
+    },
+    "members": [],
+    "name": "NoAccess",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@S@WriteMode",
+    "What": "Struct",
+    "defdec": "Def",
+    "display": "WriteMode",
+    "location": {
+      "column": "8",
+      "line": "9",
+      "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\accessmode.hpp"
+    },
+    "members": [],
+    "name": "WriteMode",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@S@ReadMode",
+    "What": "Struct",
+    "defdec": "Def",
+    "display": "ReadMode",
+    "location": {
+      "column": "8",
+      "line": "10",
+      "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\accessmode.hpp"
+    },
+    "members": [],
+    "name": "ReadMode",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@S@ReadWriteMode",
+    "What": "Struct",
+    "defdec": "Def",
+    "display": "ReadWriteMode",
+    "location": {
+      "column": "8",
+      "line": "11",
+      "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\accessmode.hpp"
+    },
+    "members": [],
+    "name": "ReadWriteMode",
     "origin": "user_include",
     "scope": null
   },
@@ -106993,564 +106939,6 @@
     "scope": null
   },
   {
-    "ID": "c:@S@NoAccess",
-    "What": "Struct",
-    "defdec": "Def",
-    "display": "NoAccess",
-    "location": {
-      "column": "8",
-      "line": "8",
-      "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\accessmode.hpp"
-    },
-    "members": [],
-    "name": "NoAccess",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@S@WriteMode",
-    "What": "Struct",
-    "defdec": "Def",
-    "display": "WriteMode",
-    "location": {
-      "column": "8",
-      "line": "9",
-      "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\accessmode.hpp"
-    },
-    "members": [],
-    "name": "WriteMode",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@S@ReadMode",
-    "What": "Struct",
-    "defdec": "Def",
-    "display": "ReadMode",
-    "location": {
-      "column": "8",
-      "line": "10",
-      "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\accessmode.hpp"
-    },
-    "members": [],
-    "name": "ReadMode",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@S@ReadWriteMode",
-    "What": "Struct",
-    "defdec": "Def",
-    "display": "ReadWriteMode",
-    "location": {
-      "column": "8",
-      "line": "11",
-      "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\accessmode.hpp"
-    },
-    "members": [],
-    "name": "ReadWriteMode",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@ST>3#Ni#Ni#T@RegisterBase",
-    "What": "ClassTemplate",
-    "defdec": "Def",
-    "display": "RegisterBase<address, size, AccessMode>",
-    "location": {
-      "column": "8",
-      "line": "13",
-      "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\registerbase.hpp"
-    },
-    "members": [
-      {
-        "ID": "c:@ST>3#Ni#Ni#T@RegisterBase@Address",
-        "What": "VarDecl",
-        "defdec": "Def",
-        "display": "Address",
-        "location": {
-          "column": "25",
-          "line": "15",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\registerbase.hpp"
-        },
-        "name": "Address",
-        "origin": "user_include",
-        "scope": "RegisterBase"
-      },
-      {
-        "ID": "c:@ST>3#Ni#Ni#T@RegisterBase@Type",
-        "What": "TypeAliasDecl",
-        "defdec": "Def",
-        "display": "Type",
-        "location": {
-          "column": "9",
-          "line": "16",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\registerbase.hpp"
-        },
-        "name": "Type",
-        "origin": "user_include",
-        "scope": "RegisterBase"
-      },
-      {
-        "ID": "c:@ST>3#Ni#Ni#T@RegisterBase@FT@>2#T#TWrite#^RegisterType<size>:::Type#v#S",
-        "What": "FunctionTemplate",
-        "defdec": "Def",
-        "display": "void Write(RegisterBase::Type)",
-        "location": {
-          "column": "22",
-          "line": "22",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\registerbase.hpp"
-        },
-        "name": "Write",
-        "origin": "user_include",
-        "scope": "RegisterBase"
-      },
-      {
-        "ID": "",
-        "What": "FunctionTemplate",
-        "defdec": "Dec",
-        "display": "",
-        "location": {
-          "column": "24",
-          "line": "30",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\registerbase.hpp"
-        },
-        "name": "Write",
-        "origin": "user_include",
-        "scope": "RegisterBase"
-      },
-      {
-        "ID": "",
-        "What": "FunctionTemplate",
-        "defdec": "Dec",
-        "display": "",
-        "location": {
-          "column": "22",
-          "line": "38",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\registerbase.hpp"
-        },
-        "name": "Set",
-        "origin": "user_include",
-        "scope": "RegisterBase"
-      },
-      {
-        "ID": "c:@ST>3#Ni#Ni#T@RegisterBase@FT@>2#T#TToggle#^RegisterType<size>:::Type#v#S",
-        "What": "FunctionTemplate",
-        "defdec": "Def",
-        "display": "void Toggle(RegisterBase::Type)",
-        "location": {
-          "column": "22",
-          "line": "47",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\registerbase.hpp"
-        },
-        "name": "Toggle",
-        "origin": "user_include",
-        "scope": "RegisterBase"
-      },
-      {
-        "ID": "c:@ST>3#Ni#Ni#T@RegisterBase@FT@>2#T#TGet#^RegisterType<size>:::Type#S",
-        "What": "FunctionTemplate",
-        "defdec": "Def",
-        "display": "RegisterBase::Type Get(void)",
-        "location": {
-          "column": "22",
-          "line": "56",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\registerbase.hpp"
-        },
-        "name": "Get",
-        "origin": "user_include",
-        "scope": "RegisterBase"
-      }
-    ],
-    "name": "RegisterBase",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@ST>5#Ni#Ni#T#T#pT@Register",
-    "What": "ClassTemplate",
-    "defdec": "Def",
-    "display": "Register<address, size, AccessMode, FieldValueBaseType, Args>",
-    "location": {
-      "column": "7",
-      "line": "13",
-      "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\register.hpp"
-    },
-    "members": [
-      {
-        "ID": "c:@ST>5#Ni#Ni#T#T#pT@Register@Type",
-        "What": "TypeAliasDecl",
-        "defdec": "Def",
-        "display": "Type",
-        "location": {
-          "column": "11",
-          "line": "16",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\register.hpp"
-        },
-        "name": "Type",
-        "origin": "user_include",
-        "scope": "Register"
-      },
-      {
-        "ID": "",
-        "What": "FunctionTemplate",
-        "defdec": "Dec",
-        "display": "",
-        "location": {
-          "column": "17",
-          "line": "20",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\register.hpp"
-        },
-        "name": "Set",
-        "origin": "user_include",
-        "scope": "Register"
-      },
-      {
-        "ID": "",
-        "What": "FunctionTemplate",
-        "defdec": "Dec",
-        "display": "",
-        "location": {
-          "column": "17",
-          "line": "35",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\register.hpp"
-        },
-        "name": "Write",
-        "origin": "user_include",
-        "scope": "Register"
-      },
-      {
-        "ID": "",
-        "What": "FunctionTemplate",
-        "defdec": "Dec",
-        "display": "",
-        "location": {
-          "column": "17",
-          "line": "45",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\register.hpp"
-        },
-        "name": "IsSet",
-        "origin": "user_include",
-        "scope": "Register"
-      },
-      {
-        "ID": "c:@ST>5#Ni#Ni#T#T#pT@Register@FT@>2#T#TGetIndividualMask# #S",
-        "What": "FunctionTemplate",
-        "defdec": "Def",
-        "display": "auto GetIndividualMask(void)",
-        "location": {
-          "column": "27",
-          "line": "60",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\register.hpp"
-        },
-        "name": "GetIndividualMask",
-        "origin": "user_include",
-        "scope": "Register"
-      },
-      {
-        "ID": "c:register.hpp@3638@ST>5#Ni#Ni#T#T#pT@Register@FT@>2#T#TGetIndividualMask# #S@result",
-        "What": "VarDecl",
-        "defdec": "Def",
-        "display": "result",
-        "location": {
-          "column": "24",
-          "line": "62",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\register.hpp"
-        },
-        "name": "result",
-        "origin": "user_include",
-        "scope": "Register"
-      },
-      {
-        "ID": "c:@ST>5#Ni#Ni#T#T#pT@Register@F@GetMask#S",
-        "What": "CXXMethod",
-        "defdec": "Def",
-        "display": "auto GetMask(void)",
-        "location": {
-          "column": "27",
-          "line": "67",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\register.hpp"
-        },
-        "name": "GetMask",
-        "origin": "user_include",
-        "scope": "Register"
-      },
-      {
-        "ID": "c:@ST>5#Ni#Ni#T#T#pT@Register@FT@>2#T#TGetIndividualValue# #S",
-        "What": "FunctionTemplate",
-        "defdec": "Def",
-        "display": "auto GetIndividualValue(void)",
-        "location": {
-          "column": "27",
-          "line": "78",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\register.hpp"
-        },
-        "name": "GetIndividualValue",
-        "origin": "user_include",
-        "scope": "Register"
-      },
-      {
-        "ID": "c:register.hpp@4871@ST>5#Ni#Ni#T#T#pT@Register@FT@>2#T#TGetIndividualValue# #S@result",
-        "What": "VarDecl",
-        "defdec": "Def",
-        "display": "result",
-        "location": {
-          "column": "24",
-          "line": "80",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\register.hpp"
-        },
-        "name": "result",
-        "origin": "user_include",
-        "scope": "Register"
-      },
-      {
-        "ID": "c:@ST>5#Ni#Ni#T#T#pT@Register@F@GetValue#S",
-        "What": "CXXMethod",
-        "defdec": "Def",
-        "display": "auto GetValue(void)",
-        "location": {
-          "column": "27",
-          "line": "85",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\register.hpp"
-        },
-        "name": "GetValue",
-        "origin": "user_include",
-        "scope": "Register"
-      },
-      {
-        "ID": "c:@ST>5#Ni#Ni#T#T#pT@Register@FT@>1#pTIsIdentType# #S",
-        "What": "FunctionTemplate",
-        "defdec": "Def",
-        "display": "auto IsIdentType(void)",
-        "location": {
-          "column": "27",
-          "line": "91",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\register.hpp"
-        },
-        "name": "IsIdentType",
-        "origin": "user_include",
-        "scope": "Register"
-      },
-      {
-        "ID": "c:@ST>5#Ni#Ni#T#T#pT@Register@FT@>2#T#pTIsIdent#b#S",
-        "What": "FunctionTemplate",
-        "defdec": "Def",
-        "display": "bool IsIdent(void)",
-        "location": {
-          "column": "27",
-          "line": "97",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\register.hpp"
-        },
-        "name": "IsIdent",
-        "origin": "user_include",
-        "scope": "Register"
-      }
-    ],
-    "name": "Register",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:iostream@107@macro@_IOSTREAM_",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_IOSTREAM_",
-    "location": {
-      "column": "9",
-      "line": "4",
-      "path": "R:\\Program\\IAR\\arm\\inc\\cpp\\iostream"
-    },
-    "name": "_IOSTREAM_",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@N@std",
-    "What": "Namespace",
-    "defdec": "Def",
-    "display": "std",
-    "location": {
-      "column": "11",
-      "line": "12",
-      "path": "R:\\Program\\IAR\\arm\\inc\\cpp\\iostream"
-    },
-    "members": [
-      {
-        "ID": "c:@N@std@cin",
-        "What": "VarDecl",
-        "defdec": "Dec",
-        "display": "cin",
-        "location": {
-          "column": "32",
-          "line": "16",
-          "path": "R:\\Program\\IAR\\arm\\inc\\cpp\\iostream"
-        },
-        "name": "cin",
-        "origin": "system_include",
-        "scope": "std"
-      },
-      {
-        "ID": "c:@N@std@cout",
-        "What": "VarDecl",
-        "defdec": "Dec",
-        "display": "cout",
-        "location": {
-          "column": "32",
-          "line": "17",
-          "path": "R:\\Program\\IAR\\arm\\inc\\cpp\\iostream"
-        },
-        "name": "cout",
-        "origin": "system_include",
-        "scope": "std"
-      },
-      {
-        "ID": "c:@N@std@cerr",
-        "What": "VarDecl",
-        "defdec": "Dec",
-        "display": "cerr",
-        "location": {
-          "column": "32",
-          "line": "18",
-          "path": "R:\\Program\\IAR\\arm\\inc\\cpp\\iostream"
-        },
-        "name": "cerr",
-        "origin": "system_include",
-        "scope": "std"
-      },
-      {
-        "ID": "c:@N@std@clog",
-        "What": "VarDecl",
-        "defdec": "Dec",
-        "display": "clog",
-        "location": {
-          "column": "32",
-          "line": "19",
-          "path": "R:\\Program\\IAR\\arm\\inc\\cpp\\iostream"
-        },
-        "name": "clog",
-        "origin": "system_include",
-        "scope": "std"
-      },
-      {
-        "ID": "c:@N@std@S@_Winit",
-        "What": "Class",
-        "defdec": "Def",
-        "display": "_Winit",
-        "location": {
-          "column": "7",
-          "line": "22",
-          "path": "R:\\Program\\IAR\\arm\\inc\\cpp\\iostream"
-        },
-        "members": [
-          {
-            "ID": "c:@N@std@S@_Winit@F@_Winit#",
-            "What": "CXXConstructor",
-            "defdec": "Dec",
-            "display": "void _Winit(void)",
-            "location": {
-              "column": "3",
-              "line": "25",
-              "path": "R:\\Program\\IAR\\arm\\inc\\cpp\\iostream"
-            },
-            "name": "_Winit",
-            "origin": "system_include",
-            "scope": "std::_Winit"
-          },
-          {
-            "ID": "c:@N@std@S@_Winit@F@~_Winit#",
-            "What": "CXXDestructor",
-            "defdec": "Dec",
-            "display": "void ~_Winit(void)",
-            "location": {
-              "column": "3",
-              "line": "26",
-              "path": "R:\\Program\\IAR\\arm\\inc\\cpp\\iostream"
-            },
-            "name": "~_Winit",
-            "origin": "system_include",
-            "scope": "std::_Winit"
-          },
-          {
-            "ID": "c:@N@std@S@_Winit@_Init_cnt",
-            "What": "VarDecl",
-            "defdec": "Dec",
-            "display": "_Init_cnt",
-            "location": {
-              "column": "14",
-              "line": "28",
-              "path": "R:\\Program\\IAR\\arm\\inc\\cpp\\iostream"
-            },
-            "name": "_Init_cnt",
-            "origin": "system_include",
-            "scope": "std::_Winit"
-          }
-        ],
-        "name": "_Winit",
-        "origin": "system_include",
-        "scope": "std"
-      },
-      {
-        "ID": "c:@N@std@wcin",
-        "What": "VarDecl",
-        "defdec": "Dec",
-        "display": "wcin",
-        "location": {
-          "column": "33",
-          "line": "32",
-          "path": "R:\\Program\\IAR\\arm\\inc\\cpp\\iostream"
-        },
-        "name": "wcin",
-        "origin": "system_include",
-        "scope": "std"
-      },
-      {
-        "ID": "c:@N@std@wcout",
-        "What": "VarDecl",
-        "defdec": "Dec",
-        "display": "wcout",
-        "location": {
-          "column": "33",
-          "line": "33",
-          "path": "R:\\Program\\IAR\\arm\\inc\\cpp\\iostream"
-        },
-        "name": "wcout",
-        "origin": "system_include",
-        "scope": "std"
-      },
-      {
-        "ID": "c:@N@std@wcerr",
-        "What": "VarDecl",
-        "defdec": "Dec",
-        "display": "wcerr",
-        "location": {
-          "column": "33",
-          "line": "34",
-          "path": "R:\\Program\\IAR\\arm\\inc\\cpp\\iostream"
-        },
-        "name": "wcerr",
-        "origin": "system_include",
-        "scope": "std"
-      },
-      {
-        "ID": "c:@N@std@wclog",
-        "What": "VarDecl",
-        "defdec": "Dec",
-        "display": "wclog",
-        "location": {
-          "column": "33",
-          "line": "35",
-          "path": "R:\\Program\\IAR\\arm\\inc\\cpp\\iostream"
-        },
-        "name": "wclog",
-        "origin": "system_include",
-        "scope": "std"
-      }
-    ],
-    "name": "std",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
     "ID": "c:@ST>5#T#Ni#Ni#T#T@RegisterField",
     "What": "ClassTemplate",
     "defdec": "Def",
@@ -108012,116 +107400,728 @@
     "scope": null
   },
   {
-    "ID": "c:pin.h@78@macro@PIN_H",
-    "What": "MacroDef",
+    "ID": "c:@ST>5#Ni#Ni#T#T#pT@Register",
+    "What": "ClassTemplate",
     "defdec": "Def",
-    "display": "PIN_H",
+    "display": "Register<address, size, AccessMode, FieldValueBaseType, Args>",
     "location": {
-      "column": "9",
-      "line": "3",
-      "path": "R:\\POIP\\POIP\\Project_8\\Hardware\\Pin\\pin.h"
+      "column": "7",
+      "line": "13",
+      "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\register.hpp"
     },
-    "name": "PIN_H",
+    "members": [
+      {
+        "ID": "c:@ST>5#Ni#Ni#T#T#pT@Register@Type",
+        "What": "TypeAliasDecl",
+        "defdec": "Def",
+        "display": "Type",
+        "location": {
+          "column": "11",
+          "line": "16",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\register.hpp"
+        },
+        "name": "Type",
+        "origin": "user_include",
+        "scope": "Register"
+      },
+      {
+        "ID": "",
+        "What": "FunctionTemplate",
+        "defdec": "Dec",
+        "display": "",
+        "location": {
+          "column": "17",
+          "line": "20",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\register.hpp"
+        },
+        "name": "Set",
+        "origin": "user_include",
+        "scope": "Register"
+      },
+      {
+        "ID": "",
+        "What": "FunctionTemplate",
+        "defdec": "Dec",
+        "display": "",
+        "location": {
+          "column": "17",
+          "line": "35",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\register.hpp"
+        },
+        "name": "Write",
+        "origin": "user_include",
+        "scope": "Register"
+      },
+      {
+        "ID": "",
+        "What": "FunctionTemplate",
+        "defdec": "Dec",
+        "display": "",
+        "location": {
+          "column": "17",
+          "line": "45",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\register.hpp"
+        },
+        "name": "IsSet",
+        "origin": "user_include",
+        "scope": "Register"
+      },
+      {
+        "ID": "c:@ST>5#Ni#Ni#T#T#pT@Register@FT@>2#T#TGetIndividualMask# #S",
+        "What": "FunctionTemplate",
+        "defdec": "Def",
+        "display": "auto GetIndividualMask(void)",
+        "location": {
+          "column": "27",
+          "line": "60",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\register.hpp"
+        },
+        "name": "GetIndividualMask",
+        "origin": "user_include",
+        "scope": "Register"
+      },
+      {
+        "ID": "c:register.hpp@3638@ST>5#Ni#Ni#T#T#pT@Register@FT@>2#T#TGetIndividualMask# #S@result",
+        "What": "VarDecl",
+        "defdec": "Def",
+        "display": "result",
+        "location": {
+          "column": "24",
+          "line": "62",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\register.hpp"
+        },
+        "name": "result",
+        "origin": "user_include",
+        "scope": "Register"
+      },
+      {
+        "ID": "c:@ST>5#Ni#Ni#T#T#pT@Register@F@GetMask#S",
+        "What": "CXXMethod",
+        "defdec": "Def",
+        "display": "auto GetMask(void)",
+        "location": {
+          "column": "27",
+          "line": "67",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\register.hpp"
+        },
+        "name": "GetMask",
+        "origin": "user_include",
+        "scope": "Register"
+      },
+      {
+        "ID": "c:@ST>5#Ni#Ni#T#T#pT@Register@FT@>2#T#TGetIndividualValue# #S",
+        "What": "FunctionTemplate",
+        "defdec": "Def",
+        "display": "auto GetIndividualValue(void)",
+        "location": {
+          "column": "27",
+          "line": "78",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\register.hpp"
+        },
+        "name": "GetIndividualValue",
+        "origin": "user_include",
+        "scope": "Register"
+      },
+      {
+        "ID": "c:register.hpp@4871@ST>5#Ni#Ni#T#T#pT@Register@FT@>2#T#TGetIndividualValue# #S@result",
+        "What": "VarDecl",
+        "defdec": "Def",
+        "display": "result",
+        "location": {
+          "column": "24",
+          "line": "80",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\register.hpp"
+        },
+        "name": "result",
+        "origin": "user_include",
+        "scope": "Register"
+      },
+      {
+        "ID": "c:@ST>5#Ni#Ni#T#T#pT@Register@F@GetValue#S",
+        "What": "CXXMethod",
+        "defdec": "Def",
+        "display": "auto GetValue(void)",
+        "location": {
+          "column": "27",
+          "line": "85",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\register.hpp"
+        },
+        "name": "GetValue",
+        "origin": "user_include",
+        "scope": "Register"
+      },
+      {
+        "ID": "c:@ST>5#Ni#Ni#T#T#pT@Register@FT@>1#pTIsIdentType# #S",
+        "What": "FunctionTemplate",
+        "defdec": "Def",
+        "display": "auto IsIdentType(void)",
+        "location": {
+          "column": "27",
+          "line": "91",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\register.hpp"
+        },
+        "name": "IsIdentType",
+        "origin": "user_include",
+        "scope": "Register"
+      },
+      {
+        "ID": "c:@ST>5#Ni#Ni#T#T#pT@Register@FT@>2#T#pTIsIdent#b#S",
+        "What": "FunctionTemplate",
+        "defdec": "Def",
+        "display": "bool IsIdent(void)",
+        "location": {
+          "column": "27",
+          "line": "97",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\register.hpp"
+        },
+        "name": "IsIdent",
+        "origin": "user_include",
+        "scope": "Register"
+      }
+    ],
+    "name": "Register",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:@ST>2#T#NI@Pin",
-    "What": "ClassTemplate",
+    "ID": "c:iostream@107@macro@_IOSTREAM_",
+    "What": "MacroDef",
     "defdec": "Def",
-    "display": "Pin<TPort, pinNum>",
+    "display": "_IOSTREAM_",
     "location": {
-      "column": "7",
-      "line": "13",
-      "path": "R:\\POIP\\POIP\\Project_8\\Hardware\\Pin\\pin.h"
+      "column": "9",
+      "line": "4",
+      "path": "R:\\Program\\IAR\\arm\\inc\\cpp\\iostream"
+    },
+    "name": "_IOSTREAM_",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@N@std",
+    "What": "Namespace",
+    "defdec": "Def",
+    "display": "std",
+    "location": {
+      "column": "11",
+      "line": "12",
+      "path": "R:\\Program\\IAR\\arm\\inc\\cpp\\iostream"
     },
     "members": [
       {
-        "ID": "c:@ST>2#T#NI@Pin@F@Set#",
-        "What": "CXXMethod",
+        "ID": "c:@N@std@cin",
+        "What": "VarDecl",
         "defdec": "Dec",
-        "display": "void Set(void)",
+        "display": "cin",
         "location": {
-          "column": "8",
+          "column": "32",
           "line": "16",
-          "path": "R:\\POIP\\POIP\\Project_8\\Hardware\\Pin\\pin.h"
+          "path": "R:\\Program\\IAR\\arm\\inc\\cpp\\iostream"
+        },
+        "name": "cin",
+        "origin": "system_include",
+        "scope": "std"
+      },
+      {
+        "ID": "c:@N@std@cout",
+        "What": "VarDecl",
+        "defdec": "Dec",
+        "display": "cout",
+        "location": {
+          "column": "32",
+          "line": "17",
+          "path": "R:\\Program\\IAR\\arm\\inc\\cpp\\iostream"
+        },
+        "name": "cout",
+        "origin": "system_include",
+        "scope": "std"
+      },
+      {
+        "ID": "c:@N@std@cerr",
+        "What": "VarDecl",
+        "defdec": "Dec",
+        "display": "cerr",
+        "location": {
+          "column": "32",
+          "line": "18",
+          "path": "R:\\Program\\IAR\\arm\\inc\\cpp\\iostream"
+        },
+        "name": "cerr",
+        "origin": "system_include",
+        "scope": "std"
+      },
+      {
+        "ID": "c:@N@std@clog",
+        "What": "VarDecl",
+        "defdec": "Dec",
+        "display": "clog",
+        "location": {
+          "column": "32",
+          "line": "19",
+          "path": "R:\\Program\\IAR\\arm\\inc\\cpp\\iostream"
+        },
+        "name": "clog",
+        "origin": "system_include",
+        "scope": "std"
+      },
+      {
+        "ID": "c:@N@std@S@_Winit",
+        "What": "Class",
+        "defdec": "Def",
+        "display": "_Winit",
+        "location": {
+          "column": "7",
+          "line": "22",
+          "path": "R:\\Program\\IAR\\arm\\inc\\cpp\\iostream"
+        },
+        "members": [
+          {
+            "ID": "c:@N@std@S@_Winit@F@_Winit#",
+            "What": "CXXConstructor",
+            "defdec": "Dec",
+            "display": "void _Winit(void)",
+            "location": {
+              "column": "3",
+              "line": "25",
+              "path": "R:\\Program\\IAR\\arm\\inc\\cpp\\iostream"
+            },
+            "name": "_Winit",
+            "origin": "system_include",
+            "scope": "std::_Winit"
+          },
+          {
+            "ID": "c:@N@std@S@_Winit@F@~_Winit#",
+            "What": "CXXDestructor",
+            "defdec": "Dec",
+            "display": "void ~_Winit(void)",
+            "location": {
+              "column": "3",
+              "line": "26",
+              "path": "R:\\Program\\IAR\\arm\\inc\\cpp\\iostream"
+            },
+            "name": "~_Winit",
+            "origin": "system_include",
+            "scope": "std::_Winit"
+          },
+          {
+            "ID": "c:@N@std@S@_Winit@_Init_cnt",
+            "What": "VarDecl",
+            "defdec": "Dec",
+            "display": "_Init_cnt",
+            "location": {
+              "column": "14",
+              "line": "28",
+              "path": "R:\\Program\\IAR\\arm\\inc\\cpp\\iostream"
+            },
+            "name": "_Init_cnt",
+            "origin": "system_include",
+            "scope": "std::_Winit"
+          }
+        ],
+        "name": "_Winit",
+        "origin": "system_include",
+        "scope": "std"
+      },
+      {
+        "ID": "c:@N@std@wcin",
+        "What": "VarDecl",
+        "defdec": "Dec",
+        "display": "wcin",
+        "location": {
+          "column": "33",
+          "line": "32",
+          "path": "R:\\Program\\IAR\\arm\\inc\\cpp\\iostream"
+        },
+        "name": "wcin",
+        "origin": "system_include",
+        "scope": "std"
+      },
+      {
+        "ID": "c:@N@std@wcout",
+        "What": "VarDecl",
+        "defdec": "Dec",
+        "display": "wcout",
+        "location": {
+          "column": "33",
+          "line": "33",
+          "path": "R:\\Program\\IAR\\arm\\inc\\cpp\\iostream"
+        },
+        "name": "wcout",
+        "origin": "system_include",
+        "scope": "std"
+      },
+      {
+        "ID": "c:@N@std@wcerr",
+        "What": "VarDecl",
+        "defdec": "Dec",
+        "display": "wcerr",
+        "location": {
+          "column": "33",
+          "line": "34",
+          "path": "R:\\Program\\IAR\\arm\\inc\\cpp\\iostream"
+        },
+        "name": "wcerr",
+        "origin": "system_include",
+        "scope": "std"
+      },
+      {
+        "ID": "c:@N@std@wclog",
+        "What": "VarDecl",
+        "defdec": "Dec",
+        "display": "wclog",
+        "location": {
+          "column": "33",
+          "line": "35",
+          "path": "R:\\Program\\IAR\\arm\\inc\\cpp\\iostream"
+        },
+        "name": "wclog",
+        "origin": "system_include",
+        "scope": "std"
+      }
+    ],
+    "name": "std",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@ST>4#T#T#N^type-parameter-0-0::Register:::Type#T@FieldValue",
+    "What": "ClassTemplate",
+    "defdec": "Def",
+    "display": "FieldValue<Field, Base, value, class>",
+    "location": {
+      "column": "8",
+      "line": "18",
+      "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\fieldvalue.hpp"
+    },
+    "members": [
+      {
+        "ID": "c:@ST>4#T#T#N^type-parameter-0-0::Register:::Type#T@FieldValue@Type",
+        "What": "TypeAliasDecl",
+        "defdec": "Def",
+        "display": "Type",
+        "location": {
+          "column": "9",
+          "line": "20",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\fieldvalue.hpp"
+        },
+        "name": "Type",
+        "origin": "user_include",
+        "scope": "FieldValue"
+      },
+      {
+        "ID": "c:@ST>4#T#T#N^type-parameter-0-0::Register:::Type#T@FieldValue@Mask",
+        "What": "VarDecl",
+        "defdec": "Def",
+        "display": "Mask",
+        "location": {
+          "column": "25",
+          "line": "21",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\fieldvalue.hpp"
+        },
+        "name": "Mask",
+        "origin": "user_include",
+        "scope": "FieldValue"
+      },
+      {
+        "ID": "c:@ST>4#T#T#N^type-parameter-0-0::Register:::Type#T@FieldValue@Value",
+        "What": "VarDecl",
+        "defdec": "Def",
+        "display": "Value",
+        "location": {
+          "column": "25",
+          "line": "22",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\fieldvalue.hpp"
+        },
+        "name": "Value",
+        "origin": "user_include",
+        "scope": "FieldValue"
+      },
+      {
+        "ID": "c:@ST>4#T#T#N^type-parameter-0-0::Register:::Type#T@FieldValue@Offset",
+        "What": "VarDecl",
+        "defdec": "Def",
+        "display": "Offset",
+        "location": {
+          "column": "25",
+          "line": "23",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\fieldvalue.hpp"
+        },
+        "name": "Offset",
+        "origin": "user_include",
+        "scope": "FieldValue"
+      },
+      {
+        "ID": "c:@ST>4#T#T#N^type-parameter-0-0::Register:::Type#T@FieldValue@BaseType",
+        "What": "TypeAliasDecl",
+        "defdec": "Def",
+        "display": "BaseType",
+        "location": {
+          "column": "9",
+          "line": "24",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\fieldvalue.hpp"
+        },
+        "name": "BaseType",
+        "origin": "user_include",
+        "scope": "FieldValue"
+      },
+      {
+        "ID": "c:@ST>4#T#T#N^type-parameter-0-0::Register:::Type#T@FieldValue@Access",
+        "What": "TypeAliasDecl",
+        "defdec": "Def",
+        "display": "Access",
+        "location": {
+          "column": "9",
+          "line": "25",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\fieldvalue.hpp"
+        },
+        "name": "Access",
+        "origin": "user_include",
+        "scope": "FieldValue"
+      },
+      {
+        "ID": "c:@ST>4#T#T#N^type-parameter-0-0::Register:::Type#T@FieldValue@FieldType",
+        "What": "TypeAliasDecl",
+        "defdec": "Def",
+        "display": "FieldType",
+        "location": {
+          "column": "9",
+          "line": "26",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\fieldvalue.hpp"
+        },
+        "name": "FieldType",
+        "origin": "user_include",
+        "scope": "FieldValue"
+      }
+    ],
+    "name": "FieldValue",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@ST>3#Ni#Ni#T@RegisterBase",
+    "What": "ClassTemplate",
+    "defdec": "Def",
+    "display": "RegisterBase<address, size, AccessMode>",
+    "location": {
+      "column": "8",
+      "line": "13",
+      "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\registerbase.hpp"
+    },
+    "members": [
+      {
+        "ID": "c:@ST>3#Ni#Ni#T@RegisterBase@Address",
+        "What": "VarDecl",
+        "defdec": "Def",
+        "display": "Address",
+        "location": {
+          "column": "25",
+          "line": "15",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\registerbase.hpp"
+        },
+        "name": "Address",
+        "origin": "user_include",
+        "scope": "RegisterBase"
+      },
+      {
+        "ID": "c:@ST>3#Ni#Ni#T@RegisterBase@Type",
+        "What": "TypeAliasDecl",
+        "defdec": "Def",
+        "display": "Type",
+        "location": {
+          "column": "9",
+          "line": "16",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\registerbase.hpp"
+        },
+        "name": "Type",
+        "origin": "user_include",
+        "scope": "RegisterBase"
+      },
+      {
+        "ID": "c:@ST>3#Ni#Ni#T@RegisterBase@FT@>2#T#TWrite#^RegisterType<size>:::Type#v#S",
+        "What": "FunctionTemplate",
+        "defdec": "Def",
+        "display": "void Write(RegisterBase::Type)",
+        "location": {
+          "column": "22",
+          "line": "22",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\registerbase.hpp"
+        },
+        "name": "Write",
+        "origin": "user_include",
+        "scope": "RegisterBase"
+      },
+      {
+        "ID": "",
+        "What": "FunctionTemplate",
+        "defdec": "Dec",
+        "display": "",
+        "location": {
+          "column": "24",
+          "line": "30",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\registerbase.hpp"
+        },
+        "name": "Write",
+        "origin": "user_include",
+        "scope": "RegisterBase"
+      },
+      {
+        "ID": "",
+        "What": "FunctionTemplate",
+        "defdec": "Dec",
+        "display": "",
+        "location": {
+          "column": "22",
+          "line": "38",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\registerbase.hpp"
         },
         "name": "Set",
         "origin": "user_include",
-        "scope": "Pin"
+        "scope": "RegisterBase"
       },
       {
-        "ID": "c:@ST>2#T#NI@Pin@F@Reset#1",
-        "What": "CXXMethod",
+        "ID": "c:@ST>3#Ni#Ni#T@RegisterBase@FT@>2#T#TToggle#^RegisterType<size>:::Type#v#S",
+        "What": "FunctionTemplate",
         "defdec": "Def",
-        "display": "void Reset(void)",
+        "display": "void Toggle(RegisterBase::Type)",
         "location": {
-          "column": "8",
-          "line": "21",
-          "path": "R:\\POIP\\POIP\\Project_8\\Hardware\\Pin\\pin.h"
-        },
-        "name": "Reset",
-        "origin": "user_include",
-        "scope": "Pin"
-      },
-      {
-        "ID": "c:pin.h@711@ST>2#T#NI@Pin@F@Reset#1@value",
-        "What": "VarDecl",
-        "defdec": "Def",
-        "display": "value",
-        "location": {
-          "column": "10",
-          "line": "23",
-          "path": "R:\\POIP\\POIP\\Project_8\\Hardware\\Pin\\pin.h"
-        },
-        "name": "value",
-        "origin": "user_include",
-        "scope": "Pin"
-      },
-      {
-        "ID": "c:@ST>2#T#NI@Pin@F@Toggle#1",
-        "What": "CXXMethod",
-        "defdec": "Def",
-        "display": "void Toggle(void)",
-        "location": {
-          "column": "8",
-          "line": "27",
-          "path": "R:\\POIP\\POIP\\Project_8\\Hardware\\Pin\\pin.h"
+          "column": "22",
+          "line": "47",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\registerbase.hpp"
         },
         "name": "Toggle",
         "origin": "user_include",
-        "scope": "Pin"
+        "scope": "RegisterBase"
       },
       {
-        "ID": "c:@ST>2#T#NI@Pin@F@IsHigh#1",
-        "What": "CXXMethod",
+        "ID": "c:@ST>3#Ni#Ni#T@RegisterBase@FT@>2#T#TGet#^RegisterType<size>:::Type#S",
+        "What": "FunctionTemplate",
         "defdec": "Def",
-        "display": "bool IsHigh(void)",
+        "display": "RegisterBase::Type Get(void)",
         "location": {
-          "column": "8",
-          "line": "32",
-          "path": "R:\\POIP\\POIP\\Project_8\\Hardware\\Pin\\pin.h"
+          "column": "22",
+          "line": "56",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\registerbase.hpp"
         },
-        "name": "IsHigh",
+        "name": "Get",
         "origin": "user_include",
-        "scope": "Pin"
-      },
-      {
-        "ID": "c:pin.h@1051@ST>2#T#NI@Pin@F@IsHigh#1@value",
-        "What": "VarDecl",
-        "defdec": "Def",
-        "display": "value",
-        "location": {
-          "column": "10",
-          "line": "34",
-          "path": "R:\\POIP\\POIP\\Project_8\\Hardware\\Pin\\pin.h"
-        },
-        "name": "value",
-        "origin": "user_include",
-        "scope": "Pin"
+        "scope": "RegisterBase"
       }
     ],
-    "name": "Pin",
+    "name": "RegisterBase",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Garland.h@62@macro@GARLAND_H",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "GARLAND_H",
+    "location": {
+      "column": "9",
+      "line": "3",
+      "path": "R:\\POIP\\POIP\\Project_8\\Garland.h"
+    },
+    "name": "GARLAND_H",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Garland.h@modeNumber",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "modeNumber",
+    "location": {
+      "column": "24",
+      "line": "8",
+      "path": "R:\\POIP\\POIP\\Project_8\\Garland.h"
+    },
+    "name": "modeNumber",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@tArrayModes",
+    "What": "TypeAliasDecl",
+    "defdec": "Def",
+    "display": "tArrayModes",
+    "location": {
+      "column": "7",
+      "line": "11",
+      "path": "R:\\POIP\\POIP\\Project_8\\Garland.h"
+    },
+    "name": "tArrayModes",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@S@Garland",
+    "What": "Class",
+    "defdec": "Def",
+    "display": "Garland",
+    "location": {
+      "column": "7",
+      "line": "12",
+      "path": "R:\\POIP\\POIP\\Project_8\\Garland.h"
+    },
+    "members": [
+      {
+        "ID": "c:@S@Garland@F@Garland#&1$@N@std@S@array>#*$@S@IMode#Vi2#",
+        "What": "CXXConstructor",
+        "defdec": "Def",
+        "display": "void Garland(const tArrayModes &)",
+        "location": {
+          "column": "3",
+          "line": "15",
+          "path": "R:\\POIP\\POIP\\Project_8\\Garland.h"
+        },
+        "name": "Garland",
+        "origin": "user_include",
+        "scope": "Garland"
+      },
+      {
+        "ID": "c:@S@Garland@F@UpdateCurrentMode#1",
+        "What": "CXXMethod",
+        "defdec": "Def",
+        "display": "void UpdateCurrentMode(void)",
+        "location": {
+          "column": "16",
+          "line": "20",
+          "path": "R:\\POIP\\POIP\\Project_8\\Garland.h"
+        },
+        "name": "UpdateCurrentMode",
+        "origin": "user_include",
+        "scope": "Garland"
+      },
+      {
+        "ID": "c:@S@Garland@F@SwithNextMode#1",
+        "What": "CXXMethod",
+        "defdec": "Def",
+        "display": "void SwithNextMode(void)",
+        "location": {
+          "column": "16",
+          "line": "25",
+          "path": "R:\\POIP\\POIP\\Project_8\\Garland.h"
+        },
+        "name": "SwithNextMode",
+        "origin": "user_include",
+        "scope": "Garland"
+      },
+      {
+        "ID": "c:@S@Garland@FI@_modes",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "_modes",
+        "location": {
+          "column": "23",
+          "line": "32",
+          "path": "R:\\POIP\\POIP\\Project_8\\Garland.h"
+        },
+        "name": "_modes",
+        "origin": "user_include",
+        "scope": "Garland"
+      }
+    ],
+    "name": "Garland",
     "origin": "user_include",
     "scope": null
   },
@@ -108212,12 +108212,12 @@
     "scope": null
   },
   {
-    "ID": "c:@F@Delay#I#",
+    "ID": "c:@F@Delay#k#",
     "What": "Function",
     "defdec": "Def",
-    "display": "int Delay(int)",
+    "display": "void Delay(uint64_t)",
     "location": {
-      "column": "5",
+      "column": "6",
       "line": "18",
       "path": "R:\\POIP\\POIP\\Project_8\\main.cpp"
     },
@@ -108226,12 +108226,12 @@
     "scope": null
   },
   {
-    "ID": "c:main.cpp@718@F@Delay#I#@i",
+    "ID": "c:main.cpp@724@F@Delay#k#@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
-      "column": "11",
+      "column": "16",
       "line": "20",
       "path": "R:\\POIP\\POIP\\Project_8\\main.cpp"
     },
@@ -108240,12 +108240,12 @@
     "scope": null
   },
   {
-    "ID": "c:main.cpp@751@F@Delay#I#@j",
+    "ID": "c:main.cpp@762@F@Delay#k#@j",
     "What": "Variable",
     "defdec": "Def",
     "display": "j",
     "location": {
-      "column": "18",
+      "column": "23",
       "line": "22",
       "path": "R:\\POIP\\POIP\\Project_8\\main.cpp"
     },
@@ -108422,146 +108422,6 @@
     "scope": null
   },
   {
-    "ID": "c:pinconfig.h@31@macro@PINCONFIG_H",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PINCONFIG_H",
-    "location": {
-      "column": "10",
-      "line": "2",
-      "path": "R:\\POIP\\POIP\\Project_8\\Hardware\\Pin\\pinconfig.h"
-    },
-    "name": "PINCONFIG_H",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@pinC6",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "pinC6",
-    "location": {
-      "column": "32",
-      "line": "7",
-      "path": "R:\\POIP\\POIP\\Project_8\\Hardware\\Pin\\pinconfig.h"
-    },
-    "name": "pinC6",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@pinC7",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "pinC7",
-    "location": {
-      "column": "32",
-      "line": "8",
-      "path": "R:\\POIP\\POIP\\Project_8\\Hardware\\Pin\\pinconfig.h"
-    },
-    "name": "pinC7",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@pinC8",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "pinC8",
-    "location": {
-      "column": "32",
-      "line": "9",
-      "path": "R:\\POIP\\POIP\\Project_8\\Hardware\\Pin\\pinconfig.h"
-    },
-    "name": "pinC8",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@pinC9",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "pinC9",
-    "location": {
-      "column": "32",
-      "line": "10",
-      "path": "R:\\POIP\\POIP\\Project_8\\Hardware\\Pin\\pinconfig.h"
-    },
-    "name": "pinC9",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@pinC13",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "pinC13",
-    "location": {
-      "column": "33",
-      "line": "13",
-      "path": "R:\\POIP\\POIP\\Project_8\\Hardware\\Pin\\pinconfig.h"
-    },
-    "name": "pinC13",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:TreeMode.cpp@LedNumber",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "LedNumber",
-    "location": {
-      "column": "24",
-      "line": "3",
-      "path": "R:\\POIP\\POIP\\Project_8\\Modes\\TreeMode\\TreeMode.cpp"
-    },
-    "name": "LedNumber",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@S@TreeMode@F@TreeMode#&1$@N@std@S@array>#*$@S@ILed#Vi4#",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void TreeMode(const tArrayLeds &)",
-    "location": {
-      "column": "11",
-      "line": "5",
-      "path": "R:\\POIP\\POIP\\Project_8\\Modes\\TreeMode\\TreeMode.cpp"
-    },
-    "name": "TreeMode",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@S@TreeMode@F@Clear#1",
-    "What": "CXXMethod",
-    "defdec": "Def",
-    "display": "void Clear(void)",
-    "location": {
-      "column": "16",
-      "line": "10",
-      "path": "R:\\POIP\\POIP\\Project_8\\Modes\\TreeMode\\TreeMode.cpp"
-    },
-    "name": "Clear",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:TreeMode.cpp@188@S@TreeMode@F@Clear#1@i",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "i",
-    "location": {
-      "column": "24",
-      "line": "12",
-      "path": "R:\\POIP\\POIP\\Project_8\\Modes\\TreeMode\\TreeMode.cpp"
-    },
-    "name": "i",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
     "ID": "c:@F@__aeabi_assert",
     "What": "Function",
     "defdec": "Dec",
@@ -108660,116 +108520,200 @@
     "scope": null
   },
   {
-    "ID": "c:Garland.h@62@macro@GARLAND_H",
+    "ID": "c:pin.h@78@macro@PIN_H",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "GARLAND_H",
+    "display": "PIN_H",
     "location": {
       "column": "9",
       "line": "3",
-      "path": "R:\\POIP\\POIP\\Project_8\\Modes\\Garland.h"
+      "path": "R:\\POIP\\POIP\\Project_8\\Hardware\\Pin\\pin.h"
     },
-    "name": "GARLAND_H",
+    "name": "PIN_H",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:Garland.h@modeNumber",
-    "What": "Variable",
+    "ID": "c:@ST>2#T#NI@Pin",
+    "What": "ClassTemplate",
     "defdec": "Def",
-    "display": "modeNumber",
-    "location": {
-      "column": "24",
-      "line": "8",
-      "path": "R:\\POIP\\POIP\\Project_8\\Modes\\Garland.h"
-    },
-    "name": "modeNumber",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@tArrayModes",
-    "What": "TypeAliasDecl",
-    "defdec": "Def",
-    "display": "tArrayModes",
+    "display": "Pin<TPort, pinNum>",
     "location": {
       "column": "7",
-      "line": "11",
-      "path": "R:\\POIP\\POIP\\Project_8\\Modes\\Garland.h"
-    },
-    "name": "tArrayModes",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@S@Garland",
-    "What": "Class",
-    "defdec": "Def",
-    "display": "Garland",
-    "location": {
-      "column": "7",
-      "line": "12",
-      "path": "R:\\POIP\\POIP\\Project_8\\Modes\\Garland.h"
+      "line": "13",
+      "path": "R:\\POIP\\POIP\\Project_8\\Hardware\\Pin\\pin.h"
     },
     "members": [
       {
-        "ID": "c:@S@Garland@F@Garland#&1$@N@std@S@array>#*$@S@IMode#Vi2#",
-        "What": "CXXConstructor",
-        "defdec": "Def",
-        "display": "void Garland(const tArrayModes &)",
+        "ID": "c:@ST>2#T#NI@Pin@F@Set#",
+        "What": "CXXMethod",
+        "defdec": "Dec",
+        "display": "void Set(void)",
         "location": {
-          "column": "3",
+          "column": "8",
           "line": "16",
-          "path": "R:\\POIP\\POIP\\Project_8\\Modes\\Garland.h"
+          "path": "R:\\POIP\\POIP\\Project_8\\Hardware\\Pin\\pin.h"
         },
-        "name": "Garland",
+        "name": "Set",
         "origin": "user_include",
-        "scope": "Garland"
+        "scope": "Pin"
       },
       {
-        "ID": "c:@S@Garland@F@UpdateCurrentMode#1",
+        "ID": "c:@ST>2#T#NI@Pin@F@Reset#1",
         "What": "CXXMethod",
         "defdec": "Def",
-        "display": "void UpdateCurrentMode(void)",
+        "display": "void Reset(void)",
         "location": {
-          "column": "16",
+          "column": "8",
           "line": "21",
-          "path": "R:\\POIP\\POIP\\Project_8\\Modes\\Garland.h"
+          "path": "R:\\POIP\\POIP\\Project_8\\Hardware\\Pin\\pin.h"
         },
-        "name": "UpdateCurrentMode",
+        "name": "Reset",
         "origin": "user_include",
-        "scope": "Garland"
+        "scope": "Pin"
       },
       {
-        "ID": "c:@S@Garland@F@SwithNextMode#1",
+        "ID": "c:pin.h@711@ST>2#T#NI@Pin@F@Reset#1@value",
+        "What": "VarDecl",
+        "defdec": "Def",
+        "display": "value",
+        "location": {
+          "column": "10",
+          "line": "23",
+          "path": "R:\\POIP\\POIP\\Project_8\\Hardware\\Pin\\pin.h"
+        },
+        "name": "value",
+        "origin": "user_include",
+        "scope": "Pin"
+      },
+      {
+        "ID": "c:@ST>2#T#NI@Pin@F@Toggle#1",
         "What": "CXXMethod",
         "defdec": "Def",
-        "display": "void SwithNextMode(void)",
+        "display": "void Toggle(void)",
         "location": {
-          "column": "16",
-          "line": "26",
-          "path": "R:\\POIP\\POIP\\Project_8\\Modes\\Garland.h"
+          "column": "8",
+          "line": "27",
+          "path": "R:\\POIP\\POIP\\Project_8\\Hardware\\Pin\\pin.h"
         },
-        "name": "SwithNextMode",
+        "name": "Toggle",
         "origin": "user_include",
-        "scope": "Garland"
+        "scope": "Pin"
       },
       {
-        "ID": "c:@S@Garland@FI@_modes",
-        "What": "FieldDecl",
+        "ID": "c:@ST>2#T#NI@Pin@F@IsHigh#1",
+        "What": "CXXMethod",
         "defdec": "Def",
-        "display": "_modes",
+        "display": "bool IsHigh(void)",
         "location": {
-          "column": "23",
-          "line": "33",
-          "path": "R:\\POIP\\POIP\\Project_8\\Modes\\Garland.h"
+          "column": "8",
+          "line": "32",
+          "path": "R:\\POIP\\POIP\\Project_8\\Hardware\\Pin\\pin.h"
         },
-        "name": "_modes",
+        "name": "IsHigh",
         "origin": "user_include",
-        "scope": "Garland"
+        "scope": "Pin"
+      },
+      {
+        "ID": "c:pin.h@1051@ST>2#T#NI@Pin@F@IsHigh#1@value",
+        "What": "VarDecl",
+        "defdec": "Def",
+        "display": "value",
+        "location": {
+          "column": "10",
+          "line": "34",
+          "path": "R:\\POIP\\POIP\\Project_8\\Hardware\\Pin\\pin.h"
+        },
+        "name": "value",
+        "origin": "user_include",
+        "scope": "Pin"
       }
     ],
-    "name": "Garland",
+    "name": "Pin",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:pinconfig.h@31@macro@PINCONFIG_H",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PINCONFIG_H",
+    "location": {
+      "column": "10",
+      "line": "2",
+      "path": "R:\\POIP\\POIP\\Project_8\\Hardware\\Pin\\pinconfig.h"
+    },
+    "name": "PINCONFIG_H",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@pinC6",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "pinC6",
+    "location": {
+      "column": "32",
+      "line": "7",
+      "path": "R:\\POIP\\POIP\\Project_8\\Hardware\\Pin\\pinconfig.h"
+    },
+    "name": "pinC6",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@pinC7",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "pinC7",
+    "location": {
+      "column": "32",
+      "line": "8",
+      "path": "R:\\POIP\\POIP\\Project_8\\Hardware\\Pin\\pinconfig.h"
+    },
+    "name": "pinC7",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@pinC8",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "pinC8",
+    "location": {
+      "column": "32",
+      "line": "9",
+      "path": "R:\\POIP\\POIP\\Project_8\\Hardware\\Pin\\pinconfig.h"
+    },
+    "name": "pinC8",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@pinC9",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "pinC9",
+    "location": {
+      "column": "32",
+      "line": "10",
+      "path": "R:\\POIP\\POIP\\Project_8\\Hardware\\Pin\\pinconfig.h"
+    },
+    "name": "pinC9",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@pinC13",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "pinC13",
+    "location": {
+      "column": "33",
+      "line": "13",
+      "path": "R:\\POIP\\POIP\\Project_8\\Hardware\\Pin\\pinconfig.h"
+    },
+    "name": "pinC13",
     "origin": "user_include",
     "scope": null
   },
@@ -108857,6 +108801,62 @@
     ],
     "name": "TreeMode",
     "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:TreeMode.cpp@LedNumber",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "LedNumber",
+    "location": {
+      "column": "24",
+      "line": "3",
+      "path": "R:\\POIP\\POIP\\Project_8\\Modes\\TreeMode\\TreeMode.cpp"
+    },
+    "name": "LedNumber",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@S@TreeMode@F@TreeMode#&1$@N@std@S@array>#*$@S@ILed#Vi4#",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void TreeMode(const tArrayLeds &)",
+    "location": {
+      "column": "11",
+      "line": "5",
+      "path": "R:\\POIP\\POIP\\Project_8\\Modes\\TreeMode\\TreeMode.cpp"
+    },
+    "name": "TreeMode",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@S@TreeMode@F@Clear#1",
+    "What": "CXXMethod",
+    "defdec": "Def",
+    "display": "void Clear(void)",
+    "location": {
+      "column": "16",
+      "line": "10",
+      "path": "R:\\POIP\\POIP\\Project_8\\Modes\\TreeMode\\TreeMode.cpp"
+    },
+    "name": "Clear",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:TreeMode.cpp@188@S@TreeMode@F@Clear#1@i",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "i",
+    "location": {
+      "column": "24",
+      "line": "12",
+      "path": "R:\\POIP\\POIP\\Project_8\\Modes\\TreeMode\\TreeMode.cpp"
+    },
+    "name": "i",
+    "origin": "project_file",
     "scope": null
   },
   {

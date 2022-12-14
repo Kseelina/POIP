@@ -2,20 +2,19 @@
 #ifndef IMODE_H
 #define IMODE_H
 
-#include <array>
-#include "ILED.h"
+#include <array> // подключение библиотеки массивов
+#include "ILED.h" // подключение интерфейса LED
 
 using tArrayLeds = std::array<ILed*,4>; // убрать в Ledsconfig.h
 
 class IMode
 {
 public: 
-  
-  IMode(const tArrayLeds& leds): _leds(leds)
+  IMode(const tArrayLeds& leds): _leds(leds) // инициализация ссылки на объекты-светодиоды
   {
   
   }
-  
+// Функция переключения светодиодов из одного состояния в другое  
   virtual void Update() const 
   {
      for(auto& it:_leds) 
@@ -23,7 +22,7 @@ public:
         it->Toggle();
      }
   };
-  
+// Функция, выключающая светодиоды  
   virtual void Clear() const 
   {
     for(auto& it:_leds) 
@@ -41,7 +40,7 @@ public:
  // };
   
 protected:
-   const tArrayLeds& _leds;
+   const tArrayLeds& _leds; // конструктор может использоваться только классами наследниками
 };
 
 #endif

@@ -15,11 +15,11 @@
 #include <iostream> // подключение стандартной библиотеки С++
 #include <array> // подключение библиотек для работы с массивами
 // -------------------------Функция задержки-----------------------------------
-int Delay(int value)
+void Delay(uint64_t value)
 {
-  for(int i = 0;i<value;++i)
+  for(uint64_t i = 0;i<value;++i)
   {
-    volatile int j = i; 
+    volatile uint64_t j = i; 
   }
 }
 //------------------------------------------------------------------------------
@@ -78,15 +78,15 @@ int main()
 
 
   //std::uint32_t modeNumber = 0;
-  for(;;)  
+  for(;;)  // вечный цикл 
   {
     Delay(100000); 
-    if(userButton1.IsPressed())
+    if(userButton1.IsPressed()) // Если кнопка нажата
     { 
-      garland.SwithNextMode();
+      garland.SwithNextMode(); // Меняем режим
     }
     Delay(1000000);    
-    garland.UpdateCurrentMode();
+    garland.UpdateCurrentMode(); // обновляем текущий режим светодиодов
   }
   
 }

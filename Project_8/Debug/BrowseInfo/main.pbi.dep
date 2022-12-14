@@ -78,8 +78,6 @@ R:\POIP\POIP\Project_8\Debug\BrowseInfo\main.pbi: \
   R:\POIP\POIP\Project_8\Components\LED\ILED.h \
   R:\POIP\POIP\Project_8\Components\LED\iled.h \
   R:\POIP\POIP\Project_8\Modes\ChessMode\ChessMode.h \
-  R:\POIP\POIP\Project_8\Components\LED\Iled.h \
   R:\POIP\POIP\Project_8\Modes\TreeMode\TreeMode.h \
-  R:\POIP\POIP\Project_8\Modes\Garland.h \
-  R:\POIP\POIP\Project_8\Modes\IMode.h \
-  R:\Program\IAR\arm\inc\cpp\iostream
+  R:\POIP\POIP\Project_8\Components\LED\Iled.h \
+  R:\POIP\POIP\Project_8\Garland.h R:\Program\IAR\arm\inc\cpp\iostream

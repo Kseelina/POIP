@@ -2164,7 +2164,7 @@
                 <name>$PROJ_DIR$\Components\Button\IButton.h</name>
             </file>
             <file>
-                <name>$PROJ_DIR$\Components\Button\iPinReadable.h</name>
+                <name>$PROJ_DIR$\Components\Button\IPinReadable.h</name>
             </file>
         </group>
         <group>
@@ -2216,12 +2216,12 @@
             </file>
         </group>
         <file>
-            <name>$PROJ_DIR$\Modes\Garland.h</name>
-        </file>
-        <file>
             <name>$PROJ_DIR$\Modes\IMode.h</name>
         </file>
     </group>
+    <file>
+        <name>$PROJ_DIR$\Garland.h</name>
+    </file>
     <file>
         <name>$PROJ_DIR$\main.cpp</name>
     </file>

@@ -1,12 +1,12 @@
-#include "ChessMode.h"
+#include "ChessMode.h" // подключение заголовочника
 
 
-ChessMode::ChessMode(const tArrayLeds& leds): IMode(leds)
+ChessMode::ChessMode(const tArrayLeds& leds): IMode(leds) // Наследование всех функций (методов) от интерфейса IMode
 {
-  Clear();
+  Clear(); // переопределённая функция
 }
 
-void ChessMode::Clear() const 
+void ChessMode::Clear() const // реализация переопределённой функции
 {
     for (std::uint32_t i = 0; i < std::size(_leds); ++i)
     {

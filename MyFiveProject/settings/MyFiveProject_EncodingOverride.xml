@@ -53,6 +53,10 @@
         <encoding>Win-1251</encoding>
     </override>
     <override>
+        <path>R:\POIP\POIP\Project_8\Garland.h</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
         <path>R:\POIP\POIP\Project_8\Hardware\Pin\Fake.h</path>
         <encoding>Win-1251</encoding>
     </override>
@@ -90,6 +94,10 @@
     </override>
     <override>
         <path>R:\POIP\POIP\Project_8\Modes\ChessMode\ChessMode.cpp</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
+        <path>R:\POIP\POIP\Project_8\Modes\ChessMode\ChessMode.h</path>
         <encoding>Win-1251</encoding>
     </override>
     <override>
