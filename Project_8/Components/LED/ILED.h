@@ -7,8 +7,7 @@ class ILed
 {
 public: 
   virtual void SwithOff() const=0; // виртуальный метод выключения светодиода
- // virtual void SwithOn() const=0; 
-  virtual void Toggle() const=0; // виртуальный метод переключения светодиода из 1 в 0 или обратно
+  virtual void Toggle() const=0;   // виртуальный метод переключения светодиода из 1 в 0 или обратно
 };
 
 #endif

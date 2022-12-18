@@ -2902,6 +2902,12 @@
             </file>
         </group>
         <group>
+            <name>Slide</name>
+            <file>
+                <name>$PROJ_DIR$\Modes\Slide\SlideMode.cpp</name>
+            </file>
+        </group>
+        <group>
             <name>TreeMode</name>
             <file>
                 <name>$PROJ_DIR$\Modes\TreeMode\TreeMode.cpp</name>

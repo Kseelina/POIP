@@ -5,7 +5,7 @@
 #include <array> // подключение библиотеки массивов
 #include "ILED.h" // подключение интерфейса LED
 
-using tArrayLeds = std::array<ILed*,4>; // убрать в Ledsconfig.h
+using tArrayLeds = std::array<ILed*,3>; // убрать в Ledsconfig.h
 
 class IMode
 {
@@ -15,7 +15,7 @@ public:
   
   }
 // Функция переключения светодиодов из одного состояния в другое  
-  virtual void Update() const 
+  virtual void Update() 
   {
      for(auto& it:_leds) 
      {
@@ -23,21 +23,14 @@ public:
      }
   };
 // Функция, выключающая светодиоды  
-  virtual void Clear() const 
+  virtual void Clear()  
   {
     for(auto& it:_leds) 
     {
        it->SwithOff();
     }
   };
-  
-   // virtual void On() const 
- // {
- //   for(auto& it:_leds) 
-  //  {
-  //     it->SwithOn;
-  //  }
- // };
+
   
 protected:
    const tArrayLeds& _leds; // конструктор может использоваться только классами наследниками

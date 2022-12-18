@@ -8,8 +8,13 @@
 class TreeMode: public IMode
 {
 public: 
-   TreeMode(const tArrayLeds& led) ;
-   void Clear() const override ;
+   TreeMode(const tArrayLeds& led) ; // передача массива из светодиодав
+   void Update() override ;  // переопределение функции 
+      
+private:
+  uint32_t ledNumber = 0; // индекс светодиода
 };
+
+
 #endif
 

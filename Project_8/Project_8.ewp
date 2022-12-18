@@ -356,6 +356,7 @@
                     <state>R:\POIP\POIP\Project_8\Modes\AllMode</state>
                     <state>R:\POIP\POIP\Project_8\Modes\ChessMode</state>
                     <state>R:\POIP\POIP\Project_8\Modes\TreeMode</state>
+                    <state>R:\POIP\POIP\Project_8\Modes\Slide</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -2207,6 +2208,12 @@
             <name>ChessMode</name>
             <file>
                 <name>$PROJ_DIR$\Modes\ChessMode\ChessMode.cpp</name>
+            </file>
+        </group>
+        <group>
+            <name>Slide</name>
+            <file>
+                <name>$PROJ_DIR$\Modes\Slide\SlideMode.cpp</name>
             </file>
         </group>
         <group>

@@ -37,6 +37,8 @@ R:\POIP\POIP\Project_8\Modes\ChessMode
 -I
 R:\POIP\POIP\Project_8\Modes\TreeMode
 -I
+R:\POIP\POIP\Project_8\Modes\Slide
+-I
 R:\Program\IAR\arm\inc\cpp
 -I
 R:\Program\IAR\arm\inc\c\aarch32
@@ -70,6 +72,8 @@ R:\POIP\POIP\Project_8\Modes\AllMode
 R:\POIP\POIP\Project_8\Modes\ChessMode
 -I
 R:\POIP\POIP\Project_8\Modes\TreeMode
+-I
+R:\POIP\POIP\Project_8\Modes\Slide
 -D__CHAR_BITS__=8
 -D__CHAR_MAX__=0xff
 -D__CHAR_MIN__=0

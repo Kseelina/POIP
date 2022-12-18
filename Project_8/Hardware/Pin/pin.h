@@ -1,19 +1,16 @@
 
 #ifndef PIN_H //Защита от двойного подключения заголовочного файла
-#define PIN_H //Защита от двойного подключения заголовочного файла
+#define PIN_H //Защита от двойного подключения заголовочного файла  
 
-//#include "gpiocregisters.hpp" // подключение регистра С
-//#include <cinttypes>  // для         
-
-#include "ipin.h" // подключение интерфейса
-#include "IPinReadable.h" // подключение интерфейса
+#include "ipin.h" // подключение интерфейса пинов
+#include "IPinReadable.h" // подключение интерфейса считывания кнопки
 
 
 template<typename TPort, int pinNum> // Отменяет привязку к типу порта, теперь можно сюда передать номер с любого порта (GPIOC, GPIOА)
 class Pin: public IPin, public IPinReadable // Pin - класс наследник (наследование)
 { 
   public: 
-  void Set() //  устанавливает пин в 1
+  void Set() const //  устанавливает пин в 1
   {
     TPort::ODR::Set(1U << pinNum);
   }
@@ -24,6 +21,7 @@ class Pin: public IPin, public IPinReadable // Pin - класс наследник (наследован
     value &=~(1U << pinNum);
     TPort::ODR::Write(value);
   } 
+  
   void Toggle() const override //override - переопределение функции, которые есть в наследуемом классе интерфейсе
   {
     TPort::ODR::Toggle(1U << pinNum);

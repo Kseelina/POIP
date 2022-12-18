@@ -6,7 +6,7 @@ class IPinReadable
 {
 public: 
 
-  virtual bool IsHigh() const=0;
+  virtual bool IsHigh() const=0; // позволяет считать состояние ножки
   
 };
 

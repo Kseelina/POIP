@@ -9,6 +9,7 @@
 #include "AllMode.h" // режим горят все
 #include "ChessMode.h" // режим шахматы
 #include "TreeMode.h" // режим ёлочка
+#include "SlideMode.h" // режим горочка
 #include "Garland.h" // гирлянда
 
 
@@ -25,13 +26,12 @@ void Delay(uint64_t value)
 //------------------------------------------------------------------------------
 
 //-------Создание объектов (компонентов гирлянды) с привязкой к пинам-----------
-Led led1(pinC6); // светодиод 1
-Led led2(pinC7); // светодиод 2
-Led led3(pinC8); // светодиод 3
-Led led4(pinC9); // светодиод 4
+Led led1(pinC7); // светодиод 1
+Led led2(pinC8); // светодиод 2
+Led led3(pinC9); // светодиод 3 
+Led led4(pinC6); // светодиод 4
 Button userButton1(pinC13); // кнопка
 
-//  Led led5(fakepinC9);
 //------------------------------------------------------------------------------
 
 //---------------------------------Массива из светодиодов-----------------------
@@ -41,22 +41,25 @@ Button userButton1(pinC13); // кнопка
       &led1,
       &led2,
       &led3,
-      &led4,
+     // &led4,
     };
 //------------------------------------------------------------------------------
     
 //-------------Создание объектов (режимов) с массивом из светодиодов------------  
   AllMode allMode(leds); 
   ChessMode chessMode(leds);
+  TreeMode treeMode(leds);
+  SlideMode slideMode(leds);
 //------------------------------------------------------------------------------  
   
 //----------------------------------Массив из режимов--------------------------
-    using tArrayModes = std::array<IMode*,2>;
+    using tArrayModes = std::array<IMode*,4>;
     tArrayModes modes =
     { 
       &allMode,
       &chessMode,
-
+      &treeMode,
+      &slideMode,     
     };
 //------------------------------------------------------------------------------
     
@@ -64,9 +67,9 @@ Button userButton1(pinC13); // кнопка
   Garland garland(modes); 
 
 //------------------------------------------------------------------------------     
-    
+
 int main()
-{ 
+{
   //Подать тактирование на порт С
   RCC::AHB1ENR::GPIOCEN::Enable::Set();
 
@@ -75,17 +78,16 @@ int main()
   GPIOC::MODER::MODER7::Output::Set();
   GPIOC::MODER::MODER8::Output::Set();
   GPIOC::MODER::MODER9::Output::Set();
+  
+  
 
-
-  //std::uint32_t modeNumber = 0;
   for(;;)  // вечный цикл 
   {
-    Delay(100000); 
     if(userButton1.IsPressed()) // Если кнопка нажата
     { 
-      garland.SwithNextMode(); // Меняем режим
+      garland.SwithNextMode(); // Меняем режим 
     }
-    Delay(1000000);    
+    Delay(1000000); 
     garland.UpdateCurrentMode(); // обновляем текущий режим светодиодов
   }
   
