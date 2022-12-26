@@ -53,6 +53,14 @@
         <encoding>Win-1251</encoding>
     </override>
     <override>
+        <path>R:\POIP\POIP\Project_8\Components\Observer\IButtonObserver.h</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
+        <path>R:\POIP\POIP\Project_8\Components\Observer\IObservable.h</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
         <path>R:\POIP\POIP\Project_8\Garland.h</path>
         <encoding>Win-1251</encoding>
     </override>
@@ -122,6 +130,10 @@
     </override>
     <override>
         <path>R:\POIP\POIP\Project_8\Modes\Slide\SlideMode.h</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
+        <path>R:\POIP\POIP\Project_8\Modes\SlideMode\SlideMode.cpp</path>
         <encoding>Win-1251</encoding>
     </override>
     <override>

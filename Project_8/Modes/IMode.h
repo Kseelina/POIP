@@ -5,7 +5,7 @@
 #include <array> // подключение библиотеки массивов
 #include "ILED.h" // подключение интерфейса LED
 
-using tArrayLeds = std::array<ILed*,3>; // убрать в Ledsconfig.h
+using tArrayLeds = std::array<ILed*,4>; // убрать в Ledsconfig.h
 
 class IMode
 {
@@ -27,7 +27,7 @@ public:
   {
     for(auto& it:_leds) 
     {
-       it->SwithOff();
+       it->SwitchOff();
     }
   };
 

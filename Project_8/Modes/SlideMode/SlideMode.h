@@ -14,6 +14,7 @@ public:
 private:
   uint32_t ledNumber = 0;  //  индекс светодиода
   bool revers = false;    // Флаг, отвечающий за прямой и обратной ход светодиодов
+  void CalculateNextIndex();
 };
 
 #endif

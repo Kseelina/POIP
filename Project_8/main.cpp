@@ -41,7 +41,7 @@ Button userButton1(pinC13); // кнопка
       &led1,
       &led2,
       &led3,
-     // &led4,
+      &led4,
     };
 //------------------------------------------------------------------------------
     
@@ -59,12 +59,15 @@ Button userButton1(pinC13); // кнопка
       &allMode,
       &chessMode,
       &treeMode,
-      &slideMode,     
+      &slideMode, 
     };
 //------------------------------------------------------------------------------
     
 //-------------Создание объекта (гирлянда) с привязкой к режимам----------------  
-  Garland garland(modes); 
+  Gyru gyru0; 
+  Gyru gyru1;  
+  Garland garland(modes); // т.е. если мы тут создаём объекты, то они никуда не девабются
+  Gyru gyru; 
 
 //------------------------------------------------------------------------------     
 
@@ -79,14 +82,20 @@ int main()
   GPIOC::MODER::MODER8::Output::Set();
   GPIOC::MODER::MODER9::Output::Set();
   
+  // Добавление наблюдателей за действиями кнопки
+  userButton1.AddObserver(gyru1);
+  userButton1.AddObserver(gyru0);
+  userButton1.AddObserver(garland); 
+  userButton1.AddObserver(gyru);
   
+ // Удаление наблюдателя
+ userButton1.RemoveObserver(garland); // удаление наблюдателя за действиями кнопки
+  
+  
+  for(;;)  // вечный цикл
+  { 
+    userButton1.IsPressed() ;// Если кнопка нажата
 
-  for(;;)  // вечный цикл 
-  {
-    if(userButton1.IsPressed()) // Если кнопка нажата
-    { 
-      garland.SwithNextMode(); // Меняем режим 
-    }
     Delay(1000000); 
     garland.UpdateCurrentMode(); // обновляем текущий режим светодиодов
   }

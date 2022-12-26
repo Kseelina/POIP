@@ -10,12 +10,18 @@ SlideMode::SlideMode(const tArrayLeds& leds): IMode(leds) // Ќаследование всех ф
 void SlideMode::Update()  // реализаци€ переопределЄнной функции
 { 
   _leds[ledNumber]->Toggle(); // переключаем с начала светодиод из одного состо€ни€ в другое
-  if (ledNumber != (size(_leds) - 1 - ledNumber)) // если номера светодиодов с конца и начала не встретились,
+  const auto endIndex = size(_leds) - 1 - ledNumber  ; // вычисление индекса с конца массива светодиодов
+  if (ledNumber != endIndex) // если номера светодиодов с конца и начала не встретились,
   { 
-    _leds[size(_leds) - 1 - ledNumber]->Toggle(); // то переключаем с конца светодиод на противоположное состо€ние     
+    _leds[endIndex]->Toggle(); // то переключаем с конца светодиод на противоположное состо€ние     
   }
+  CalculateNextIndex();
   
-  if (!revers) // если пр€мой ход
+}
+
+void SlideMode::CalculateNextIndex()  // расчитывыет индексы светодиодов дл€ пр€мого и обратного хода
+{ 
+if (!revers) // если пр€мой ход
   {
      if(ledNumber < ( ((size(_leds) + 1) / 2) -1 ) ) // если индекс светодиода не дошЄл до середины
      {
@@ -32,7 +38,7 @@ void SlideMode::Update()  // реализаци€ переопределЄнной функции
      {
         ledNumber --; //  идЄм в обратном пор€дке
      }
-     else 
+     else
      {
        revers = false; // как только индекс светодиода стал = 0, переходим в пр€мой ход
      }

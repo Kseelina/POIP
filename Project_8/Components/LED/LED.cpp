@@ -6,7 +6,7 @@ Led::Led(const IPin& pin): _pin(pin) // инициализация ссылки на объект IPin
   
 }
 // потушить светодиод
-void Led::SwithOff() const
+void Led::SwitchOff() const
 {
   _pin.Reset(); // у IPin есть метод Reset(), который сбрасывает пин в 0
 }

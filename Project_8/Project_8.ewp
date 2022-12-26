@@ -356,7 +356,8 @@
                     <state>R:\POIP\POIP\Project_8\Modes\AllMode</state>
                     <state>R:\POIP\POIP\Project_8\Modes\ChessMode</state>
                     <state>R:\POIP\POIP\Project_8\Modes\TreeMode</state>
-                    <state>R:\POIP\POIP\Project_8\Modes\Slide</state>
+                    <state>R:\POIP\POIP\Project_8\Modes\SlideMode</state>
+                    <state>R:\POIP\POIP\Project_8\Components\Observer</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -2177,6 +2178,15 @@
                 <name>$PROJ_DIR$\Components\LED\LED.cpp</name>
             </file>
         </group>
+        <group>
+            <name>Observer</name>
+            <file>
+                <name>$PROJ_DIR$\Components\Observer\IButtonObserver.h</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Components\Observer\IObservable.h</name>
+            </file>
+        </group>
     </group>
     <group>
         <name>Hardware</name>
@@ -2211,9 +2221,9 @@
             </file>
         </group>
         <group>
-            <name>Slide</name>
+            <name>SlideMode</name>
             <file>
-                <name>$PROJ_DIR$\Modes\Slide\SlideMode.cpp</name>
+                <name>$PROJ_DIR$\Modes\SlideMode\SlideMode.cpp</name>
             </file>
         </group>
         <group>

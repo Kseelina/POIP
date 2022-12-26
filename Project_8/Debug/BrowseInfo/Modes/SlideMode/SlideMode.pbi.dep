@@ -1,7 +1,8 @@
-R:\POIP\POIP\Project_8\Debug\BrowseInfo\Components\Button\Button.pbi: \
-  R:\POIP\POIP\Project_8\Components\Button\Button.cpp \
-  R:\POIP\POIP\Project_8\Components\Button\Button.h \
-  R:\Program\IAR\arm\inc\cpp\array R:\Program\IAR\arm\inc\cpp\algorithm \
+R:\POIP\POIP\Project_8\Debug\BrowseInfo\Modes\SlideMode\SlideMode.pbi: \
+  R:\POIP\POIP\Project_8\Modes\SlideMode\SlideMode.cpp \
+  R:\POIP\POIP\Project_8\Modes\SlideMode\SlideMode.h \
+  R:\POIP\POIP\Project_8\Modes\IMode.h R:\Program\IAR\arm\inc\cpp\array \
+  R:\Program\IAR\arm\inc\cpp\algorithm \
   R:\Program\IAR\arm\inc\cpp\xmemory R:\Program\IAR\arm\inc\cpp\xmemory0 \
   R:\Program\IAR\arm\inc\cpp\cstdint R:\Program\IAR\arm\inc\c\stdint.h \
   R:\Program\IAR\arm\inc\c\ycheck.h R:\Program\IAR\arm\inc\c\yvals.h \
@@ -47,8 +48,4 @@ R:\POIP\POIP\Project_8\Debug\BrowseInfo\Components\Button\Button.pbi: \
   R:\Program\IAR\arm\inc\cpp\system_error \
   R:\Program\IAR\arm\inc\cpp\cerrno R:\Program\IAR\arm\inc\c\errno.h \
   R:\Program\IAR\arm\inc\cpp\tuple \
-  R:\POIP\POIP\Project_8\Components\Button\IButton.h \
-  R:\POIP\POIP\Project_8\Components\Button\iPinReadable.h \
-  R:\POIP\POIP\Project_8\Components\Observer\IButtonObserver.h \
-  R:\POIP\POIP\Project_8\Components\Observer\IObservable.h \
-  R:\POIP\POIP\Project_8\Components\Observer\IButtonObserver.h
+  R:\POIP\POIP\Project_8\Components\LED\ILED.h

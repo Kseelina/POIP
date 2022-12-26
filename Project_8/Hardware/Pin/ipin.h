@@ -6,7 +6,7 @@ class IPin
 {
 public: 
   virtual void Reset() const=0;   //  —брасывает пин в 0
-  virtual void Toggle() const=0 ; // виртуальный метод, у которого нет реализации
+  virtual void Toggle() const=0; // виртуальный метод, у которого нет реализации
 };
 
 #endif
