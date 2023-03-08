@@ -41,6 +41,10 @@ R:\POIP\POIP\Project_8\Modes\SlideMode
 -I
 R:\POIP\POIP\Project_8\Components\Observer
 -I
+C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Registers\CortexM4\FieldValues
+-I
+C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Registers\CortexM4
+-I
 R:\Program\IAR\arm\inc\cpp
 -I
 R:\Program\IAR\arm\inc\c\aarch32
@@ -78,6 +82,10 @@ R:\POIP\POIP\Project_8\Modes\TreeMode
 R:\POIP\POIP\Project_8\Modes\SlideMode
 -I
 R:\POIP\POIP\Project_8\Components\Observer
+-I
+C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Registers\CortexM4\FieldValues
+-I
+C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Registers\CortexM4
 -D__CHAR_BITS__=8
 -D__CHAR_MAX__=0xff
 -D__CHAR_MIN__=0

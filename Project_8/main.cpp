@@ -2,7 +2,6 @@
 #include "gpiocregisters.hpp" // регистр для порта с
 #include "gpioaregisters.hpp" // регистр для порта a
 
-
 #include "pinconfig.h" // подкючение привязанных пинов к портам МК
 #include "LED.h"   // подключение заголовочного файла
 #include  "Button.h" // для кнопки
@@ -15,10 +14,10 @@
 
 #include <iostream> // подключение стандартной библиотеки С++
 #include <array> // подключение библиотек для работы с массивами
-// -------------------------Функция задержки-----------------------------------
+// -------------------------Функция задержки в  миллисекундах-----------------------------------
 void Delay(uint64_t value)
 {
-  for(uint64_t i = 0;i<value;++i)
+    for(uint64_t i = 0;i<value;++i)
   {
     volatile uint64_t j = i; 
   }
@@ -83,20 +82,20 @@ int main()
   GPIOC::MODER::MODER9::Output::Set();
   
   // Добавление наблюдателей за действиями кнопки
-  userButton1.AddObserver(gyru1);
-  userButton1.AddObserver(gyru0);
+ // userButton1.AddObserver(gyru1);
+ // userButton1.AddObserver(gyru0);
   userButton1.AddObserver(garland); 
-  userButton1.AddObserver(gyru);
+//  userButton1.AddObserver(gyru);
   
  // Удаление наблюдателя
- userButton1.RemoveObserver(garland); // удаление наблюдателя за действиями кнопки
+// userButton1.RemoveObserver(garland); // удаление наблюдателя за действиями кнопки
   
   
   for(;;)  // вечный цикл
   { 
     userButton1.IsPressed() ;// Если кнопка нажата
 
-    Delay(1000000); 
+    Delay(1000000);  // в милисекундах
     garland.UpdateCurrentMode(); // обновляем текущий режим светодиодов
   }
   

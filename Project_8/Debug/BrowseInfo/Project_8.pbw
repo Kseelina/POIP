@@ -81411,7 +81411,7 @@
         "display": "_leds",
         "location": {
           "column": "22",
-          "line": "36",
+          "line": "37",
           "path": "R:\\POIP\\POIP\\Project_8\\Modes\\IMode.h"
         },
         "name": "_leds",
@@ -82612,92 +82612,6 @@
     },
     "name": "Update",
     "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@ST>3#T#T#N^type-parameter-0-0::Register:::Type@FieldValueBase",
-    "What": "ClassTemplate",
-    "defdec": "Def",
-    "display": "FieldValueBase<Field, Base, value>",
-    "location": {
-      "column": "8",
-      "line": "15",
-      "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\fieldvaluebase.hpp"
-    },
-    "members": [
-      {
-        "ID": "c:@ST>3#T#T#N^type-parameter-0-0::Register:::Type@FieldValueBase@RegType",
-        "What": "TypeAliasDecl",
-        "defdec": "Def",
-        "display": "RegType",
-        "location": {
-          "column": "9",
-          "line": "17",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\fieldvaluebase.hpp"
-        },
-        "name": "RegType",
-        "origin": "user_include",
-        "scope": "FieldValueBase"
-      },
-      {
-        "ID": "c:@ST>3#T#T#N^type-parameter-0-0::Register:::Type@FieldValueBase@FT@>2#T#TSet#v#S",
-        "What": "FunctionTemplate",
-        "defdec": "Def",
-        "display": "void Set(void)",
-        "location": {
-          "column": "15",
-          "line": "21",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\fieldvaluebase.hpp"
-        },
-        "name": "Set",
-        "origin": "user_include",
-        "scope": "FieldValueBase"
-      },
-      {
-        "ID": "c:fieldvaluebase.hpp@942@ST>3#T#T#N^type-parameter-0-0::Register:::Type@FieldValueBase@FT@>2#T#TSet#v#S@newRegValue",
-        "What": "VarDecl",
-        "defdec": "Def",
-        "display": "newRegValue",
-        "location": {
-          "column": "13",
-          "line": "24",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\fieldvaluebase.hpp"
-        },
-        "name": "newRegValue",
-        "origin": "user_include",
-        "scope": "FieldValueBase"
-      },
-      {
-        "ID": "",
-        "What": "FunctionTemplate",
-        "defdec": "Dec",
-        "display": "",
-        "location": {
-          "column": "15",
-          "line": "49",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\fieldvaluebase.hpp"
-        },
-        "name": "Write",
-        "origin": "user_include",
-        "scope": "FieldValueBase"
-      },
-      {
-        "ID": "",
-        "What": "FunctionTemplate",
-        "defdec": "Dec",
-        "display": "",
-        "location": {
-          "column": "22",
-          "line": "59",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\fieldvaluebase.hpp"
-        },
-        "name": "IsSet",
-        "origin": "user_include",
-        "scope": "FieldValueBase"
-      }
-    ],
-    "name": "FieldValueBase",
-    "origin": "user_include",
     "scope": null
   },
   {
@@ -89436,6 +89350,120 @@
     },
     "members": [],
     "name": "RCC_PLLI2SCFGR_PLLI2SNx_Values",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@ST>4#T#T#N^type-parameter-0-0::Register:::Type#T@FieldValue",
+    "What": "ClassTemplate",
+    "defdec": "Def",
+    "display": "FieldValue<Field, Base, value, class>",
+    "location": {
+      "column": "8",
+      "line": "18",
+      "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\fieldvalue.hpp"
+    },
+    "members": [
+      {
+        "ID": "c:@ST>4#T#T#N^type-parameter-0-0::Register:::Type#T@FieldValue@Type",
+        "What": "TypeAliasDecl",
+        "defdec": "Def",
+        "display": "Type",
+        "location": {
+          "column": "9",
+          "line": "20",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\fieldvalue.hpp"
+        },
+        "name": "Type",
+        "origin": "user_include",
+        "scope": "FieldValue"
+      },
+      {
+        "ID": "c:@ST>4#T#T#N^type-parameter-0-0::Register:::Type#T@FieldValue@Mask",
+        "What": "VarDecl",
+        "defdec": "Def",
+        "display": "Mask",
+        "location": {
+          "column": "25",
+          "line": "21",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\fieldvalue.hpp"
+        },
+        "name": "Mask",
+        "origin": "user_include",
+        "scope": "FieldValue"
+      },
+      {
+        "ID": "c:@ST>4#T#T#N^type-parameter-0-0::Register:::Type#T@FieldValue@Value",
+        "What": "VarDecl",
+        "defdec": "Def",
+        "display": "Value",
+        "location": {
+          "column": "25",
+          "line": "22",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\fieldvalue.hpp"
+        },
+        "name": "Value",
+        "origin": "user_include",
+        "scope": "FieldValue"
+      },
+      {
+        "ID": "c:@ST>4#T#T#N^type-parameter-0-0::Register:::Type#T@FieldValue@Offset",
+        "What": "VarDecl",
+        "defdec": "Def",
+        "display": "Offset",
+        "location": {
+          "column": "25",
+          "line": "23",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\fieldvalue.hpp"
+        },
+        "name": "Offset",
+        "origin": "user_include",
+        "scope": "FieldValue"
+      },
+      {
+        "ID": "c:@ST>4#T#T#N^type-parameter-0-0::Register:::Type#T@FieldValue@BaseType",
+        "What": "TypeAliasDecl",
+        "defdec": "Def",
+        "display": "BaseType",
+        "location": {
+          "column": "9",
+          "line": "24",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\fieldvalue.hpp"
+        },
+        "name": "BaseType",
+        "origin": "user_include",
+        "scope": "FieldValue"
+      },
+      {
+        "ID": "c:@ST>4#T#T#N^type-parameter-0-0::Register:::Type#T@FieldValue@Access",
+        "What": "TypeAliasDecl",
+        "defdec": "Def",
+        "display": "Access",
+        "location": {
+          "column": "9",
+          "line": "25",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\fieldvalue.hpp"
+        },
+        "name": "Access",
+        "origin": "user_include",
+        "scope": "FieldValue"
+      },
+      {
+        "ID": "c:@ST>4#T#T#N^type-parameter-0-0::Register:::Type#T@FieldValue@FieldType",
+        "What": "TypeAliasDecl",
+        "defdec": "Def",
+        "display": "FieldType",
+        "location": {
+          "column": "9",
+          "line": "26",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\fieldvalue.hpp"
+        },
+        "name": "FieldType",
+        "origin": "user_include",
+        "scope": "FieldValue"
+      }
+    ],
+    "name": "FieldValue",
     "origin": "user_include",
     "scope": null
   },
@@ -105461,6 +105489,176 @@
     "scope": null
   },
   {
+    "ID": "c:@ST>5#T#Ni#Ni#T#T@RegisterField",
+    "What": "ClassTemplate",
+    "defdec": "Def",
+    "display": "RegisterField<Reg, offset, size, AccessMode, class>",
+    "location": {
+      "column": "8",
+      "line": "15",
+      "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\registerfield.hpp"
+    },
+    "members": [
+      {
+        "ID": "c:@ST>5#T#Ni#Ni#T#T@RegisterField@RegType",
+        "What": "TypeAliasDecl",
+        "defdec": "Def",
+        "display": "RegType",
+        "location": {
+          "column": "9",
+          "line": "17",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\registerfield.hpp"
+        },
+        "name": "RegType",
+        "origin": "user_include",
+        "scope": "RegisterField"
+      },
+      {
+        "ID": "c:@ST>5#T#Ni#Ni#T#T@RegisterField@Register",
+        "What": "TypeAliasDecl",
+        "defdec": "Def",
+        "display": "Register",
+        "location": {
+          "column": "9",
+          "line": "18",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\registerfield.hpp"
+        },
+        "name": "Register",
+        "origin": "user_include",
+        "scope": "RegisterField"
+      },
+      {
+        "ID": "c:@ST>5#T#Ni#Ni#T#T@RegisterField@Offset",
+        "What": "VarDecl",
+        "defdec": "Def",
+        "display": "Offset",
+        "location": {
+          "column": "28",
+          "line": "20",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\registerfield.hpp"
+        },
+        "name": "Offset",
+        "origin": "user_include",
+        "scope": "RegisterField"
+      },
+      {
+        "ID": "c:@ST>5#T#Ni#Ni#T#T@RegisterField@Size",
+        "What": "VarDecl",
+        "defdec": "Def",
+        "display": "Size",
+        "location": {
+          "column": "28",
+          "line": "21",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\registerfield.hpp"
+        },
+        "name": "Size",
+        "origin": "user_include",
+        "scope": "RegisterField"
+      },
+      {
+        "ID": "c:@ST>5#T#Ni#Ni#T#T@RegisterField@Mask",
+        "What": "VarDecl",
+        "defdec": "Def",
+        "display": "Mask",
+        "location": {
+          "column": "28",
+          "line": "22",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\registerfield.hpp"
+        },
+        "name": "Mask",
+        "origin": "user_include",
+        "scope": "RegisterField"
+      },
+      {
+        "ID": "c:@ST>5#T#Ni#Ni#T#T@RegisterField@Access",
+        "What": "TypeAliasDecl",
+        "defdec": "Def",
+        "display": "Access",
+        "location": {
+          "column": "9",
+          "line": "24",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\registerfield.hpp"
+        },
+        "name": "Access",
+        "origin": "user_include",
+        "scope": "RegisterField"
+      },
+      {
+        "ID": "",
+        "What": "FunctionTemplate",
+        "defdec": "Dec",
+        "display": "",
+        "location": {
+          "column": "15",
+          "line": "28",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\registerfield.hpp"
+        },
+        "name": "Set",
+        "origin": "user_include",
+        "scope": "RegisterField"
+      },
+      {
+        "ID": "",
+        "What": "FunctionTemplate",
+        "defdec": "Dec",
+        "display": "",
+        "location": {
+          "column": "15",
+          "line": "43",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\registerfield.hpp"
+        },
+        "name": "Set",
+        "origin": "user_include",
+        "scope": "RegisterField"
+      },
+      {
+        "ID": "",
+        "What": "FunctionTemplate",
+        "defdec": "Dec",
+        "display": "",
+        "location": {
+          "column": "15",
+          "line": "57",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\registerfield.hpp"
+        },
+        "name": "Write",
+        "origin": "user_include",
+        "scope": "RegisterField"
+      },
+      {
+        "ID": "",
+        "What": "FunctionTemplate",
+        "defdec": "Dec",
+        "display": "",
+        "location": {
+          "column": "15",
+          "line": "66",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\registerfield.hpp"
+        },
+        "name": "Write",
+        "origin": "user_include",
+        "scope": "RegisterField"
+      },
+      {
+        "ID": "",
+        "What": "FunctionTemplate",
+        "defdec": "Dec",
+        "display": "",
+        "location": {
+          "column": "25",
+          "line": "76",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\registerfield.hpp"
+        },
+        "name": "Get",
+        "origin": "user_include",
+        "scope": "RegisterField"
+      }
+    ],
+    "name": "RegisterField",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
     "ID": "c:gpioaregisters.hpp@372@macro@GPIOAREGISTERS_HPP",
     "What": "MacroDef",
     "defdec": "Def",
@@ -108335,6 +108533,556 @@
     "scope": null
   },
   {
+    "ID": "c:@F@Delay#k#",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void Delay(uint64_t)",
+    "location": {
+      "column": "6",
+      "line": "18",
+      "path": "R:\\POIP\\POIP\\Project_8\\main.cpp"
+    },
+    "name": "Delay",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.cpp@782@F@Delay#k#@i",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "i",
+    "location": {
+      "column": "18",
+      "line": "20",
+      "path": "R:\\POIP\\POIP\\Project_8\\main.cpp"
+    },
+    "name": "i",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.cpp@820@F@Delay#k#@j",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "j",
+    "location": {
+      "column": "23",
+      "line": "22",
+      "path": "R:\\POIP\\POIP\\Project_8\\main.cpp"
+    },
+    "name": "j",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@led1",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "led1",
+    "location": {
+      "column": "5",
+      "line": "28",
+      "path": "R:\\POIP\\POIP\\Project_8\\main.cpp"
+    },
+    "name": "led1",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@led2",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "led2",
+    "location": {
+      "column": "5",
+      "line": "29",
+      "path": "R:\\POIP\\POIP\\Project_8\\main.cpp"
+    },
+    "name": "led2",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@led3",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "led3",
+    "location": {
+      "column": "5",
+      "line": "30",
+      "path": "R:\\POIP\\POIP\\Project_8\\main.cpp"
+    },
+    "name": "led3",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@led4",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "led4",
+    "location": {
+      "column": "5",
+      "line": "31",
+      "path": "R:\\POIP\\POIP\\Project_8\\main.cpp"
+    },
+    "name": "led4",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@userButton1",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "userButton1",
+    "location": {
+      "column": "8",
+      "line": "32",
+      "path": "R:\\POIP\\POIP\\Project_8\\main.cpp"
+    },
+    "name": "userButton1",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@leds",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "leds",
+    "location": {
+      "column": "16",
+      "line": "38",
+      "path": "R:\\POIP\\POIP\\Project_8\\main.cpp"
+    },
+    "name": "leds",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@allMode",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "allMode",
+    "location": {
+      "column": "11",
+      "line": "48",
+      "path": "R:\\POIP\\POIP\\Project_8\\main.cpp"
+    },
+    "name": "allMode",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@chessMode",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "chessMode",
+    "location": {
+      "column": "13",
+      "line": "49",
+      "path": "R:\\POIP\\POIP\\Project_8\\main.cpp"
+    },
+    "name": "chessMode",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@treeMode",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "treeMode",
+    "location": {
+      "column": "12",
+      "line": "50",
+      "path": "R:\\POIP\\POIP\\Project_8\\main.cpp"
+    },
+    "name": "treeMode",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@slideMode",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "slideMode",
+    "location": {
+      "column": "13",
+      "line": "51",
+      "path": "R:\\POIP\\POIP\\Project_8\\main.cpp"
+    },
+    "name": "slideMode",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@tArrayModes",
+    "What": "TypeAliasDecl",
+    "defdec": "Def",
+    "display": "tArrayModes",
+    "location": {
+      "column": "11",
+      "line": "55",
+      "path": "R:\\POIP\\POIP\\Project_8\\main.cpp"
+    },
+    "name": "tArrayModes",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@modes",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "modes",
+    "location": {
+      "column": "17",
+      "line": "56",
+      "path": "R:\\POIP\\POIP\\Project_8\\main.cpp"
+    },
+    "name": "modes",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@gyru0",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "gyru0",
+    "location": {
+      "column": "8",
+      "line": "66",
+      "path": "R:\\POIP\\POIP\\Project_8\\main.cpp"
+    },
+    "name": "gyru0",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@gyru1",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "gyru1",
+    "location": {
+      "column": "8",
+      "line": "67",
+      "path": "R:\\POIP\\POIP\\Project_8\\main.cpp"
+    },
+    "name": "gyru1",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@garland",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "garland",
+    "location": {
+      "column": "11",
+      "line": "68",
+      "path": "R:\\POIP\\POIP\\Project_8\\main.cpp"
+    },
+    "name": "garland",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@gyru",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "gyru",
+    "location": {
+      "column": "8",
+      "line": "69",
+      "path": "R:\\POIP\\POIP\\Project_8\\main.cpp"
+    },
+    "name": "gyru",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@main#",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "int main(void)",
+    "location": {
+      "column": "5",
+      "line": "73",
+      "path": "R:\\POIP\\POIP\\Project_8\\main.cpp"
+    },
+    "name": "main",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@ST>5#Ni#Ni#T#T#pT@Register",
+    "What": "ClassTemplate",
+    "defdec": "Def",
+    "display": "Register<address, size, AccessMode, FieldValueBaseType, Args>",
+    "location": {
+      "column": "7",
+      "line": "13",
+      "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\register.hpp"
+    },
+    "members": [
+      {
+        "ID": "c:@ST>5#Ni#Ni#T#T#pT@Register@Type",
+        "What": "TypeAliasDecl",
+        "defdec": "Def",
+        "display": "Type",
+        "location": {
+          "column": "11",
+          "line": "16",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\register.hpp"
+        },
+        "name": "Type",
+        "origin": "user_include",
+        "scope": "Register"
+      },
+      {
+        "ID": "",
+        "What": "FunctionTemplate",
+        "defdec": "Dec",
+        "display": "",
+        "location": {
+          "column": "17",
+          "line": "20",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\register.hpp"
+        },
+        "name": "Set",
+        "origin": "user_include",
+        "scope": "Register"
+      },
+      {
+        "ID": "",
+        "What": "FunctionTemplate",
+        "defdec": "Dec",
+        "display": "",
+        "location": {
+          "column": "17",
+          "line": "35",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\register.hpp"
+        },
+        "name": "Write",
+        "origin": "user_include",
+        "scope": "Register"
+      },
+      {
+        "ID": "",
+        "What": "FunctionTemplate",
+        "defdec": "Dec",
+        "display": "",
+        "location": {
+          "column": "17",
+          "line": "45",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\register.hpp"
+        },
+        "name": "IsSet",
+        "origin": "user_include",
+        "scope": "Register"
+      },
+      {
+        "ID": "c:@ST>5#Ni#Ni#T#T#pT@Register@FT@>2#T#TGetIndividualMask# #S",
+        "What": "FunctionTemplate",
+        "defdec": "Def",
+        "display": "auto GetIndividualMask(void)",
+        "location": {
+          "column": "27",
+          "line": "60",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\register.hpp"
+        },
+        "name": "GetIndividualMask",
+        "origin": "user_include",
+        "scope": "Register"
+      },
+      {
+        "ID": "c:register.hpp@3638@ST>5#Ni#Ni#T#T#pT@Register@FT@>2#T#TGetIndividualMask# #S@result",
+        "What": "VarDecl",
+        "defdec": "Def",
+        "display": "result",
+        "location": {
+          "column": "24",
+          "line": "62",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\register.hpp"
+        },
+        "name": "result",
+        "origin": "user_include",
+        "scope": "Register"
+      },
+      {
+        "ID": "c:@ST>5#Ni#Ni#T#T#pT@Register@F@GetMask#S",
+        "What": "CXXMethod",
+        "defdec": "Def",
+        "display": "auto GetMask(void)",
+        "location": {
+          "column": "27",
+          "line": "67",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\register.hpp"
+        },
+        "name": "GetMask",
+        "origin": "user_include",
+        "scope": "Register"
+      },
+      {
+        "ID": "c:@ST>5#Ni#Ni#T#T#pT@Register@FT@>2#T#TGetIndividualValue# #S",
+        "What": "FunctionTemplate",
+        "defdec": "Def",
+        "display": "auto GetIndividualValue(void)",
+        "location": {
+          "column": "27",
+          "line": "78",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\register.hpp"
+        },
+        "name": "GetIndividualValue",
+        "origin": "user_include",
+        "scope": "Register"
+      },
+      {
+        "ID": "c:register.hpp@4871@ST>5#Ni#Ni#T#T#pT@Register@FT@>2#T#TGetIndividualValue# #S@result",
+        "What": "VarDecl",
+        "defdec": "Def",
+        "display": "result",
+        "location": {
+          "column": "24",
+          "line": "80",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\register.hpp"
+        },
+        "name": "result",
+        "origin": "user_include",
+        "scope": "Register"
+      },
+      {
+        "ID": "c:@ST>5#Ni#Ni#T#T#pT@Register@F@GetValue#S",
+        "What": "CXXMethod",
+        "defdec": "Def",
+        "display": "auto GetValue(void)",
+        "location": {
+          "column": "27",
+          "line": "85",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\register.hpp"
+        },
+        "name": "GetValue",
+        "origin": "user_include",
+        "scope": "Register"
+      },
+      {
+        "ID": "c:@ST>5#Ni#Ni#T#T#pT@Register@FT@>1#pTIsIdentType# #S",
+        "What": "FunctionTemplate",
+        "defdec": "Def",
+        "display": "auto IsIdentType(void)",
+        "location": {
+          "column": "27",
+          "line": "91",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\register.hpp"
+        },
+        "name": "IsIdentType",
+        "origin": "user_include",
+        "scope": "Register"
+      },
+      {
+        "ID": "c:@ST>5#Ni#Ni#T#T#pT@Register@FT@>2#T#pTIsIdent#b#S",
+        "What": "FunctionTemplate",
+        "defdec": "Def",
+        "display": "bool IsIdent(void)",
+        "location": {
+          "column": "27",
+          "line": "97",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\register.hpp"
+        },
+        "name": "IsIdent",
+        "origin": "user_include",
+        "scope": "Register"
+      }
+    ],
+    "name": "Register",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@ST>3#T#T#N^type-parameter-0-0::Register:::Type@FieldValueBase",
+    "What": "ClassTemplate",
+    "defdec": "Def",
+    "display": "FieldValueBase<Field, Base, value>",
+    "location": {
+      "column": "8",
+      "line": "15",
+      "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\fieldvaluebase.hpp"
+    },
+    "members": [
+      {
+        "ID": "c:@ST>3#T#T#N^type-parameter-0-0::Register:::Type@FieldValueBase@RegType",
+        "What": "TypeAliasDecl",
+        "defdec": "Def",
+        "display": "RegType",
+        "location": {
+          "column": "9",
+          "line": "17",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\fieldvaluebase.hpp"
+        },
+        "name": "RegType",
+        "origin": "user_include",
+        "scope": "FieldValueBase"
+      },
+      {
+        "ID": "c:@ST>3#T#T#N^type-parameter-0-0::Register:::Type@FieldValueBase@FT@>2#T#TSet#v#S",
+        "What": "FunctionTemplate",
+        "defdec": "Def",
+        "display": "void Set(void)",
+        "location": {
+          "column": "15",
+          "line": "21",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\fieldvaluebase.hpp"
+        },
+        "name": "Set",
+        "origin": "user_include",
+        "scope": "FieldValueBase"
+      },
+      {
+        "ID": "c:fieldvaluebase.hpp@942@ST>3#T#T#N^type-parameter-0-0::Register:::Type@FieldValueBase@FT@>2#T#TSet#v#S@newRegValue",
+        "What": "VarDecl",
+        "defdec": "Def",
+        "display": "newRegValue",
+        "location": {
+          "column": "13",
+          "line": "24",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\fieldvaluebase.hpp"
+        },
+        "name": "newRegValue",
+        "origin": "user_include",
+        "scope": "FieldValueBase"
+      },
+      {
+        "ID": "",
+        "What": "FunctionTemplate",
+        "defdec": "Dec",
+        "display": "",
+        "location": {
+          "column": "15",
+          "line": "49",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\fieldvaluebase.hpp"
+        },
+        "name": "Write",
+        "origin": "user_include",
+        "scope": "FieldValueBase"
+      },
+      {
+        "ID": "",
+        "What": "FunctionTemplate",
+        "defdec": "Dec",
+        "display": "",
+        "location": {
+          "column": "22",
+          "line": "59",
+          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\fieldvaluebase.hpp"
+        },
+        "name": "IsSet",
+        "origin": "user_include",
+        "scope": "FieldValueBase"
+      }
+    ],
+    "name": "FieldValueBase",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
     "ID": "c:@ST>3#Ni#Ni#T@RegisterBase",
     "What": "ClassTemplate",
     "defdec": "Def",
@@ -108446,570 +109194,6 @@
     ],
     "name": "RegisterBase",
     "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@ST>4#T#T#N^type-parameter-0-0::Register:::Type#T@FieldValue",
-    "What": "ClassTemplate",
-    "defdec": "Def",
-    "display": "FieldValue<Field, Base, value, class>",
-    "location": {
-      "column": "8",
-      "line": "18",
-      "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\fieldvalue.hpp"
-    },
-    "members": [
-      {
-        "ID": "c:@ST>4#T#T#N^type-parameter-0-0::Register:::Type#T@FieldValue@Type",
-        "What": "TypeAliasDecl",
-        "defdec": "Def",
-        "display": "Type",
-        "location": {
-          "column": "9",
-          "line": "20",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\fieldvalue.hpp"
-        },
-        "name": "Type",
-        "origin": "user_include",
-        "scope": "FieldValue"
-      },
-      {
-        "ID": "c:@ST>4#T#T#N^type-parameter-0-0::Register:::Type#T@FieldValue@Mask",
-        "What": "VarDecl",
-        "defdec": "Def",
-        "display": "Mask",
-        "location": {
-          "column": "25",
-          "line": "21",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\fieldvalue.hpp"
-        },
-        "name": "Mask",
-        "origin": "user_include",
-        "scope": "FieldValue"
-      },
-      {
-        "ID": "c:@ST>4#T#T#N^type-parameter-0-0::Register:::Type#T@FieldValue@Value",
-        "What": "VarDecl",
-        "defdec": "Def",
-        "display": "Value",
-        "location": {
-          "column": "25",
-          "line": "22",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\fieldvalue.hpp"
-        },
-        "name": "Value",
-        "origin": "user_include",
-        "scope": "FieldValue"
-      },
-      {
-        "ID": "c:@ST>4#T#T#N^type-parameter-0-0::Register:::Type#T@FieldValue@Offset",
-        "What": "VarDecl",
-        "defdec": "Def",
-        "display": "Offset",
-        "location": {
-          "column": "25",
-          "line": "23",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\fieldvalue.hpp"
-        },
-        "name": "Offset",
-        "origin": "user_include",
-        "scope": "FieldValue"
-      },
-      {
-        "ID": "c:@ST>4#T#T#N^type-parameter-0-0::Register:::Type#T@FieldValue@BaseType",
-        "What": "TypeAliasDecl",
-        "defdec": "Def",
-        "display": "BaseType",
-        "location": {
-          "column": "9",
-          "line": "24",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\fieldvalue.hpp"
-        },
-        "name": "BaseType",
-        "origin": "user_include",
-        "scope": "FieldValue"
-      },
-      {
-        "ID": "c:@ST>4#T#T#N^type-parameter-0-0::Register:::Type#T@FieldValue@Access",
-        "What": "TypeAliasDecl",
-        "defdec": "Def",
-        "display": "Access",
-        "location": {
-          "column": "9",
-          "line": "25",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\fieldvalue.hpp"
-        },
-        "name": "Access",
-        "origin": "user_include",
-        "scope": "FieldValue"
-      },
-      {
-        "ID": "c:@ST>4#T#T#N^type-parameter-0-0::Register:::Type#T@FieldValue@FieldType",
-        "What": "TypeAliasDecl",
-        "defdec": "Def",
-        "display": "FieldType",
-        "location": {
-          "column": "9",
-          "line": "26",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\fieldvalue.hpp"
-        },
-        "name": "FieldType",
-        "origin": "user_include",
-        "scope": "FieldValue"
-      }
-    ],
-    "name": "FieldValue",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@ST>5#T#Ni#Ni#T#T@RegisterField",
-    "What": "ClassTemplate",
-    "defdec": "Def",
-    "display": "RegisterField<Reg, offset, size, AccessMode, class>",
-    "location": {
-      "column": "8",
-      "line": "15",
-      "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\registerfield.hpp"
-    },
-    "members": [
-      {
-        "ID": "c:@ST>5#T#Ni#Ni#T#T@RegisterField@RegType",
-        "What": "TypeAliasDecl",
-        "defdec": "Def",
-        "display": "RegType",
-        "location": {
-          "column": "9",
-          "line": "17",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\registerfield.hpp"
-        },
-        "name": "RegType",
-        "origin": "user_include",
-        "scope": "RegisterField"
-      },
-      {
-        "ID": "c:@ST>5#T#Ni#Ni#T#T@RegisterField@Register",
-        "What": "TypeAliasDecl",
-        "defdec": "Def",
-        "display": "Register",
-        "location": {
-          "column": "9",
-          "line": "18",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\registerfield.hpp"
-        },
-        "name": "Register",
-        "origin": "user_include",
-        "scope": "RegisterField"
-      },
-      {
-        "ID": "c:@ST>5#T#Ni#Ni#T#T@RegisterField@Offset",
-        "What": "VarDecl",
-        "defdec": "Def",
-        "display": "Offset",
-        "location": {
-          "column": "28",
-          "line": "20",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\registerfield.hpp"
-        },
-        "name": "Offset",
-        "origin": "user_include",
-        "scope": "RegisterField"
-      },
-      {
-        "ID": "c:@ST>5#T#Ni#Ni#T#T@RegisterField@Size",
-        "What": "VarDecl",
-        "defdec": "Def",
-        "display": "Size",
-        "location": {
-          "column": "28",
-          "line": "21",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\registerfield.hpp"
-        },
-        "name": "Size",
-        "origin": "user_include",
-        "scope": "RegisterField"
-      },
-      {
-        "ID": "c:@ST>5#T#Ni#Ni#T#T@RegisterField@Mask",
-        "What": "VarDecl",
-        "defdec": "Def",
-        "display": "Mask",
-        "location": {
-          "column": "28",
-          "line": "22",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\registerfield.hpp"
-        },
-        "name": "Mask",
-        "origin": "user_include",
-        "scope": "RegisterField"
-      },
-      {
-        "ID": "c:@ST>5#T#Ni#Ni#T#T@RegisterField@Access",
-        "What": "TypeAliasDecl",
-        "defdec": "Def",
-        "display": "Access",
-        "location": {
-          "column": "9",
-          "line": "24",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\registerfield.hpp"
-        },
-        "name": "Access",
-        "origin": "user_include",
-        "scope": "RegisterField"
-      },
-      {
-        "ID": "",
-        "What": "FunctionTemplate",
-        "defdec": "Dec",
-        "display": "",
-        "location": {
-          "column": "15",
-          "line": "28",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\registerfield.hpp"
-        },
-        "name": "Set",
-        "origin": "user_include",
-        "scope": "RegisterField"
-      },
-      {
-        "ID": "",
-        "What": "FunctionTemplate",
-        "defdec": "Dec",
-        "display": "",
-        "location": {
-          "column": "15",
-          "line": "43",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\registerfield.hpp"
-        },
-        "name": "Set",
-        "origin": "user_include",
-        "scope": "RegisterField"
-      },
-      {
-        "ID": "",
-        "What": "FunctionTemplate",
-        "defdec": "Dec",
-        "display": "",
-        "location": {
-          "column": "15",
-          "line": "57",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\registerfield.hpp"
-        },
-        "name": "Write",
-        "origin": "user_include",
-        "scope": "RegisterField"
-      },
-      {
-        "ID": "",
-        "What": "FunctionTemplate",
-        "defdec": "Dec",
-        "display": "",
-        "location": {
-          "column": "15",
-          "line": "66",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\registerfield.hpp"
-        },
-        "name": "Write",
-        "origin": "user_include",
-        "scope": "RegisterField"
-      },
-      {
-        "ID": "",
-        "What": "FunctionTemplate",
-        "defdec": "Dec",
-        "display": "",
-        "location": {
-          "column": "25",
-          "line": "76",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\registerfield.hpp"
-        },
-        "name": "Get",
-        "origin": "user_include",
-        "scope": "RegisterField"
-      }
-    ],
-    "name": "RegisterField",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Delay#k#",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void Delay(uint64_t)",
-    "location": {
-      "column": "6",
-      "line": "19",
-      "path": "R:\\POIP\\POIP\\Project_8\\main.cpp"
-    },
-    "name": "Delay",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:main.cpp@765@F@Delay#k#@i",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "i",
-    "location": {
-      "column": "16",
-      "line": "21",
-      "path": "R:\\POIP\\POIP\\Project_8\\main.cpp"
-    },
-    "name": "i",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:main.cpp@803@F@Delay#k#@j",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "j",
-    "location": {
-      "column": "23",
-      "line": "23",
-      "path": "R:\\POIP\\POIP\\Project_8\\main.cpp"
-    },
-    "name": "j",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@led1",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "led1",
-    "location": {
-      "column": "5",
-      "line": "29",
-      "path": "R:\\POIP\\POIP\\Project_8\\main.cpp"
-    },
-    "name": "led1",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@led2",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "led2",
-    "location": {
-      "column": "5",
-      "line": "30",
-      "path": "R:\\POIP\\POIP\\Project_8\\main.cpp"
-    },
-    "name": "led2",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@led3",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "led3",
-    "location": {
-      "column": "5",
-      "line": "31",
-      "path": "R:\\POIP\\POIP\\Project_8\\main.cpp"
-    },
-    "name": "led3",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@led4",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "led4",
-    "location": {
-      "column": "5",
-      "line": "32",
-      "path": "R:\\POIP\\POIP\\Project_8\\main.cpp"
-    },
-    "name": "led4",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@userButton1",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "userButton1",
-    "location": {
-      "column": "8",
-      "line": "33",
-      "path": "R:\\POIP\\POIP\\Project_8\\main.cpp"
-    },
-    "name": "userButton1",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@leds",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "leds",
-    "location": {
-      "column": "16",
-      "line": "39",
-      "path": "R:\\POIP\\POIP\\Project_8\\main.cpp"
-    },
-    "name": "leds",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@allMode",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "allMode",
-    "location": {
-      "column": "11",
-      "line": "49",
-      "path": "R:\\POIP\\POIP\\Project_8\\main.cpp"
-    },
-    "name": "allMode",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@chessMode",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "chessMode",
-    "location": {
-      "column": "13",
-      "line": "50",
-      "path": "R:\\POIP\\POIP\\Project_8\\main.cpp"
-    },
-    "name": "chessMode",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@treeMode",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "treeMode",
-    "location": {
-      "column": "12",
-      "line": "51",
-      "path": "R:\\POIP\\POIP\\Project_8\\main.cpp"
-    },
-    "name": "treeMode",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@slideMode",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "slideMode",
-    "location": {
-      "column": "13",
-      "line": "52",
-      "path": "R:\\POIP\\POIP\\Project_8\\main.cpp"
-    },
-    "name": "slideMode",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@tArrayModes",
-    "What": "TypeAliasDecl",
-    "defdec": "Def",
-    "display": "tArrayModes",
-    "location": {
-      "column": "11",
-      "line": "56",
-      "path": "R:\\POIP\\POIP\\Project_8\\main.cpp"
-    },
-    "name": "tArrayModes",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@modes",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "modes",
-    "location": {
-      "column": "17",
-      "line": "57",
-      "path": "R:\\POIP\\POIP\\Project_8\\main.cpp"
-    },
-    "name": "modes",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@gyru0",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "gyru0",
-    "location": {
-      "column": "8",
-      "line": "67",
-      "path": "R:\\POIP\\POIP\\Project_8\\main.cpp"
-    },
-    "name": "gyru0",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@gyru1",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "gyru1",
-    "location": {
-      "column": "8",
-      "line": "68",
-      "path": "R:\\POIP\\POIP\\Project_8\\main.cpp"
-    },
-    "name": "gyru1",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@garland",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "garland",
-    "location": {
-      "column": "11",
-      "line": "69",
-      "path": "R:\\POIP\\POIP\\Project_8\\main.cpp"
-    },
-    "name": "garland",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@gyru",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "gyru",
-    "location": {
-      "column": "8",
-      "line": "70",
-      "path": "R:\\POIP\\POIP\\Project_8\\main.cpp"
-    },
-    "name": "gyru",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@main#",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "int main(void)",
-    "location": {
-      "column": "5",
-      "line": "74",
-      "path": "R:\\POIP\\POIP\\Project_8\\main.cpp"
-    },
-    "name": "main",
-    "origin": "project_file",
     "scope": null
   },
   {
@@ -109304,190 +109488,6 @@
     "scope": null
   },
   {
-    "ID": "c:@ST>5#Ni#Ni#T#T#pT@Register",
-    "What": "ClassTemplate",
-    "defdec": "Def",
-    "display": "Register<address, size, AccessMode, FieldValueBaseType, Args>",
-    "location": {
-      "column": "7",
-      "line": "13",
-      "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\register.hpp"
-    },
-    "members": [
-      {
-        "ID": "c:@ST>5#Ni#Ni#T#T#pT@Register@Type",
-        "What": "TypeAliasDecl",
-        "defdec": "Def",
-        "display": "Type",
-        "location": {
-          "column": "11",
-          "line": "16",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\register.hpp"
-        },
-        "name": "Type",
-        "origin": "user_include",
-        "scope": "Register"
-      },
-      {
-        "ID": "",
-        "What": "FunctionTemplate",
-        "defdec": "Dec",
-        "display": "",
-        "location": {
-          "column": "17",
-          "line": "20",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\register.hpp"
-        },
-        "name": "Set",
-        "origin": "user_include",
-        "scope": "Register"
-      },
-      {
-        "ID": "",
-        "What": "FunctionTemplate",
-        "defdec": "Dec",
-        "display": "",
-        "location": {
-          "column": "17",
-          "line": "35",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\register.hpp"
-        },
-        "name": "Write",
-        "origin": "user_include",
-        "scope": "Register"
-      },
-      {
-        "ID": "",
-        "What": "FunctionTemplate",
-        "defdec": "Dec",
-        "display": "",
-        "location": {
-          "column": "17",
-          "line": "45",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\register.hpp"
-        },
-        "name": "IsSet",
-        "origin": "user_include",
-        "scope": "Register"
-      },
-      {
-        "ID": "c:@ST>5#Ni#Ni#T#T#pT@Register@FT@>2#T#TGetIndividualMask# #S",
-        "What": "FunctionTemplate",
-        "defdec": "Def",
-        "display": "auto GetIndividualMask(void)",
-        "location": {
-          "column": "27",
-          "line": "60",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\register.hpp"
-        },
-        "name": "GetIndividualMask",
-        "origin": "user_include",
-        "scope": "Register"
-      },
-      {
-        "ID": "c:register.hpp@3638@ST>5#Ni#Ni#T#T#pT@Register@FT@>2#T#TGetIndividualMask# #S@result",
-        "What": "VarDecl",
-        "defdec": "Def",
-        "display": "result",
-        "location": {
-          "column": "24",
-          "line": "62",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\register.hpp"
-        },
-        "name": "result",
-        "origin": "user_include",
-        "scope": "Register"
-      },
-      {
-        "ID": "c:@ST>5#Ni#Ni#T#T#pT@Register@F@GetMask#S",
-        "What": "CXXMethod",
-        "defdec": "Def",
-        "display": "auto GetMask(void)",
-        "location": {
-          "column": "27",
-          "line": "67",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\register.hpp"
-        },
-        "name": "GetMask",
-        "origin": "user_include",
-        "scope": "Register"
-      },
-      {
-        "ID": "c:@ST>5#Ni#Ni#T#T#pT@Register@FT@>2#T#TGetIndividualValue# #S",
-        "What": "FunctionTemplate",
-        "defdec": "Def",
-        "display": "auto GetIndividualValue(void)",
-        "location": {
-          "column": "27",
-          "line": "78",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\register.hpp"
-        },
-        "name": "GetIndividualValue",
-        "origin": "user_include",
-        "scope": "Register"
-      },
-      {
-        "ID": "c:register.hpp@4871@ST>5#Ni#Ni#T#T#pT@Register@FT@>2#T#TGetIndividualValue# #S@result",
-        "What": "VarDecl",
-        "defdec": "Def",
-        "display": "result",
-        "location": {
-          "column": "24",
-          "line": "80",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\register.hpp"
-        },
-        "name": "result",
-        "origin": "user_include",
-        "scope": "Register"
-      },
-      {
-        "ID": "c:@ST>5#Ni#Ni#T#T#pT@Register@F@GetValue#S",
-        "What": "CXXMethod",
-        "defdec": "Def",
-        "display": "auto GetValue(void)",
-        "location": {
-          "column": "27",
-          "line": "85",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\register.hpp"
-        },
-        "name": "GetValue",
-        "origin": "user_include",
-        "scope": "Register"
-      },
-      {
-        "ID": "c:@ST>5#Ni#Ni#T#T#pT@Register@FT@>1#pTIsIdentType# #S",
-        "What": "FunctionTemplate",
-        "defdec": "Def",
-        "display": "auto IsIdentType(void)",
-        "location": {
-          "column": "27",
-          "line": "91",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\register.hpp"
-        },
-        "name": "IsIdentType",
-        "origin": "user_include",
-        "scope": "Register"
-      },
-      {
-        "ID": "c:@ST>5#Ni#Ni#T#T#pT@Register@FT@>2#T#pTIsIdent#b#S",
-        "What": "FunctionTemplate",
-        "defdec": "Def",
-        "display": "bool IsIdent(void)",
-        "location": {
-          "column": "27",
-          "line": "97",
-          "path": "C:\\Users\\Home\\Documents\\GitHub\\CortexLib\\AbstractHardware\\Registers\\register.hpp"
-        },
-        "name": "IsIdent",
-        "origin": "user_include",
-        "scope": "Register"
-      }
-    ],
-    "name": "Register",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
     "ID": "c:pin.h@78@macro@PIN_H",
     "What": "MacroDef",
     "defdec": "Def",
@@ -109700,6 +109700,164 @@
     "scope": null
   },
   {
+    "ID": "c:Garland.h@49@macro@GARLAND_H",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "GARLAND_H",
+    "location": {
+      "column": "9",
+      "line": "3",
+      "path": "R:\\POIP\\POIP\\Project_8\\Garland.h"
+    },
+    "name": "GARLAND_H",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@tArrayModes",
+    "What": "TypeAliasDecl",
+    "defdec": "Def",
+    "display": "tArrayModes",
+    "location": {
+      "column": "7",
+      "line": "9",
+      "path": "R:\\POIP\\POIP\\Project_8\\Garland.h"
+    },
+    "name": "tArrayModes",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@S@Garland",
+    "What": "Class",
+    "defdec": "Def",
+    "display": "Garland",
+    "location": {
+      "column": "7",
+      "line": "10",
+      "path": "R:\\POIP\\POIP\\Project_8\\Garland.h"
+    },
+    "members": [
+      {
+        "ID": "c:@S@Garland@F@Garland#&1$@N@std@S@array>#*$@S@IMode#Vi4#",
+        "What": "CXXConstructor",
+        "defdec": "Def",
+        "display": "void Garland(const tArrayModes &)",
+        "location": {
+          "column": "3",
+          "line": "13",
+          "path": "R:\\POIP\\POIP\\Project_8\\Garland.h"
+        },
+        "name": "Garland",
+        "origin": "user_include",
+        "scope": "Garland"
+      },
+      {
+        "ID": "c:@S@Garland@F@UpdateCurrentMode#1",
+        "What": "CXXMethod",
+        "defdec": "Def",
+        "display": "void UpdateCurrentMode(void)",
+        "location": {
+          "column": "8",
+          "line": "18",
+          "path": "R:\\POIP\\POIP\\Project_8\\Garland.h"
+        },
+        "name": "UpdateCurrentMode",
+        "origin": "user_include",
+        "scope": "Garland"
+      },
+      {
+        "ID": "c:@S@Garland@F@SwitchNextMode#",
+        "What": "CXXMethod",
+        "defdec": "Def",
+        "display": "void SwitchNextMode(void)",
+        "location": {
+          "column": "8",
+          "line": "23",
+          "path": "R:\\POIP\\POIP\\Project_8\\Garland.h"
+        },
+        "name": "SwitchNextMode",
+        "origin": "user_include",
+        "scope": "Garland"
+      },
+      {
+        "ID": "c:@S@Garland@F@OnButtonPress#",
+        "What": "CXXMethod",
+        "defdec": "Def",
+        "display": "void OnButtonPress(void)",
+        "location": {
+          "column": "8",
+          "line": "36",
+          "path": "R:\\POIP\\POIP\\Project_8\\Garland.h"
+        },
+        "name": "OnButtonPress",
+        "origin": "user_include",
+        "scope": "Garland"
+      },
+      {
+        "ID": "c:@S@Garland@FI@modeNumber",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "modeNumber",
+        "location": {
+          "column": "13",
+          "line": "44",
+          "path": "R:\\POIP\\POIP\\Project_8\\Garland.h"
+        },
+        "name": "modeNumber",
+        "origin": "user_include",
+        "scope": "Garland"
+      },
+      {
+        "ID": "c:@S@Garland@FI@_modes",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "_modes",
+        "location": {
+          "column": "23",
+          "line": "45",
+          "path": "R:\\POIP\\POIP\\Project_8\\Garland.h"
+        },
+        "name": "_modes",
+        "origin": "user_include",
+        "scope": "Garland"
+      }
+    ],
+    "name": "Garland",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@S@Gyru",
+    "What": "Class",
+    "defdec": "Def",
+    "display": "Gyru",
+    "location": {
+      "column": "7",
+      "line": "49",
+      "path": "R:\\POIP\\POIP\\Project_8\\Garland.h"
+    },
+    "members": [
+      {
+        "ID": "c:@S@Gyru@F@OnButtonPress#",
+        "What": "CXXMethod",
+        "defdec": "Def",
+        "display": "void OnButtonPress(void)",
+        "location": {
+          "column": "10",
+          "line": "51",
+          "path": "R:\\POIP\\POIP\\Project_8\\Garland.h"
+        },
+        "name": "OnButtonPress",
+        "origin": "user_include",
+        "scope": "Gyru"
+      }
+    ],
+    "name": "Gyru",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
     "ID": "c:iostream@107@macro@_IOSTREAM_",
     "What": "MacroDef",
     "defdec": "Def",
@@ -109897,164 +110055,6 @@
     ],
     "name": "std",
     "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Garland.h@49@macro@GARLAND_H",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "GARLAND_H",
-    "location": {
-      "column": "9",
-      "line": "3",
-      "path": "R:\\POIP\\POIP\\Project_8\\Garland.h"
-    },
-    "name": "GARLAND_H",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@tArrayModes",
-    "What": "TypeAliasDecl",
-    "defdec": "Def",
-    "display": "tArrayModes",
-    "location": {
-      "column": "7",
-      "line": "9",
-      "path": "R:\\POIP\\POIP\\Project_8\\Garland.h"
-    },
-    "name": "tArrayModes",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@S@Garland",
-    "What": "Class",
-    "defdec": "Def",
-    "display": "Garland",
-    "location": {
-      "column": "7",
-      "line": "10",
-      "path": "R:\\POIP\\POIP\\Project_8\\Garland.h"
-    },
-    "members": [
-      {
-        "ID": "c:@S@Garland@F@Garland#&1$@N@std@S@array>#*$@S@IMode#Vi4#",
-        "What": "CXXConstructor",
-        "defdec": "Def",
-        "display": "void Garland(const tArrayModes &)",
-        "location": {
-          "column": "3",
-          "line": "13",
-          "path": "R:\\POIP\\POIP\\Project_8\\Garland.h"
-        },
-        "name": "Garland",
-        "origin": "user_include",
-        "scope": "Garland"
-      },
-      {
-        "ID": "c:@S@Garland@F@UpdateCurrentMode#1",
-        "What": "CXXMethod",
-        "defdec": "Def",
-        "display": "void UpdateCurrentMode(void)",
-        "location": {
-          "column": "8",
-          "line": "18",
-          "path": "R:\\POIP\\POIP\\Project_8\\Garland.h"
-        },
-        "name": "UpdateCurrentMode",
-        "origin": "user_include",
-        "scope": "Garland"
-      },
-      {
-        "ID": "c:@S@Garland@F@SwitchNextMode#",
-        "What": "CXXMethod",
-        "defdec": "Def",
-        "display": "void SwitchNextMode(void)",
-        "location": {
-          "column": "8",
-          "line": "23",
-          "path": "R:\\POIP\\POIP\\Project_8\\Garland.h"
-        },
-        "name": "SwitchNextMode",
-        "origin": "user_include",
-        "scope": "Garland"
-      },
-      {
-        "ID": "c:@S@Garland@F@OnButtonPress#",
-        "What": "CXXMethod",
-        "defdec": "Def",
-        "display": "void OnButtonPress(void)",
-        "location": {
-          "column": "8",
-          "line": "36",
-          "path": "R:\\POIP\\POIP\\Project_8\\Garland.h"
-        },
-        "name": "OnButtonPress",
-        "origin": "user_include",
-        "scope": "Garland"
-      },
-      {
-        "ID": "c:@S@Garland@FI@modeNumber",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "modeNumber",
-        "location": {
-          "column": "13",
-          "line": "44",
-          "path": "R:\\POIP\\POIP\\Project_8\\Garland.h"
-        },
-        "name": "modeNumber",
-        "origin": "user_include",
-        "scope": "Garland"
-      },
-      {
-        "ID": "c:@S@Garland@FI@_modes",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "_modes",
-        "location": {
-          "column": "23",
-          "line": "45",
-          "path": "R:\\POIP\\POIP\\Project_8\\Garland.h"
-        },
-        "name": "_modes",
-        "origin": "user_include",
-        "scope": "Garland"
-      }
-    ],
-    "name": "Garland",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@S@Gyru",
-    "What": "Class",
-    "defdec": "Def",
-    "display": "Gyru",
-    "location": {
-      "column": "7",
-      "line": "49",
-      "path": "R:\\POIP\\POIP\\Project_8\\Garland.h"
-    },
-    "members": [
-      {
-        "ID": "c:@S@Gyru@F@OnButtonPress#",
-        "What": "CXXMethod",
-        "defdec": "Def",
-        "display": "void OnButtonPress(void)",
-        "location": {
-          "column": "10",
-          "line": "51",
-          "path": "R:\\POIP\\POIP\\Project_8\\Garland.h"
-        },
-        "name": "OnButtonPress",
-        "origin": "user_include",
-        "scope": "Gyru"
-      }
-    ],
-    "name": "Gyru",
-    "origin": "user_include",
     "scope": null
   },
   {
