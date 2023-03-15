@@ -1,7 +1,7 @@
 R:\POIP\POIP\POIP2\Rabots\Rabota_1\Debug\BrowseInfo\Modes\SlideMode\SlideMode.pbi: \
   R:\POIP\POIP\POIP2\Rabots\Rabota_1\Modes\SlideMode\SlideMode.cpp \
   R:\POIP\POIP\POIP2\Rabots\Rabota_1\Modes\SlideMode\SlideMode.h \
-  R:\POIP\POIP\Project_8\Modes\IMode.h \
+  R:\POIP\POIP\POIP2\Rabots\Rabota_1\Modes\IMode.h \
   R:\Program\IAR\arm\inc\libcpp\array \
   R:\Program\IAR\arm\inc\libcpp\__config \
   R:\Program\IAR\arm\inc\libcpp\__config_site \
@@ -234,4 +234,4 @@ R:\POIP\POIP\POIP2\Rabots\Rabota_1\Debug\BrowseInfo\Modes\SlideMode\SlideMode.pb
   R:\Program\IAR\arm\inc\libcpp\__algorithm\transform.h \
   R:\Program\IAR\arm\inc\libcpp\__algorithm\unique_copy.h \
   R:\Program\IAR\arm\inc\libcpp\__algorithm\unique.h \
-  R:\POIP\POIP\Project_8\Components\LED\ILED.h
+  R:\POIP\POIP\POIP2\Rabots\Rabota_1\Components\LED\ILED.h

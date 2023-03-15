@@ -3,5 +3,11 @@
     <project>
         <path>$WS_DIR$\Rabota_1.ewp</path>
     </project>
+    <project>
+        <path>$WS_DIR$\..\Rabota_2\Rabota_2.ewp</path>
+    </project>
+    <project>
+        <path>$WS_DIR$\..\Rabota_3\Rabota_3.ewp</path>
+    </project>
     <batchBuild />
 </workspace>

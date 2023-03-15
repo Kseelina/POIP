@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <userOverrides>
     <override>
+        <path>C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\InterruptHandler\interrupthandler.hpp</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
         <path>R:\POIP\POIP\POIP2\Rabots\Rabota_1\main.cpp</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
+        <path>R:\POIP\POIP\POIP2\Rabots\Rabota_2\StartUp.cpp</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
+        <path>R:\POIP\POIP\POIP2\Rabots\Rabota_2\main.cpp</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
+        <path>R:\POIP\POIP\POIP2\Rabots\Rabota_3\StartUp.cpp</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
+        <path>R:\POIP\POIP\POIP2\Rabots\Rabota_3\main.cpp</path>
         <encoding>Win-1251</encoding>
     </override>
 </userOverrides>

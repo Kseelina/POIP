@@ -1,0 +1,294 @@
+---
+title: Отчёт по прерываниям
+---
+
+:reproducible:
+
+:description: Rabota_2
+:keywords: AsciiDoc
+:imagesdir: ImgRabota_2
+:figure-caption: Рисунок
+:table-caption: Таблица
+
+
+:toc-title: Содержание
+:toc:
+
+[text-right]
+--
+ Выполнила студентка группы КЭ-413
+ Прокопьева Ксения
+--
+[.notes]
+Прерывание - это состояние программы, когда по срабатыванию какого-либо события,
+программа останавливает свою основную функцию, сохраняет её и начинает выполнять другую функцию.
+
+Оброботчик прерываний - это программа, которая отвечает за то, при каком событии вызвать прерывание,
+и какую функцию начать выполнять, а после выполнения этой функции, позволяет вернуться обраться к
+основной функции.
+
+Прерывания деляться на 2 вида:
+
+    Синхронные - когда программа знает в какой момент произойдёт прерывание
+(например при выполнение неккоректных действий произойдёт прерывание на ошибку)
+
+    Асинхронные - когда основная программа не знает когда придёт прерывание (например пользовательское нажатие клвиш)
+
+== Таблица прерываний
+В нашем микроконтролле имеется таблица прерываний для каждой периферии (file:///R:/POIP/POIP/stm32f411_1.pdf (с.201-204):
+
+.Фрагмент таблицы прерываний
+image::ФрагментТаблицыПрерываний.png[]
+
+Согласно данной таблице можно определить положение таймеров TIM2 и TIM5 относительно системного таймера:
+
+.Позиции таймеров TIM2 и TIM5 относительно системного таймера
+image::ПозицииТаймеров.png[]
+
+== Алгоритм работы и настройка прерываний
+
+1. Разрешить глобальное прерывание периферийного модуля.
+2. Настроить событие на прерывание.
+
+За работу с прерываниями отвечают следующие регистры:
+
+.Регистры отвечающие за работу с прерываниями
+image::РегистрыПрерывайний.png[]
+
+1. ISER - разрешает глобальное прерывание, выставив в позицию "1", например NVIC::ISER1::Write(1U << 18U) - включает глобальное прерывание для 50 позиции (50-32 = 18, поэтому в ISER[1] 18 бит ставим "1"), относительно систмного таймера (TIM5).
+2. ICER - выключает прерывание, выставив в позицию "1".
+3. ISPR - ставит прерывание в ожидание, если выставить в позицию "1".
+4. ICPR - сбрасывает прерывание с ожидания
+5. IABP - показывает, активно ли сейчас прерыание.
+
+== Прерывание по таймеру TIM5
+
+Для работы с прерываниями понадобиться библиотека в которой будут размещаться функции
+для каждого прерывания, а также библиотека дл работы с таймером ТIM5.
+Поэтому добавим в следующие строчки программу:
+
+.Файл main.cpp
+[source, c++]
+-------
+#include "interrupthandler.hpp" // Обработчик прерываний
+#include "tim5registers.hpp"  // Подключение таймера ТIM5
+#include "nvicregisters.hpp" // Регистры для работы с прерываниями
+
+constexpr std::uint32_t SystemClock = 8'000'000U; // Тактирование внутреннего генератора, 1 такт = 8 000 000 Гц = 1 сек
+constexpr std::uint32_t OneMillisecondRation = 1000U; // Коэффициент деления
+constexpr  std::uint32_t Timer5Prescaller = SystemClock / OneMillisecondRation; // 1 млсек
+-------
+
+Перепишем функцию Delay():
+
+.Функция - Delay()
+[source, c++]
+-------
+// -------------------------Функция задержки-----------------------------------
+void Delay(std::uint32_t milliseconds)
+{
+    TIM5::ARR::Write(milliseconds);     // До скольки считает таймер (период таймера TIM5)
+    TIM5::CNT::Write(0);                // Обнулили таймер TIM5, чтобы считал с нуля
+    TIM5::SR::UIF::NoInterruptPending::Set(); // Скинули флаг таймера TIM5
+    TIM5::CR1::CEN::Enable::Set();      // Включили таймер TIM5
+}
+//------------------------------------------------------------------------------
+-------
+
+Теперь в функции *main()* настроим прерывание по таймеру, добавив:
+
+.Функция main()
+[source, c++]
+-------
+int main()
+{
+    RCC::APB1ENR::TIM5EN::Enable::Set(); // подали тактирование на таймер TIM5
+    TIM5::PSC::Write(Timer5Prescaller); // делитель частоты для таймера TIM5
+    NVIC::ISER1::Write(1U << 18U);     // разрешить глобальное прерывание для таймера TIM5, который находится на 50 позиции относительно системного таймера
+    TIM5::DIER::UIE::Value1::Set();   // разрешение прерывания по переполнению для таймера TIM5
+    Delay(700);                      // Задержка в миллисекундах
+    for(;;)
+    {
+        userButton1.IsPressed() ;    // Если кнопка нажата
+        if (flag == 1)
+        {
+            garland.UpdateCurrentMode(); // обновляем текущий режим светодиодов
+            flag = 0;
+        }
+    }
+}
+-------
+
+Теперь необходимо настроить вызов прерывания таймера и описать функцию,
+которую будет выполнять программа, когда произойдёт прерывание.
+Для этого сперва добавим в проект новый файл с векторами прерываний:
+
+.Файл StartUp.cpp
+[source, c++]
+-------
+#include "interrupthandler.hpp" //for InterruptHandler
+
+extern "C" void __iar_program_start(void) ;
+
+using tIntFunct = void(*)();
+using tIntVectItem = union {tIntFunct __fun; void * __ptr;};
+
+
+#pragma segment = "CSTACK"
+#pragma location = ".intvec"
+const tIntVectItem __vector_table[] =
+{
+{ .__ptr = __sfe( "CSTACK" ) },
+__iar_program_start,
+
+InterruptHandler::DummyHandler,
+InterruptHandler::DummyHandler,
+InterruptHandler::DummyHandler,
+InterruptHandler::DummyHandler,
+InterruptHandler::DummyHandler,
+0,
+0,
+0,
+0,
+InterruptHandler::DummyHandler,
+InterruptHandler::DummyHandler,
+0,
+InterruptHandler::DummyHandler,
+InterruptHandler::TimerHandler, // системный таймер
+//External Interrupts
+InterruptHandler::DummyHandler, //Window Watchdog
+InterruptHandler::DummyHandler, //PVD through EXTI Line detect/EXTI16
+InterruptHandler::DummyHandler, //Tamper and Time Stamp/EXTI21
+InterruptHandler::DummyHandler, //RTC Wakeup/EXTI22
+InterruptHandler::DummyHandler, //FLASH
+InterruptHandler::DummyHandler, //RCC
+InterruptHandler::DummyHandler, //EXTI Line 0
+InterruptHandler::DummyHandler, //EXTI Line 1
+InterruptHandler::DummyHandler, //EXTI Line 2
+InterruptHandler::DummyHandler, //EXTI Line 3
+InterruptHandler::DummyHandler, //EXTI Line 4
+InterruptHandler::DummyHandler, //DMA1 Stream 0
+InterruptHandler::DummyHandler, //DMA1 Stream 1
+InterruptHandler::DummyHandler, //DMA1 Stream 2
+InterruptHandler::DummyHandler, //DMA1 Stream 3
+InterruptHandler::DummyHandler, //DMA1 Stream 4
+InterruptHandler::DummyHandler, //DMA1 Stream 5
+InterruptHandler::DummyHandler, //DMA1 Stream 6
+InterruptHandler::DummyHandler, //ADC1
+0, //USB High Priority
+0, //USB Low Priority
+0, //DAC
+0, //COMP through EXTI Line
+InterruptHandler::DummyHandler, //EXTI Line 9..5
+InterruptHandler::DummyHandler, //TIM9/TIM1 Break interrupt
+InterruptHandler::DummyHandler, //TIM10/TIM1 Update interrupt
+InterruptHandler::DummyHandler, //TIM11/TIM1 Trigger/Commutation interrupts
+InterruptHandler::DummyHandler, //TIM1 Capture Compare interrupt
+InterruptHandler::Timer2Handler, //TIM2 28 строк от системного таймера
+InterruptHandler::DummyHandler, //TIM3
+InterruptHandler::DummyHandler, ////TIM4
+InterruptHandler::DummyHandler,
+InterruptHandler::DummyHandler,
+InterruptHandler::DummyHandler,
+InterruptHandler::DummyHandler,
+InterruptHandler::DummyHandler,
+InterruptHandler::DummyHandler,
+InterruptHandler::DummyHandler,
+InterruptHandler::DummyHandler,
+InterruptHandler::DummyHandler,
+InterruptHandler::DummyHandler, //40
+InterruptHandler::DummyHandler,
+InterruptHandler::DummyHandler,
+InterruptHandler::DummyHandler,
+InterruptHandler::DummyHandler,
+InterruptHandler::DummyHandler,
+InterruptHandler::DummyHandler,
+InterruptHandler::DummyHandler,
+InterruptHandler::DummyHandler,
+InterruptHandler::DummyHandler,
+InterruptHandler::Timer5Handler, // TIM5 50 строк от системного таймера (по библии на file:///R:/POIP/POIP/stm32f411_1.pdf)
+InterruptHandler::DummyHandler,
+InterruptHandler::DummyHandler,
+InterruptHandler::DummyHandler,
+InterruptHandler::DummyHandler,
+};
+
+extern "C" void __cmain(void) ;
+extern "C" __weak void __iar_init_core(void) ;
+extern "C" __weak void __iar_init_vfp(void) ;
+
+#pragma required = __vector_table
+void __iar_program_start(void) {
+__iar_init_core() ;
+__iar_init_vfp() ;
+__cmain() ;
+}
+-------
+
+Затем в файле *interrupthandler.hpp* добавим функцию прерывания для таймера TIM5.
+
+.Файл interrupthandler.hpp
+[source, c++]
+-------
+//
+// Created by Sergey on 21.11.2019.
+//
+
+#ifndef REGISTERS_INTERRUPTHANDLER_HPP
+#define REGISTERS_INTERRUPTHANDLER_HPP
+
+#include <iostream>
+
+#include "tim2registers.hpp"  //for TIM2
+#include "tim5registers.hpp"  //for TIM5
+#include "gpiocregisters.hpp" // для порта С
+
+inline int flag = 0; // глобальная переменная, показывающая сработало ли прерывание
+
+class InterruptHandler {
+  public:
+    static void DummyHandler()
+    {
+      for(;;)
+      {
+
+      }
+    }
+
+    static void TimerHandler() // Прерывание для системного таймера
+    {
+
+    }
+    static void Timer2Handler() //  Прервывание для таймера TIM2
+    {
+    // if (TIM2::SR::UIF::InterruptPending::IsSet())
+    // {
+        // TIM2::SR::UIF::NoInterruptPending::Set(); // скидывает флаг
+        // Pin<Port<GPIOC>, 8U, PinWriteable>::Toggle() ;
+        // flag = 1;
+        // static int i = 0;
+        // std::cout << i++ << std::endl;
+    // }
+    }
+
+    static void Timer5Handler() // Прервывание для таймера TIM5
+    {
+      if (TIM5::SR::UIF::InterruptPending::IsSet())
+      {
+        TIM5::SR::UIF::NoInterruptPending::Set(); // скидывает флаг
+        flag = 1;
+      }
+    }
+};
+#endif //REGISTERS_INTERRUPTHANDLER_HPP
+-------
+
+== Вывод
+Я научилась использовать прерывания.
+Прерывания неоходимы для того, чтобы при возникновении какого-либо события,
+программа начинала выполнять нужную функцию.
+Это позволяет выполнять основную функцию и только при возникновении собития прерываться на другую функцию.
+Другими словами, не надо тратить время на ожидание этого события (как раньше было в функции Delay(),
+которая по факту ничего не делала, и не нужно постоянно проверять флаг переполнения таймера,
+чтобы запустить другую функцию).
+
