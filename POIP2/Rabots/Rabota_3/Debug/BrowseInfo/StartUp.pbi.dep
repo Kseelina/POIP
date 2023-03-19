@@ -292,4 +292,10 @@ R:\POIP\POIP\POIP2\Rabots\Rabota_3\Debug\BrowseInfo\StartUp.pbi: \
   C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Registers\STM32F411\tim5registers.hpp \
   C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Registers\STM32F411\FieldValues\tim5fieldvalues.hpp \
   C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Registers\STM32F411\gpiocregisters.hpp \
-  C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Registers\STM32F411\FieldValues\gpiocfieldvalues.hpp
+  C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Registers\STM32F411\FieldValues\gpiocfieldvalues.hpp \
+  C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Registers\STM32F411\gpiodregisters.hpp \
+  C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Registers\STM32F411\FieldValues\gpiodfieldvalues.hpp \
+  C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Registers\STM32F411\usart2registers.hpp \
+  C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Registers\STM32F411\FieldValues\usart2fieldvalues.hpp \
+  R:\POIP\POIP\POIP2\Rabots\Rabota_3\Hardware\Sender\Sender.h \
+  R:\Program\IAR\arm\inc\libcpp\array

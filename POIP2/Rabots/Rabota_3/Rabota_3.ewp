@@ -369,6 +369,7 @@
                     <state>C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Uart\Stm32Fxx\STM32F411</state>
                     <state>C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Uart\Stm32Fxx</state>
                     <state>C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Uart</state>
+                    <state>R:\POIP\POIP\POIP2\Rabots\Rabota_3\Hardware\Sender</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -612,7 +613,7 @@
                 </option>
                 <option>
                     <name>AOutputFile</name>
-                    <state></state>
+                    <state>$FILE_BNAME$.o</state>
                 </option>
                 <option>
                     <name>ALimitErrorsCheck</name>

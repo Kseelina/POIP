@@ -17,6 +17,10 @@
         <encoding>Win-1251</encoding>
     </override>
     <override>
+        <path>R:\POIP\POIP\POIP2\Rabots\Rabota_3\Hardware\Sender\Sender.h</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
         <path>R:\POIP\POIP\POIP2\Rabots\Rabota_3\StartUp.cpp</path>
         <encoding>Win-1251</encoding>
     </override>

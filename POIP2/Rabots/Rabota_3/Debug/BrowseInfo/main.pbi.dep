@@ -245,8 +245,6 @@ R:\POIP\POIP\POIP2\Rabots\Rabota_3\Debug\BrowseInfo\main.pbi: \
   C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Registers\register.hpp \
   C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Registers\fieldvalue.hpp \
   C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Registers\accessmode.hpp \
-  C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Registers\STM32F411\usart2registers.hpp \
-  C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Registers\STM32F411\FieldValues\usart2fieldvalues.hpp \
   C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\InterruptHandler\interrupthandler.hpp \
   R:\Program\IAR\arm\inc\libcpp\iostream \
   R:\Program\IAR\arm\inc\libcpp\ios \
@@ -296,6 +294,17 @@ R:\POIP\POIP\POIP2\Rabots\Rabota_3\Debug\BrowseInfo\main.pbi: \
   C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Registers\STM32F411\FieldValues\tim5fieldvalues.hpp \
   C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Registers\STM32F411\gpiocregisters.hpp \
   C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Registers\STM32F411\FieldValues\gpiocfieldvalues.hpp \
+  C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Registers\STM32F411\gpiodregisters.hpp \
+  C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Registers\STM32F411\FieldValues\gpiodfieldvalues.hpp \
+  C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Registers\STM32F411\usart2registers.hpp \
+  C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Registers\STM32F411\FieldValues\usart2fieldvalues.hpp \
+  R:\POIP\POIP\POIP2\Rabots\Rabota_3\Hardware\Sender\Sender.h \
+  R:\Program\IAR\arm\inc\libcpp\array \
+  C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Registers\STM32F411\adc1registers.hpp \
+  C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Registers\STM32F411\FieldValues\adc1fieldvalues.hpp \
+  C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Registers\STM32F411\adccommonregisters.hpp \
+  C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Registers\STM32F411\FieldValues\adccommonfieldvalues.hpp \
+  R:\Program\IAR\arm\inc\libcpp\sstream \
   C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Registers\STM32F411\gpioaregisters.hpp \
   C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Registers\STM32F411\FieldValues\gpioafieldvalues.hpp \
   C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Registers\CortexM4\stkregisters.hpp \
@@ -310,7 +319,6 @@ R:\POIP\POIP\POIP2\Rabots\Rabota_3\Debug\BrowseInfo\main.pbi: \
   R:\POIP\POIP\POIP2\Rabots\Rabota_3\Components\LED\ILED.h \
   R:\POIP\POIP\POIP2\Rabots\Rabota_3\Hardware\Pin\ipin.h \
   R:\POIP\POIP\POIP2\Rabots\Rabota_3\Components\Button\Button.h \
-  R:\Program\IAR\arm\inc\libcpp\array \
   R:\POIP\POIP\POIP2\Rabots\Rabota_3\Components\Button\IButton.h \
   R:\POIP\POIP\POIP2\Rabots\Rabota_3\Components\Button\iPinReadable.h \
   R:\POIP\POIP\POIP2\Rabots\Rabota_3\Components\Observer\IButtonObserver.h \

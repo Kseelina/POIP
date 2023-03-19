@@ -1,8 +1,14 @@
-#include "rccregisters.hpp" // Для модуля RCC
+#include "rccregisters.hpp"       // Для модуля тактирования RCC
 
-#include "usart2registers.hpp"   // Регистры USART для передачи данных
-#include "interrupthandler.hpp" // библиотека векторов прерываний
+#include "interrupthandler.hpp"   // библиотека векторов прерываний
 
+#include "usart2registers.hpp"    // Регистры USART для передачи данных
+#include "Sender.h"               // Функция передачи данных
+
+#include "adc1registers.hpp"      // библиотека для АЦП
+#include "adccommonregisters.hpp" // бибилиотека для TSVREFE - включения/отключения датчика температуры
+
+#include <sstream>                // библиотека для преобразования числа в строку 
 //----------------------------Порты---------------------------------------------
 #include "gpiocregisters.hpp" // регистр для порта с
 #include "gpioaregisters.hpp" // регистр для порта a
@@ -13,7 +19,7 @@
 #include "tim5registers.hpp"  // Подключение таймера ТIM5
 #include "tim2registers.hpp"  // Подключение таймера ТIM2
 #include "nvicregisters.hpp"
-constexpr std::uint32_t SystemClock = 8'000'000U; // тактирование внутреннего генератора, 1 такт = 8 000 000 Гц = 1 сек
+constexpr std::uint32_t SystemClock = 16'000'000U; // тактирование внутреннего генератора, 1 такт = 8 000 000 Гц = 1 сек
 constexpr std::uint32_t OneMillisecondRation = 1000U; // коэффициент деления
 //constexpr  std::uint32_t Timer2Prescaller = SystemClock / OneMillisecondRation; // 1 млсек
 constexpr  std::uint32_t Timer5Prescaller = SystemClock / OneMillisecondRation; // 1 млсек
@@ -119,25 +125,6 @@ int main()
   //while (RCC::CR::HSERDY::NotReady::IsSet())  {} // Дожидаемся переключения на внешний генератор
 //------------------------------------------------------------------------------  
   
-//--------------------------------Передача данных-------------------------------
-  RCC::APB1ENR::USART2EN::Enable::Set();      // Подать тактирование на UART
-  NVIC::ISER1::Write(1U << 6U);              // UART = 38 позиция от системного таймера (38-32 = 6), разрешить глобальное прерывание
-  USART2::CR1::UE::Enable::Set();            // включение модуля
-  USART2::CR1::M::Data8bits::Set();         // передача данных по 8 бит
-  
-  USART2::CR1::TXEIE::InterruptWhenTXE::Set();   // разрешить прерывание по передаче
-  USART2::CR1::TCIE::InterruptWhenTC::Set();     // разрешить прерывание по концу передачи
-  USART2::CR1::RXNEIE::InterruptWhenRXNE::Set(); // разрешить прерывание по приёму
-
-  USART2::CR1::TE::Enable::Set();       // разрешить передачу
-  USART2::CR1::RE::Enable::Set();       // Разрешить приём
-  
-  USART2::CR2::STOP::Value0::Set();    // 1 стоповый бит
-  
-  USART2::BRR::DIV_Mantissa::Set(11U);  // какая-то скорость;)
-  
-//------------------------------------------------------------------------------  
-  
 //-----------------------------Таймера------------------------------------------  
    RCC::APB1ENR::TIM5EN::Enable::Set();             // подали тактирование на таймер TIM5
    TIM5::PSC::Write(Timer5Prescaller);             // делитель частоты
@@ -154,7 +141,8 @@ int main()
 //------------------------------------------------------------------------------
    
 //------------------------------------Порты-------------------------------------    
-  RCC::AHB1ENR::GPIOCEN::Enable::Set();            //Подать тактирование на порт С
+   RCC::AHB1ENR::GPIOAEN::Enable::Set();            //Подать тактирование на порт A
+   RCC::AHB1ENR::GPIOCEN::Enable::Set();            //Подать тактирование на порт С
 
 //----Порт С перевести в режим вывода (С.6 С.7 С.8 С.9 - линии светодиодов)-----
   GPIOC::MODER::MODER6::Output::Set();
@@ -163,15 +151,63 @@ int main()
   GPIOC::MODER::MODER9::Output::Set();
 //------------------------------------------------------------------------------
   
+//--------------------------------Передача данных-------------------------------
+
+  RCC::APB1ENR::USART2EN::Enable::Set();      // Подать тактирование на USART
+  NVIC::ISER1::Write(1U << 6U);              // UART = 38 позиция от системного таймера (38-32 = 6), разрешить глобальное прерывание
+  
+  
+  GPIOA::MODER::MODER2::Alternate::Set();  // настройка порта А2  на альтернативный режим для передачи данных
+  GPIOA::MODER::MODER3::Alternate::Set();  // настройка порта А3 на альтернативный режим для приёма данных
+  GPIOA::AFRL::AFRL2::Af7::Set();         // перевели порт А2 в режим TX отправки
+  GPIOA::AFRL::AFRL3::Af7::Set();         // перевели порт А3 в режим RX приёмки
+ 
+  USART2::CR1::M::Data8bits::Set();         // передача данных по 8 бит
+  
+  USART2::CR1::TXEIE::InterruptWhenTXE::Set();     // разрешить прерывание по передаче
+ // USART2::CR1::TCIE::InterruptWhenTC::Set();     // разрешить прерывание по концу передачи
+  // USART2::CR1::RXNEIE::InterruptWhenRXNE::Set();   // разрешить прерывание по приёму
+
+  USART2::CR1::TE::Enable::Set();       // разрешить передачу
+  USART2::CR1::RE::Enable::Set();       // Разрешить приём
+  
+  USART2::CR2::STOP::Value0::Set();    // 1 стоповый бит
+  
+  uint32_t usartdiv = SystemClock/ (9600);   // расчёт скорости
+  USART2::BRR::Write(usartdiv);             // Целая часть скорости
+
+  USART2::CR1::UE::Enable::Set();            // включение модуля USART
+//------------------------------------------------------------------------------    
+  
+//----------------------------------------АЦП-----------------------------------  
+  RCC::APB2ENR::ADC1EN::Enable::Set(); // подали тактирование на АЦП
+  ADC1::CR1::RES::Bits12::Set();       // разрядность АЦП
+  ADC1::SQR1::L::Conversions1::Set();  // количеств измерений (измерение один раз проводится)
+  
+  GPIOA::MODER::MODER0::Analog::Set(); // подали тактирование на порт А0
+  
+  
+  ADC1::CR2::ADON::Enable::Set(); // включили АЦП
+  
+  //ADC1::SQR3::SQ1::Channel0::Set();      // задействовали 0 канал для снятия значений с потенциометра 
+  //ADC1::SQR3::SQ1::Channel16::Set();     // задействовали 16 канал для измерения температуры
+  ADC1::SQR3::SQ1::Channel17::Set();     // задействовали 17 канал для измерения значения опорного напряжения  
+  
+ // ADC1::SMPR2::SMP0::Cycles480::Set();         // скорость дискретизации
+  ADC1::SMPR2::SMP0::Cycles84::Set();           // скорость дискретизации
+  
+  ADC_Common::CCR::TSVREFE::Enable::Set();    // включили датчик температуры и напряжения
+  
+//------------------------------------------------------------------------------
+  
 //---------Добавление и удаление наблюдателей за действиями кнопки--------------
  // userButton1.AddObserver(gyru1);
  // userButton1.AddObserver(gyru0);
-  userButton1.AddObserver(garland); 
+  userButton1.AddObserver(garland);
 //  userButton1.AddObserver(gyru);
   
 // userButton1.RemoveObserver(garland); // удаление наблюдателя за действиями кнопки
-//------------------------------------------------------------------------------  
-  
+//------------------------------------------------------------------------------  не трогала
 //---------------------------вечный цикл---------------------------------------- 
   Delay(700);     // Задержка в миллисекундах
   for(;;)  
@@ -182,9 +218,36 @@ int main()
     {
       garland.UpdateCurrentMode(); // обновляем текущий режим светодиодов
       flag = 0;
-    }
+      //Sender<USART2>::Send(" Hello World "); 
+      //USART::CR1::RE::Enable::Set();
+      //TUSART::CR1::RXNEIE::InterruptWhenRXNE::Set();
+      ADC1::CR2::SWSTART::On::Set(); // запустили АЦП на измерение
+      while( ADC1::SR::EOC::ConversionNotComplete::IsSet() )
+      {
+          // ждём пока закончится преобразование
+      }
+     // std::cout << ADC1::DR::Get() << std::endl;
+      //float voltage = ADC1::DR::Get();
+      
+      // 0x1FFF 7A2C - 0x1FFF 7A2D
+      
+      uint16_t codeTemperature = ADC1::DR::Get();  // считали значение с АЦП
+      
+      float V25 = 0.76;                                                        // из даташина (cтр. 119) file:///R:/POIP/POIP/stm32f411rc.pdf
+      float Avg_Slope = 2.5;                                                   // оттуда же file:///R:/POIP/POIP/stm32f411rc.pdf
+      double temperatura = ( (codeTemperature*3.0f/4095.0f - V25) / Avg_Slope ) + 25;  // Формула преобразования кода в температуру
 
-    
-  }
+      std::ostringstream ss;   // поток, который конвертирует число в строку
+      ss << temperatura;      // Преобразуем число в строку
+      
+      std::string outputstring (" "+ss.str() + " ");  // запись в outputstring строки с температурой
+      Sender<USART2>::Send(outputstring);        // Вывод результата температуры в терминал
+
+      uint16_t T30 = *(uint16_t*)0x1FFF7A2C;  // код датчика температуры при 3,3 вольта при 30 градусах
+      uint16_t T110 = *(uint16_t*)0x1FFF7A2E; // код датчика температуры на 3,3 вольта при 110 градусах
+            
+      cout << codeTemperature << "   " << T30 << "   "<< T110 << endl; // Вывод в консоль коды температур    
+    }
+      }
 //------------------------------------------------------------------------------  
 }

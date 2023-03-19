@@ -55,6 +55,8 @@ C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Uart\Stm32Fxx
 -I
 C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Uart
 -I
+R:\POIP\POIP\POIP2\Rabots\Rabota_3\Hardware\Sender
+-I
 R:\Program\IAR\arm\inc\libcpp
 -I
 R:\Program\IAR\arm\inc\c\aarch32
@@ -106,6 +108,8 @@ C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Uart\Stm32Fxx\STM32F41
 C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Uart\Stm32Fxx
 -I
 C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Uart
+-I
+R:\POIP\POIP\POIP2\Rabots\Rabota_3\Hardware\Sender
 -D__CHAR_BITS__=8
 -D__CHAR_BIT__=8
 -D__CHAR_MAX__=0xff
