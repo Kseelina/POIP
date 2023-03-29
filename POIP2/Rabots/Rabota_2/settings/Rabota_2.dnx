@@ -35,8 +35,8 @@
         <MemConfigValue>R:\Program\IAR\arm\CONFIG\debugger\ST\STM32F411RC.ddf</MemConfigValue>
     </PlDriver>
     <ArmDriver>
-        <EnforceMemoryConfiguration>1</EnforceMemoryConfiguration>
         <EnableCache>0</EnableCache>
+        <EnforceMemoryConfiguration>1</EnforceMemoryConfiguration>
     </ArmDriver>
     <StLinkDriver>
         <stlinkserialNo>38FF6D064B46323645412543</stlinkserialNo>

@@ -5,9 +5,6 @@
 #include "usart2registers.hpp"    // Регистры USART для передачи данных
 #include "Sender.h"               // Функция передачи данных
 
-#include "adc1registers.hpp"      // библиотека для АЦП
-#include "adccommonregisters.hpp" // бибилиотека для TSVREFE - включения/отключения датчика температуры
-
 #include <sstream>                // библиотека для преобразования числа в строку 
 //----------------------------Порты---------------------------------------------
 #include "gpiocregisters.hpp" // регистр для порта с
@@ -15,27 +12,34 @@
 
 //----------------------------Таймеры-------------------------------------------
 //#include "scbregisters.hpp" // для scb
-#include "stkregisters.hpp" // Описание регистров системного таймера
+#include "stkregisters.hpp"   // Описание регистров системного таймера
 #include "tim5registers.hpp"  // Подключение таймера ТIM5
 #include "tim2registers.hpp"  // Подключение таймера ТIM2
 #include "nvicregisters.hpp"
-constexpr std::uint32_t SystemClock = 16'000'000U; // тактирование внутреннего генератора, 1 такт = 8 000 000 Гц = 1 сек
+constexpr std::uint32_t SystemClock = 16'000'000U;    // тактирование внутреннего генератора, 1 такт = 8 000 000 Гц = 1 сек
 constexpr std::uint32_t OneMillisecondRation = 1000U; // коэффициент деления
 //constexpr  std::uint32_t Timer2Prescaller = SystemClock / OneMillisecondRation; // 1 млсек
 constexpr  std::uint32_t Timer5Prescaller = SystemClock / OneMillisecondRation; // 1 млсек
 //----------------------------Файлы с режимами для гирлянды---------------------
 #include "pinconfig.h" // подкючение привязанных пинов к портам МК
-#include "LED.h"   // подключение заголовочного файла
-#include  "Button.h" // для кнопки
-#include "AllMode.h" // режим горят все
+#include "LED.h"       // подключение заголовочного файла
+#include  "Button.h"   // для кнопки
+#include "AllMode.h"   // режим горят все
 #include "ChessMode.h" // режим шахматы
-#include "TreeMode.h" // режим ёлочка
+#include "TreeMode.h"  // режим ёлочка
 #include "SlideMode.h" // режим горочка
-#include "Garland.h" // гирлянда
+#include "Garland.h"   // гирлянда
 
 //----------------------------Стандартные библиотеки С++------------------------
 #include <iostream> // подключение стандартной библиотеки С++
-#include <array> // подключение библиотек для работы с массивами
+#include <array>    // подключение библиотек для работы с массивами
+
+//------------------------Измерения при помощи АЦП------------------------------
+#include "adc1registers.hpp"         // библиотека для АЦП
+#include "adccommonregisters.hpp"    // бибилиотека для TSVREFE - включения/отключения датчика температуры
+#include "ADC.h"                     // интерфейс для объекта АЦП
+#include "Temperature.h"             // Интерфейс для объекта температура
+#include "CalibratedTemperature.h"   // Интерфейс для объекта откалиброванная температура
 
 //-------------------------Функция задержки-------------------------------------
 void Delay(std::uint32_t milliseconds)
@@ -118,8 +122,19 @@ Button userButton1(pinC13); // кнопка
   //Gyru gyru; 
 //------------------------------------------------------------------------------     
 
+//----------------------------Создание объектов АЦП-----------------------------  
+  
+  ADC  myAdc;                                           // создание объекта АЦП
+  Temperature temperature (3.3f, 4095.0f, 0.76f, 2.5f); // создание обекта для измерения температуры
+  CalibratedTemperature cTemperature;                   // создание объекта для измерения калибровочной температуры
+  
+//------------------------------------------------------------------------------      
+  
+ 
+  
 int main()
 {
+  IADC& adc = myAdc;
 //----------------------Источники тактирования----------------------------------  
   //RCC::CR::HSEON::On::Set();                     // Включили внешнее тактирование от 8 МГц
   //while (RCC::CR::HSERDY::NotReady::IsSet())  {} // Дожидаемся переключения на внешний генератор
@@ -156,7 +171,6 @@ int main()
   RCC::APB1ENR::USART2EN::Enable::Set();      // Подать тактирование на USART
   NVIC::ISER1::Write(1U << 6U);              // UART = 38 позиция от системного таймера (38-32 = 6), разрешить глобальное прерывание
   
-  
   GPIOA::MODER::MODER2::Alternate::Set();  // настройка порта А2  на альтернативный режим для передачи данных
   GPIOA::MODER::MODER3::Alternate::Set();  // настройка порта А3 на альтернативный режим для приёма данных
   GPIOA::AFRL::AFRL2::Af7::Set();         // перевели порт А2 в режим TX отправки
@@ -190,8 +204,8 @@ int main()
   ADC1::CR2::ADON::Enable::Set(); // включили АЦП
   
   //ADC1::SQR3::SQ1::Channel0::Set();      // задействовали 0 канал для снятия значений с потенциометра 
-  //ADC1::SQR3::SQ1::Channel16::Set();     // задействовали 16 канал для измерения температуры
-  ADC1::SQR3::SQ1::Channel17::Set();     // задействовали 17 канал для измерения значения опорного напряжения  
+  ADC1::SQR3::SQ1::Channel16::Set();     // задействовали 16 канал для измерения температуры
+  //ADC1::SQR3::SQ1::Channel17::Set();     // задействовали 17 канал для измерения значения опорного напряжения  
   
  // ADC1::SMPR2::SMP0::Cycles480::Set();         // скорость дискретизации
   ADC1::SMPR2::SMP0::Cycles84::Set();           // скорость дискретизации
@@ -212,41 +226,80 @@ int main()
   Delay(700);     // Задержка в миллисекундах
   for(;;)  
   { 
-    userButton1.IsPressed() ;    // Если кнопка нажата
+    userButton1.IsPressed() ; // меняем режим светодиодов
     
-    if (flag == 1) 
+    if (flag == 1)  // если таймер переполнился
     {
-      garland.UpdateCurrentMode(); // обновляем текущий режим светодиодов
-      flag = 0;
-      //Sender<USART2>::Send(" Hello World "); 
+      
+       //Sender<USART2>::Send(" Hello World "); 
       //USART::CR1::RE::Enable::Set();
       //TUSART::CR1::RXNEIE::InterruptWhenRXNE::Set();
-      ADC1::CR2::SWSTART::On::Set(); // запустили АЦП на измерение
-      while( ADC1::SR::EOC::ConversionNotComplete::IsSet() )
-      {
+      //ADC1::CR2::SWSTART::On::Set(); // запустили АЦП на измерение
+     // while( ADC1::SR::EOC::ConversionNotComplete::IsSet() )
+     // {
           // ждём пока закончится преобразование
-      }
+     // }
      // std::cout << ADC1::DR::Get() << std::endl;
       //float voltage = ADC1::DR::Get();
       
       // 0x1FFF 7A2C - 0x1FFF 7A2D
       
-      uint16_t codeTemperature = ADC1::DR::Get();  // считали значение с АЦП
+      //uint16_t codeTemperature = ADC1::DR::Get();  // считали значение с АЦП
       
-      float V25 = 0.76;                                                        // из даташина (cтр. 119) file:///R:/POIP/POIP/stm32f411rc.pdf
-      float Avg_Slope = 2.5;                                                   // оттуда же file:///R:/POIP/POIP/stm32f411rc.pdf
-      double temperatura = ( (codeTemperature*3.0f/4095.0f - V25) / Avg_Slope ) + 25;  // Формула преобразования кода в температуру
+      //float V25 = 0.76;                                                        // из даташина (cтр. 119) file:///R:/POIP/POIP/stm32f411rc.pdf
+      //float Avg_Slope = 2.5;                                                   // оттуда же file:///R:/POIP/POIP/stm32f411rc.pdf
+      //float temperatura = ( (codeTemperature*3.0f/4095.0f - V25) / Avg_Slope ) + 25;  // Формула преобразования кода в температуру
 
-      std::ostringstream ss;   // поток, который конвертирует число в строку
-      ss << temperatura;      // Преобразуем число в строку
+      //std::ostringstream ss;   // поток, который конвертирует число в строку
+      //ss << temperatura;      // Преобразуем число в строку
       
-      std::string outputstring (" "+ss.str() + " ");  // запись в outputstring строки с температурой
-      Sender<USART2>::Send(outputstring);        // Вывод результата температуры в терминал
+      //std::string outputstring (" "+ss.str() + " ");  // запись в outputstring строки с температурой
+      //Sender<USART2>::Send(outputstring);        // Вывод результата температуры в терминал
 
-      uint16_t T30 = *(uint16_t*)0x1FFF7A2C;  // код датчика температуры при 3,3 вольта при 30 градусах
-      uint16_t T110 = *(uint16_t*)0x1FFF7A2E; // код датчика температуры на 3,3 вольта при 110 градусах
+      //uint16_t T30 = *(uint16_t*)0x1FFF7A2C;  // код датчика температуры при 3,3 вольта при 30 градусах
+      //uint16_t T110 = *(uint16_t*)0x1FFF7A2E; // код датчика температуры на 3,3 вольта при 110 градусах
             
-      cout << codeTemperature << "   " << T30 << "   "<< T110 << endl; // Вывод в консоль коды температур    
+      //cout << codeTemperature << "   " << T30 << "   "<< T110 << endl; // Вывод в консоль коды температур    
+      
+      garland.UpdateCurrentMode(); // обновляем текущий режим светодиодов
+      flag = 0;                   // скидываем флаг переполнения таймера   
+
+      adc.StartConversation(); 
+      while ( !adc.IsConversionComplete())
+      {
+         // ждём пока не заполнится АЦП
+      }
+      
+      uint16_t codeTemperature = adc.GetResult();                                // считали значение из регистра ацп
+      float temperatura = temperature.Calculate(codeTemperature);   
+      float calibrTemperatura = temperatura * (3.27f / 3.3f);                   // калибровочная температура
+      
+      std::ostringstream ss;                                                    // поток, который конвертирует число в строку
+      ss << temperatura;                                                        // Преобразуем число в строку
+      
+      std::string outputstring ("Temperature not calibration: "+ss.str() + ".   ");  // запись в outputstring строки с температурой
+      Sender<USART2>::Send(outputstring);                                            // Вывод результата температуры в терминал по UARTу
+      
+     
+      //float calibrTemperatura = cTemperature.Calculate(codeTemperature, temperatura);
+      std::ostringstream cc;                                                     // поток, который конвертирует число в строку
+      cc << calibrTemperatura;                                                   // Преобразуем число в строку
+      
+      std::string outputstring1  ("Temperature calibration: "+cc.str() + ".   "); // запись в outputstring строки с температурой
+      Sender<USART2>::Send(outputstring1);                                        // Вывод результата температуры в терминал по UARTу
+      
+        cout << outputstring << "   " << outputstring1 << "   " << endl; // Вывод в консоль коды температур  
+        // cout << codeTemperature << "   " << T30 << "   "<< T110 << endl; // Вывод в консоль коды температур   
+      //------------------------------------------------------------------------
+      
+      // для калибровки напряжения
+      /*  uint16_t VREFINT_CAL = *(uint16_t*)0x1FFF7A2A;      // калибровочный код для 30 градусов
+      uint16_t VREFINT_DATA = codeTemperature;    
+      float VDDA = 3.3 * VREFINT_DATA / VREFINT_CAL;
+      
+      cout << VREFINT_DATA << "   " << VREFINT_CAL << "   "<< VDDA << endl; // Вывод в консоль коды температур  
+      //------------------------------------------------------------------------ 
+      */
     }
       }
 //------------------------------------------------------------------------------  

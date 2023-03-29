@@ -2846,6 +2846,27 @@
         </settings>
     </configuration>
     <group>
+        <name>Applications</name>
+        <group>
+            <name>Parameters</name>
+            <file>
+                <name>$PROJ_DIR$\Applications\Parameters\CalibratedTemperature.cpp</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Applications\Parameters\CalibratedTemperature.h</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Applications\Parameters\IMeasureParameter.h</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Applications\Parameters\Temperature.cpp</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Applications\Parameters\Temperature.h</name>
+            </file>
+        </group>
+    </group>
+    <group>
         <name>Components</name>
         <group>
             <name>Button</name>
@@ -2886,6 +2907,18 @@
     </group>
     <group>
         <name>Hardware</name>
+        <group>
+            <name>ADC</name>
+            <file>
+                <name>$PROJ_DIR$\Hardware\ADC\ADC.cpp</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Hardware\ADC\ADC.h</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Hardware\ADC\IADC.h</name>
+            </file>
+        </group>
         <group>
             <name>Pin</name>
             <file>

@@ -370,6 +370,9 @@
                     <state>C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Uart\Stm32Fxx</state>
                     <state>C:\Users\Home\Documents\GitHub\CortexLib\AbstractHardware\Uart</state>
                     <state>R:\POIP\POIP\POIP2\Rabots\Rabota_3\Hardware\Sender</state>
+                    <state>R:\POIP\POIP\POIP2\Rabots\Rabota_3\Hardware\ADC</state>
+                    <state>R:\POIP\POIP\POIP2\Rabots\Rabota_3\Applications</state>
+                    <state>R:\POIP\POIP\POIP2\Rabots\Rabota_3\Applications\Parameters</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -667,7 +670,7 @@
                 </option>
                 <option>
                     <name>OOCOutputFile</name>
-                    <state></state>
+                    <state>Rabota_3.srec</state>
                 </option>
                 <option>
                     <name>OOCCommandLineProducer</name>
@@ -685,7 +688,7 @@
             <data>
                 <extensions></extensions>
                 <cmdline></cmdline>
-                <hasPrio>0</hasPrio>
+                <hasPrio>1</hasPrio>
                 <buildSequence>inputOutputBased</buildSequence>
             </data>
         </settings>
@@ -2164,6 +2167,27 @@
         </settings>
     </configuration>
     <group>
+        <name>Applications</name>
+        <group>
+            <name>Parameters</name>
+            <file>
+                <name>$PROJ_DIR$\Applications\Parameters\CalibratedTemperature.cpp</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Applications\Parameters\CalibratedTemperature.h</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Applications\Parameters\IMeasureParameter.h</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Applications\Parameters\Temperature.cpp</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Applications\Parameters\Temperature.h</name>
+            </file>
+        </group>
+    </group>
+    <group>
         <name>Components</name>
         <group>
             <name>Button</name>
@@ -2204,6 +2228,18 @@
     </group>
     <group>
         <name>Hardware</name>
+        <group>
+            <name>ADC</name>
+            <file>
+                <name>$PROJ_DIR$\Hardware\ADC\ADC.cpp</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Hardware\ADC\ADC.h</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Hardware\ADC\IADC.h</name>
+            </file>
+        </group>
         <group>
             <name>Pin</name>
             <file>

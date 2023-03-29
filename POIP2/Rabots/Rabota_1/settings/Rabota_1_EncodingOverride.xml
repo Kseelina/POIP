@@ -17,6 +17,30 @@
         <encoding>Win-1251</encoding>
     </override>
     <override>
+        <path>R:\POIP\POIP\POIP2\Rabots\Rabota_3\Applications\Parameters\CalibratedTemperature.h</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
+        <path>R:\POIP\POIP\POIP2\Rabots\Rabota_3\Applications\Parameters\Temperature.cpp</path>
+        <encoding>System</encoding>
+    </override>
+    <override>
+        <path>R:\POIP\POIP\POIP2\Rabots\Rabota_3\Applications\Parameters\Temperature.h</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
+        <path>R:\POIP\POIP\POIP2\Rabots\Rabota_3\Hardware\ADC\ADC.cpp</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
+        <path>R:\POIP\POIP\POIP2\Rabots\Rabota_3\Hardware\ADC\ADC.h</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
+        <path>R:\POIP\POIP\POIP2\Rabots\Rabota_3\Hardware\ADC\IADC.h</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
         <path>R:\POIP\POIP\POIP2\Rabots\Rabota_3\Hardware\Sender\Sender.h</path>
         <encoding>Win-1251</encoding>
     </override>
@@ -26,6 +50,10 @@
     </override>
     <override>
         <path>R:\POIP\POIP\POIP2\Rabots\Rabota_3\main.cpp</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
+        <path>R:\POIP\POIP\POIP2\Rabots\Rabota_4\main.cpp</path>
         <encoding>Win-1251</encoding>
     </override>
 </userOverrides>
