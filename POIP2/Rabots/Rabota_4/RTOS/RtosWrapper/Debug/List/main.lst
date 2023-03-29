@@ -1,0 +1,793 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V9.30.1.335/W64 for ARM         29/Mar/2023  12:58:08
+# Copyright 1999-2022 IAR Systems AB.
+#
+#    Cpu mode                     =  thumb
+#    Endian                       =  little
+#    Source file                  =
+#        R:\POIP\POIP\POIP2\Rabots\Rabota_4\RTOS\RtosWrapper\main.cpp
+#    Command line                 =
+#        -f
+#        R:\POIP\POIP\POIP2\Rabots\Rabota_4\RTOS\RtosWrapper\Debug\Obj\main.o.rsp
+#        (R:\POIP\POIP\POIP2\Rabots\Rabota_4\RTOS\RtosWrapper\main.cpp -lC
+#        R:\POIP\POIP\POIP2\Rabots\Rabota_4\RTOS\RtosWrapper\Debug\List\ -lA
+#        R:\POIP\POIP\POIP2\Rabots\Rabota_4\RTOS\RtosWrapper\Debug\List\ -o
+#        R:\POIP\POIP\POIP2\Rabots\Rabota_4\RTOS\RtosWrapper\Debug\Obj\
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
+#        --no_clustering --no_scheduling --debug --endian=little
+#        --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config
+#        R:\Program\IAR\arm\inc\c\DLib_Config_Normal.h -I
+#        R:\POIP\POIP\POIP2\Rabots\Rabota_4\RTOS\RtosWrapper\Rtos\ -I
+#        R:\POIP\POIP\POIP2\Rabots\Rabota_4\RTOS\RtosWrapper\Rtos\wrapper\ -I
+#        R:\POIP\POIP\POIP2\Rabots\Rabota_4\RTOS\RtosWrapper\Rtos\wrapper\FreeRtos\
+#        -I R:\POIP\POIP\POIP2\Rabots\Rabota_4\RTOS\RtosWrapper\Rtos\FreeRtos\
+#        -I
+#        R:\POIP\POIP\POIP2\Rabots\Rabota_4\RTOS\RtosWrapper\Rtos\FreeRtos\include\
+#        -I
+#        R:\POIP\POIP\POIP2\Rabots\Rabota_4\RTOS\RtosWrapper\Rtos\FreeRtos\portable\
+#        -I
+#        R:\POIP\POIP\POIP2\Rabots\Rabota_4\RTOS\RtosWrapper\Rtos\FreeRtos\portable\Common\
+#        -I
+#        R:\POIP\POIP\POIP2\Rabots\Rabota_4\RTOS\RtosWrapper\Rtos\FreeRtos\portable\IAR\
+#        -I
+#        R:\POIP\POIP\POIP2\Rabots\Rabota_4\RTOS\RtosWrapper\Rtos\FreeRtos\portable\IAR\ARM_CM4F\
+#        -I
+#        R:\POIP\POIP\POIP2\Rabots\Rabota_4\RTOS\RtosWrapper\Rtos\FreeRtos\portable\MemMang\
+#        -I R:\POIP\POIP\POIP2\Rabots\Rabota_4\RTOS\RtosWrapper\MyTasks\ -I
+#        R:\POIP\POIP\POIP2\Rabots\Rabota_4\RTOS\RtosWrapper\Common\ -I
+#        R:\POIP\POIP\POIP2\Rabots\Rabota_4\RTOS\RtosWrapper\CMSIS\ -I
+#        R:\POIP\POIP\POIP2\Rabots\Rabota_4\RTOS\RtosWrapper\Application\ -I
+#        R:\POIP\POIP\POIP2\Rabots\Rabota_4\RTOS\RtosWrapper\Application\Diagnostic\
+#        -I R:\POIP\POIP\POIP2\Rabots\Rabota_4\RTOS\RtosWrapper\AHardware\ -I
+#        R:\POIP\POIP\POIP2\Rabots\Rabota_4\RTOS\RtosWrapper\AHardware\GpioPort\
+#        -I
+#        R:\POIP\POIP\POIP2\Rabots\Rabota_4\RTOS\RtosWrapper\AHardware\IrqController\
+#        -I
+#        R:\POIP\POIP\POIP2\Rabots\Rabota_4\RTOS\RtosWrapper\..\CortexLib\AbstractHardware\Pin\
+#        -I
+#        R:\POIP\POIP\POIP2\Rabots\Rabota_4\RTOS\RtosWrapper\..\CortexLib\AbstractHardware\Registers\STM32F411\FieldValues\
+#        -I
+#        R:\POIP\POIP\POIP2\Rabots\Rabota_4\RTOS\RtosWrapper\..\CortexLib\AbstractHardware\Registers\STM32F411\
+#        -I
+#        R:\POIP\POIP\POIP2\Rabots\Rabota_4\RTOS\RtosWrapper\..\CortexLib\AbstractHardware\Registers\
+#        -I
+#        R:\POIP\POIP\POIP2\Rabots\Rabota_4\RTOS\RtosWrapper\..\CortexLib\AbstractHardware\Port\
+#        -I
+#        R:\POIP\POIP\POIP2\Rabots\Rabota_4\RTOS\RtosWrapper\..\CortexLib\AbstractHardware\Atomic\
+#        -I
+#        R:\POIP\POIP\POIP2\Rabots\Rabota_4\RTOS\RtosWrapper\..\CortexLib\Common\
+#        -I
+#        R:\POIP\POIP\POIP2\Rabots\Rabota_4\RTOS\RtosWrapper\..\CortexLib\Common\Singleton\
+#        -I
+#        R:\POIP\POIP\POIP2\Rabots\Rabota_4\RTOS\RtosWrapper\..\CortexLib\Common\RomObject\
+#        -Ol --c++ --no_exceptions --no_rtti) --dependencies=n
+#        R:\POIP\POIP\POIP2\Rabots\Rabota_4\RTOS\RtosWrapper\Debug\Obj\main.o.d
+#    Locale                       =  C
+#    List file                    =
+#        R:\POIP\POIP\POIP2\Rabots\Rabota_4\RTOS\RtosWrapper\Debug\List\main.lst
+#    Object file                  =
+#        R:\POIP\POIP\POIP2\Rabots\Rabota_4\RTOS\RtosWrapper\Debug\Obj\main.o
+#    Runtime model:                  
+#      __CPP_Exceptions           =  Disabled
+#      __CPP_Language             =  C++14
+#      __CPP_Library              =  DLib
+#      __CPP_Runtime              =  1
+#      __SystemLibrary            =  DLib
+#      __dlib_file_descriptor     =  0
+#      __dlib_full_locale_support =  0
+#      __dlib_version             =  6
+#
+###############################################################################
+
+R:\POIP\POIP\POIP2\Rabots\Rabota_4\RTOS\RtosWrapper\main.cpp
+      1          #include "rtos.hpp"         // for Rtos
+
+   \                                 In section .text, align 2
+   \   __vfp uint32_t *std::array<uint32_t, 128U>::data() noexcept
+   \                     _ZNSt5arrayIjLj128EE4dataEv: (+1)
+   \        0x0   0x4770             BX       LR
+
+   \                                 In section .text, align 2
+   \   __vfp OsWrapper::TicksPerSecond std::chrono::duration_cast<OsWrapper::TicksPerSecond, __int64_t, std::milli>(std::chrono::duration<__int64_t, std::milli> const &)
+   \                     _ZNSt6chrono13duration_castINS_8durationIjSt5ratioILx10ELx1000EEEExS2_ILx1ELx1000EEEENSt9enable_ifIXsr3std6chrono12_Is_durationIT_EE5valueES7_E4typeERKNS1_IT0_T1_EE: (+1)
+   \        0x0   0xB5E0             PUSH     {R5-R7,LR}
+   \        0x2   0x.... 0x....      BL       _ZNKSt6chrono8durationIxSt5ratioILx1ELx1000EEE5countEv
+   \        0x6   0x220A             MOVS     R2,#+10
+   \        0x8   0x2300             MOVS     R3,#+0
+   \        0xA   0x.... 0x....      BL       __aeabi_ldivmod
+   \        0xE   0x9000             STR      R0,[SP, #+0]
+   \       0x10   0x4669             MOV      R1,SP
+   \       0x12   0xA801             ADD      R0,SP,#+4
+   \       0x14   0x.... 0x....      BL       _ZNSt6chrono8durationIjSt5ratioILx10ELx1000EEEC1IjvEERKT_
+   \       0x18   0x9801             LDR      R0,[SP, #+4]
+   \       0x1A   0xBD0E             POP      {R1-R3,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp std::chrono::duration<uint32_t, std::ratio<10LL, 1'000LL>>::duration<uint32_t, void>(uint32_t const &)
+   \                     _ZNSt6chrono8durationIjSt5ratioILx10ELx1000EEEC1IjvEERKT_: (+1)
+   \        0x0   0x6809             LDR      R1,[R1, #+0]
+   \        0x2   0x6001             STR      R1,[R0, #+0]
+   \        0x4   0x4770             BX       LR
+
+   \                                 In section .text, align 2
+   \   __vfp __int64_t std::chrono::duration<__int64_t, std::milli>::count() const
+   \                     _ZNKSt6chrono8durationIxSt5ratioILx1ELx1000EEE5countEv: (+1)
+   \        0x0   0xE9D0 0x0100      LDRD     R0,R1,[R0, #+0]
+   \        0x4   0x4770             BX       LR
+
+   \                                 In section .text, align 2
+   \   __vfp uint32_t std::chrono::duration<uint32_t, std::ratio<10LL, 1'000LL>>::count() const
+   \                     _ZNKSt6chrono8durationIjSt5ratioILx10ELx1000EEE5countEv: (+1)
+   \        0x0   0x6800             LDR      R0,[R0, #+0]
+   \        0x2   0x4770             BX       LR
+
+   \                                 In section .text, align 4
+   \   __vfp void OsWrapper::RtosWrapper::wCreateThread<OsWrapper::Rtos, MyLED<GPIOC::ODR, 8U>>(MyLED<GPIOC::ODR, 8U> &, char const *, OsWrapper::ThreadPriority, uint16_t, uint32_t *)
+   \                     _ZN9OsWrapper11RtosWrapper13wCreateThreadINS_4RtosE5MyLEDIN5GPIOC3ODRELj8EEEEvRT0_PKcNS_14ThreadPriorityEtPj: (+1)
+   \        0x0   0xB53E             PUSH     {R1-R5,LR}
+   \        0x2   0x0005             MOVS     R5,R0
+   \        0x4   0x001C             MOVS     R4,R3
+   \        0x6   0x9806             LDR      R0,[SP, #+24]
+   \        0x8   0x2800             CMP      R0,#+0
+   \        0xA   0xD00B             BEQ.N    ??wCreateThread_2
+   \        0xC   0x1D2B             ADDS     R3,R5,#+4
+   \        0xE   0x9302             STR      R3,[SP, #+8]
+   \       0x10   0x9001             STR      R0,[SP, #+4]
+   \       0x12   0xB2D2             UXTB     R2,R2
+   \       0x14   0x9200             STR      R2,[SP, #+0]
+   \       0x16   0x002B             MOVS     R3,R5
+   \       0x18   0xB2A4             UXTH     R4,R4
+   \       0x1A   0x0022             MOVS     R2,R4
+   \       0x1C   0x4802             LDR.N    R0,??wCreateThread_0
+   \       0x1E   0x.... 0x....      BL       xTaskCreateStatic
+   \       0x22   0x6568             STR      R0,[R5, #+84]
+   \                     ??wCreateThread_2: (+1)
+   \       0x24   0xBD37             POP      {R0-R2,R4,R5,PC}
+   \       0x26   0xBF00             Nop
+   \                     ??wCreateThread_0:
+   \       0x28   0x....'....        DC32     _ZN9OsWrapper4Rtos3RunEPv
+
+   \                                 In section .text, align 4
+   \   __vfp void OsWrapper::RtosWrapper::wCreateThread<OsWrapper::Rtos, MyLED<GPIOC::ODR, 9U>>(MyLED<GPIOC::ODR, 9U> &, char const *, OsWrapper::ThreadPriority, uint16_t, uint32_t *)
+   \                     _ZN9OsWrapper11RtosWrapper13wCreateThreadINS_4RtosE5MyLEDIN5GPIOC3ODRELj9EEEEvRT0_PKcNS_14ThreadPriorityEtPj: (+1)
+   \        0x0   0xB53E             PUSH     {R1-R5,LR}
+   \        0x2   0x0005             MOVS     R5,R0
+   \        0x4   0x001C             MOVS     R4,R3
+   \        0x6   0x9806             LDR      R0,[SP, #+24]
+   \        0x8   0x2800             CMP      R0,#+0
+   \        0xA   0xD00B             BEQ.N    ??wCreateThread_3
+   \        0xC   0x1D2B             ADDS     R3,R5,#+4
+   \        0xE   0x9302             STR      R3,[SP, #+8]
+   \       0x10   0x9001             STR      R0,[SP, #+4]
+   \       0x12   0xB2D2             UXTB     R2,R2
+   \       0x14   0x9200             STR      R2,[SP, #+0]
+   \       0x16   0x002B             MOVS     R3,R5
+   \       0x18   0xB2A4             UXTH     R4,R4
+   \       0x1A   0x0022             MOVS     R2,R4
+   \       0x1C   0x4802             LDR.N    R0,??wCreateThread_1
+   \       0x1E   0x.... 0x....      BL       xTaskCreateStatic
+   \       0x22   0x6568             STR      R0,[R5, #+84]
+   \                     ??wCreateThread_3: (+1)
+   \       0x24   0xBD37             POP      {R0-R2,R4,R5,PC}
+   \       0x26   0xBF00             Nop
+   \                     ??wCreateThread_1:
+   \       0x28   0x....'....        DC32     _ZN9OsWrapper4Rtos3RunEPv
+
+   \                                 In section .text, align 2
+   \   __vfp void OsWrapper::RtosWrapper::wStart()
+   \                     _ZN9OsWrapper11RtosWrapper6wStartEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x.... 0x....      BL       vTaskStartScheduler
+   \        0x6   0xBD01             POP      {R0,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp void OsWrapper::RtosWrapper::wSleep(uint32_t)
+   \                     _ZN9OsWrapper11RtosWrapper6wSleepEj: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x.... 0x....      BL       vTaskDelay
+   \        0x6   0xBD01             POP      {R0,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp uint32_t OsWrapper::RtosWrapper::wGetTicks()
+   \                     _ZN9OsWrapper11RtosWrapper9wGetTicksEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x.... 0x....      BL       xTaskGetTickCount
+   \        0x6   0xBD02             POP      {R1,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp OsWrapper::IThread::subobject IThread() noexcept
+   \                     _ZN9OsWrapper7IThreadC2Ev: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x.... 0x....      BL       _ZN9OsWrapper7IThreadC1Ev
+   \        0x6   0xBD02             POP      {R1,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp OsWrapper::IThread::IThread() noexcept
+   \                     _ZN9OsWrapper7IThreadC1Ev: (+1)
+   \        0x0   0x2100             MOVS     R1,#+0
+   \        0x2   0x6541             STR      R1,[R0, #+84]
+   \        0x4   0x2100             MOVS     R1,#+0
+   \        0x6   0x6581             STR      R1,[R0, #+88]
+   \        0x8   0x4770             BX       LR
+
+   \                                 In section .text, align 2
+   \   __vfp void OsWrapper::IThread::Sleep(std::chrono::milliseconds)
+   \                     _ZN9OsWrapper7IThread5SleepENSt6chrono8durationIxSt5ratioILx1ELx1000EEEE: (+1)
+   \        0x0   0xB583             PUSH     {R0,R1,R7,LR}
+   \        0x2   0xB082             SUB      SP,SP,#+8
+   \        0x4   0xA802             ADD      R0,SP,#+8
+   \        0x6   0x.... 0x....      BL       _ZNSt6chrono13duration_castINS_8durationIjSt5ratioILx10ELx1000EEEExS2_ILx1ELx1000EEEENSt9enable_ifIXsr3std6chrono12_Is_durationIT_EE5valueES7_E4typeERKNS1_IT0_T1_EE
+   \        0xA   0x9000             STR      R0,[SP, #+0]
+   \        0xC   0x4668             MOV      R0,SP
+   \        0xE   0x.... 0x....      BL       _ZNKSt6chrono8durationIjSt5ratioILx10ELx1000EEE5countEv
+   \       0x12   0x.... 0x....      BL       _ZN9OsWrapper11RtosWrapper6wSleepEj
+   \       0x16   0xB005             ADD      SP,SP,#+20
+   \       0x18   0xBD00             POP      {PC}
+
+   \                                 In section .text, align 2
+   \   __vfp void OsWrapper::IThread::Run()
+   \                     _ZN9OsWrapper7IThread3RunEv: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x.... 0x....      BL       _ZN9OsWrapper11RtosWrapper9wGetTicksEv
+   \        0x8   0x65A0             STR      R0,[R4, #+88]
+   \        0xA   0x0020             MOVS     R0,R4
+   \        0xC   0x6821             LDR      R1,[R4, #+0]
+   \        0xE   0x6809             LDR      R1,[R1, #+0]
+   \       0x10   0x4788             BLX      R1
+   \       0x12   0xBD10             POP      {R4,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp OsWrapper::Thread<128U>::subobject Thread() noexcept
+   \                     _ZN9OsWrapper6ThreadILj128EEC2Ev: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x.... 0x....      BL       _ZN9OsWrapper6ThreadILj128EEC1Ev
+   \        0x6   0xBD02             POP      {R1,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp OsWrapper::Thread<128U>::Thread() noexcept
+   \                     _ZN9OsWrapper6ThreadILj128EEC1Ev: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0020             MOVS     R0,R4
+   \        0x6   0x.... 0x....      BL       _ZN9OsWrapper7IThreadC2Ev
+   \        0xA   0x0020             MOVS     R0,R4
+   \        0xC   0xBD10             POP      {R4,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp void OsWrapper::Rtos::CreateThread<MyLED<GPIOC::ODR, 8U>>(MyLED<GPIOC::ODR, 8U> &, char const *, OsWrapper::ThreadPriority)
+   \                     _ZN9OsWrapper4Rtos12CreateThreadI5MyLEDIN5GPIOC3ODRELj8EEEEvRT_PKcNS_14ThreadPriorityE: (+1)
+   \        0x0   0xB57C             PUSH     {R2-R6,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x000D             MOVS     R5,R1
+   \        0x6   0x0016             MOVS     R6,R2
+   \        0x8   0xF114 0x005C      ADDS     R0,R4,#+92
+   \        0xC   0x.... 0x....      BL       _ZNSt5arrayIjLj128EE4dataEv
+   \       0x10   0x9000             STR      R0,[SP, #+0]
+   \       0x12   0x2380             MOVS     R3,#+128
+   \       0x14   0x0032             MOVS     R2,R6
+   \       0x16   0xB2D2             UXTB     R2,R2
+   \       0x18   0x0029             MOVS     R1,R5
+   \       0x1A   0x0020             MOVS     R0,R4
+   \       0x1C   0x.... 0x....      BL       _ZN9OsWrapper11RtosWrapper13wCreateThreadINS_4RtosE5MyLEDIN5GPIOC3ODRELj8EEEEvRT0_PKcNS_14ThreadPriorityEtPj
+   \       0x20   0xBD73             POP      {R0,R1,R4-R6,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp void OsWrapper::Rtos::CreateThread<MyLED<GPIOC::ODR, 9U>>(MyLED<GPIOC::ODR, 9U> &, char const *, OsWrapper::ThreadPriority)
+   \                     _ZN9OsWrapper4Rtos12CreateThreadI5MyLEDIN5GPIOC3ODRELj9EEEEvRT_PKcNS_14ThreadPriorityE: (+1)
+   \        0x0   0xB57C             PUSH     {R2-R6,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x000D             MOVS     R5,R1
+   \        0x6   0x0016             MOVS     R6,R2
+   \        0x8   0xF114 0x005C      ADDS     R0,R4,#+92
+   \        0xC   0x.... 0x....      BL       _ZNSt5arrayIjLj128EE4dataEv
+   \       0x10   0x9000             STR      R0,[SP, #+0]
+   \       0x12   0x2380             MOVS     R3,#+128
+   \       0x14   0x0032             MOVS     R2,R6
+   \       0x16   0xB2D2             UXTB     R2,R2
+   \       0x18   0x0029             MOVS     R1,R5
+   \       0x1A   0x0020             MOVS     R0,R4
+   \       0x1C   0x.... 0x....      BL       _ZN9OsWrapper11RtosWrapper13wCreateThreadINS_4RtosE5MyLEDIN5GPIOC3ODRELj9EEEEvRT0_PKcNS_14ThreadPriorityEtPj
+   \       0x20   0xBD73             POP      {R0,R1,R4-R6,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp void OsWrapper::Rtos::Start()
+   \                     _ZN9OsWrapper4Rtos5StartEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x.... 0x....      BL       _ZN9OsWrapper11RtosWrapper6wStartEv
+   \        0x6   0xBD01             POP      {R0,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp void OsWrapper::Rtos::Run(void *)
+   \                     _ZN9OsWrapper4Rtos3RunEPv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x.... 0x....      BL       _ZN9OsWrapper7IThread3RunEv
+   \        0x6   0xBD01             POP      {R0,PC}
+      2          #include "mailbox.hpp"      // for Mailbox
+      3          #include "event.hpp"        // for Event
+      4          
+      5          //#include "mytask.hpp"       // for MyTask
+      6          //#include "led1task.hpp"     // for Led1Task
+      7          //#include "myfirsttask.h"    // for MyFirstTask
+      8          //#include "buttontask.h"   //for ButtonTask
+      9          #include "rccregisters.hpp" // for RCC
+
+   \                                 In section .text, align 4
+   \   __vfp void FieldValueBase<RCC_CR_HSION_Values<RCC::CR, 0U, 1U, ReadWriteMode, RCC::RCCCRBase>, RCC::RCCCRBase, 1U>::Set<ReadWriteMode, void>()
+   \                     _ZN14FieldValueBaseI19RCC_CR_HSION_ValuesIN3RCC2CRELj0ELj1E13ReadWriteModeNS1_9RCCCRBaseEES4_Lj1EE3SetIS3_vEEvv: (+1)
+   \        0x0   0x4903             LDR.N    R1,??Set_0
+   \        0x2   0x6808             LDR      R0,[R1, #+0]
+   \        0x4   0x0840             LSRS     R0,R0,#+1
+   \        0x6   0x0040             LSLS     R0,R0,#+1
+   \        0x8   0xF050 0x0001      ORRS     R0,R0,#0x1
+   \        0xC   0x6008             STR      R0,[R1, #+0]
+   \        0xE   0x4770             BX       LR
+   \                     ??Set_0:
+   \       0x10   0x4002'3800        DC32     0x40023800
+
+   \                                 In section .text, align 4
+   \   __vfp void FieldValueBase<RCC_CFGR_SW_Values<RCC::CFGR, 0U, 2U, ReadWriteMode, RCC::RCCCFGRBase>, RCC::RCCCFGRBase, 0U>::Set<ReadWriteMode, void>()
+   \                     _ZN14FieldValueBaseI18RCC_CFGR_SW_ValuesIN3RCC4CFGRELj0ELj2E13ReadWriteModeNS1_11RCCCFGRBaseEES4_Lj0EE3SetIS3_vEEvv: (+1)
+   \        0x0   0x4902             LDR.N    R1,??Set_1
+   \        0x2   0x6808             LDR      R0,[R1, #+0]
+   \        0x4   0x0880             LSRS     R0,R0,#+2
+   \        0x6   0x0080             LSLS     R0,R0,#+2
+   \        0x8   0x6008             STR      R0,[R1, #+0]
+   \        0xA   0x4770             BX       LR
+   \                     ??Set_1:
+   \        0xC   0x4002'3808        DC32     0x40023808
+
+   \                                 In section .text, align 4
+   \   __vfp void FieldValueBase<RCC_AHB1ENR_DMA2EN_Values<RCC::APB2ENR, 14U, 1U, ReadWriteMode, RCC::RCCAPB2ENRBase>, RCC::RCCAPB2ENRBase, 1U>::Set<ReadWriteMode, void>()
+   \                     _ZN14FieldValueBaseI25RCC_AHB1ENR_DMA2EN_ValuesIN3RCC7APB2ENRELj14ELj1E13ReadWriteModeNS1_14RCCAPB2ENRBaseEES4_Lj1EE3SetIS3_vEEvv: (+1)
+   \        0x0   0x4903             LDR.N    R1,??Set_2
+   \        0x2   0x6808             LDR      R0,[R1, #+0]
+   \        0x4   0xF430 0x4080      BICS     R0,R0,#0x4000
+   \        0x8   0xF450 0x4080      ORRS     R0,R0,#0x4000
+   \        0xC   0x6008             STR      R0,[R1, #+0]
+   \        0xE   0x4770             BX       LR
+   \                     ??Set_2:
+   \       0x10   0x4002'3844        DC32     0x40023844
+
+   \                                 In section .text, align 4
+   \   __vfp void RegisterBase<1'073'874'964U, 32U, ReadWriteMode>::Toggle<ReadWriteMode, void>(uint32_t)
+   \                     _ZN12RegisterBaseILj1073874964ELj32E13ReadWriteModeE6ToggleIS0_vEEvj: (+1)
+   \        0x0   0x4902             LDR.N    R1,??Toggle_0
+   \        0x2   0x680A             LDR      R2,[R1, #+0]
+   \        0x4   0x4050             EORS     R0,R0,R2
+   \        0x6   0x6008             STR      R0,[R1, #+0]
+   \        0x8   0x4770             BX       LR
+   \        0xA   0xBF00             Nop
+   \                     ??Toggle_0:
+   \        0xC   0x4002'0814        DC32     0x40020814
+
+   \                                 In section .text, align 4
+   \   __vfp void Register<1'073'887'280U, 32U, ReadWriteMode, RCC::RCCAHB1ENRBase, RCC_AHB1ENR_GPIOCEN_Values<RCC::AHB1ENR, 2U, 1U, ReadWriteMode, RCC::RCCAHB1ENRBase>::Enable>::Set<ReadWriteMode, void>()
+   \                     _ZN8RegisterILj1073887280ELj32E13ReadWriteModeN3RCC14RCCAHB1ENRBaseEJ10FieldValueI26RCC_AHB1ENR_GPIOCEN_ValuesINS1_7AHB1ENRELj2ELj1ES0_S2_ES2_Lj1EvEEE3SetIS0_vEEvv: (+1)
+   \        0x0   0x4903             LDR.N    R1,??Set_3
+   \        0x2   0x6808             LDR      R0,[R1, #+0]
+   \        0x4   0xF030 0x0004      BICS     R0,R0,#0x4
+   \        0x8   0xF050 0x0004      ORRS     R0,R0,#0x4
+   \        0xC   0x6008             STR      R0,[R1, #+0]
+   \        0xE   0x4770             BX       LR
+   \                     ??Set_3:
+   \       0x10   0x4002'3830        DC32     0x40023830
+
+   \                                 In section .text, align 4
+   \   __vfp void Register<1'073'874'944U, 32U, ReadWriteMode, GPIOC::GPIOCMODERBase, GPIOC_MODER_MODER15_Values<GPIOC::MODER, 16U, 2U, ReadWriteMode, GPIOC::GPIOCMODERBase>::Output, GPIOC_MODER_MODER15_Values<GPIOC::MODER, 18U, 2U, ReadWriteMode, GPIOC::GPIOCMODERBase>::Output>::Set<ReadWriteMode, void>()
+   \                     _ZN8RegisterILj1073874944ELj32E13ReadWriteModeN5GPIOC14GPIOCMODERBaseEJ10FieldValueI26GPIOC_MODER_MODER15_ValuesINS1_5MODERELj16ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj18ELj2ES0_S2_ES2_Lj1EvEEE3SetIS0_vEEvv: (+1)
+   \        0x0   0x4903             LDR.N    R1,??Set_4
+   \        0x2   0x6808             LDR      R0,[R1, #+0]
+   \        0x4   0xF430 0x2070      BICS     R0,R0,#0xF0000
+   \        0x8   0xF450 0x20A0      ORRS     R0,R0,#0x50000
+   \        0xC   0x6008             STR      R0,[R1, #+0]
+   \        0xE   0x4770             BX       LR
+   \                     ??Set_4:
+   \       0x10   0x4002'0800        DC32     0x40020800
+
+   \                                 In section .rodata, align 4
+   \   __absolute unsigned int const mask
+   \                     _ZZN8RegisterILj1073887280ELj32E13ReadWriteModeN3RCC14RCCAHB1ENRBaseEJ10FieldValueI26RCC_AHB1ENR_GPIOCEN_ValuesINS1_7AHB1ENRELj2ELj1ES0_S2_ES2_Lj1EvEEE3SetIS0_vEEvvE4mask:
+   \        0x0   0x0000'0004        DC32 4
+
+   \                                 In section .rodata, align 4
+   \   __absolute unsigned int const mask
+   \                     _ZZN8RegisterILj1073874944ELj32E13ReadWriteModeN5GPIOC14GPIOCMODERBaseEJ10FieldValueI26GPIOC_MODER_MODER15_ValuesINS1_5MODERELj16ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj18ELj2ES0_S2_ES2_Lj1EvEEE3SetIS0_vEEvvE4mask:
+   \        0x0   0x000F'0000        DC32 983'040
+
+   \                                 In section .rodata, align 4
+   \   __absolute unsigned int const value
+   \                     _ZZN8RegisterILj1073887280ELj32E13ReadWriteModeN3RCC14RCCAHB1ENRBaseEJ10FieldValueI26RCC_AHB1ENR_GPIOCEN_ValuesINS1_7AHB1ENRELj2ELj1ES0_S2_ES2_Lj1EvEEE3SetIS0_vEEvvE5value:
+   \        0x0   0x0000'0004        DC32 4
+
+   \                                 In section .rodata, align 4
+   \   __absolute unsigned int const value
+   \                     _ZZN8RegisterILj1073874944ELj32E13ReadWriteModeN5GPIOC14GPIOCMODERBaseEJ10FieldValueI26GPIOC_MODER_MODER15_ValuesINS1_5MODERELj16ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj18ELj2ES0_S2_ES2_Lj1EvEEE3SetIS0_vEEvvE5value:
+   \        0x0   0x0005'0000        DC32 327'680
+     10          
+     11          //#include "Application/Diagnostic/GlobalStatus.hpp"
+     12          //#include "gpioaregisters.hpp"  // for GPIOA
+     13          #include "gpiocregisters.hpp"  // for GPIOC
+     14          
+     15          #include "myled.h"
+
+   \                                 In section .text, align 4
+   \   __vfp MyLED<GPIOC::ODR, 8U>::MyLED(std::chrono::milliseconds)
+   \                     _ZN5MyLEDIN5GPIOC3ODRELj8EEC1ENSt6chrono8durationIxSt5ratioILx1ELx1000EEEE: (+1)
+   \        0x0   0xB570             PUSH     {R4-R6,LR}
+   \        0x2   0x0006             MOVS     R6,R0
+   \        0x4   0x0014             MOVS     R4,R2
+   \        0x6   0x001D             MOVS     R5,R3
+   \        0x8   0x0030             MOVS     R0,R6
+   \        0xA   0x.... 0x....      BL       _ZN9OsWrapper6ThreadILj128EEC2Ev
+   \        0xE   0x4804             LDR.N    R0,??MyLED_0
+   \       0x10   0x6030             STR      R0,[R6, #+0]
+   \       0x12   0xF516 0x7018      ADDS     R0,R6,#+608
+   \       0x16   0xE9C0 0x4500      STRD     R4,R5,[R0, #+0]
+   \       0x1A   0x0030             MOVS     R0,R6
+   \       0x1C   0xBD70             POP      {R4-R6,PC}
+   \       0x1E   0xBF00             Nop
+   \                     ??MyLED_0:
+   \       0x20   0x....'....        DC32     _ZTV5MyLEDIN5GPIOC3ODRELj8EE+0x8
+
+   \                                 In section .text, align 4
+   \   __vfp MyLED<GPIOC::ODR, 9U>::MyLED(std::chrono::milliseconds)
+   \                     _ZN5MyLEDIN5GPIOC3ODRELj9EEC1ENSt6chrono8durationIxSt5ratioILx1ELx1000EEEE: (+1)
+   \        0x0   0xB570             PUSH     {R4-R6,LR}
+   \        0x2   0x0006             MOVS     R6,R0
+   \        0x4   0x0014             MOVS     R4,R2
+   \        0x6   0x001D             MOVS     R5,R3
+   \        0x8   0x0030             MOVS     R0,R6
+   \        0xA   0x.... 0x....      BL       _ZN9OsWrapper6ThreadILj128EEC2Ev
+   \        0xE   0x4804             LDR.N    R0,??MyLED_1
+   \       0x10   0x6030             STR      R0,[R6, #+0]
+   \       0x12   0xF516 0x7018      ADDS     R0,R6,#+608
+   \       0x16   0xE9C0 0x4500      STRD     R4,R5,[R0, #+0]
+   \       0x1A   0x0030             MOVS     R0,R6
+   \       0x1C   0xBD70             POP      {R4-R6,PC}
+   \       0x1E   0xBF00             Nop
+   \                     ??MyLED_1:
+   \       0x20   0x....'....        DC32     _ZTV5MyLEDIN5GPIOC3ODRELj9EE+0x8
+
+   \                                 In section .text, align 2
+   \   __vfp void MyLED<GPIOC::ODR, 8U>::Execute()
+   \                     _ZN5MyLEDIN5GPIOC3ODRELj8EE7ExecuteEv: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \                     ??Execute_0: (+1)
+   \        0x4   0xF44F 0x7080      MOV      R0,#+256
+   \        0x8   0x.... 0x....      BL       _ZN12RegisterBaseILj1073874964ELj32E13ReadWriteModeE6ToggleIS0_vEEvj
+   \        0xC   0xF514 0x7218      ADDS     R2,R4,#+608
+   \       0x10   0xE9D2 0x0100      LDRD     R0,R1,[R2, #+0]
+   \       0x14   0x.... 0x....      BL       _ZN9OsWrapper7IThread5SleepENSt6chrono8durationIxSt5ratioILx1ELx1000EEEE
+   \       0x18   0xE7F4             B.N      ??Execute_0
+
+   \                                 In section .text, align 2
+   \   __vfp void MyLED<GPIOC::ODR, 9U>::Execute()
+   \                     _ZN5MyLEDIN5GPIOC3ODRELj9EE7ExecuteEv: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \                     ??Execute_1: (+1)
+   \        0x4   0xF44F 0x7000      MOV      R0,#+512
+   \        0x8   0x.... 0x....      BL       _ZN12RegisterBaseILj1073874964ELj32E13ReadWriteModeE6ToggleIS0_vEEvj
+   \        0xC   0xF514 0x7218      ADDS     R2,R4,#+608
+   \       0x10   0xE9D2 0x0100      LDRD     R0,R1,[R2, #+0]
+   \       0x14   0x.... 0x....      BL       _ZN9OsWrapper7IThread5SleepENSt6chrono8durationIxSt5ratioILx1ELx1000EEEE
+   \       0x18   0xE7F4             B.N      ??Execute_1
+     16          #include "MyLED9.h"
+     17          
+
+   \                                 In section .data, align 4
+     18          std::uint32_t SystemCoreClock = 16'000'000U;
+   \                     SystemCoreClock:
+   \        0x0   0x00F4'2400        DC32 16'000'000
+     19          
+     20          
+     21          extern "C" {
+
+   \                                 In section .text, align 2, keep-with-next
+     22          int __low_level_init(void)
+     23          {
+   \                     __low_level_init: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+     24            //Switch on external 16 MHz oscillator
+     25            RCC::CR::HSION::On::Set();
+   \        0x2   0x.... 0x....      BL       _ZN14FieldValueBaseI19RCC_CR_HSION_ValuesIN3RCC2CRELj0ELj1E13ReadWriteModeNS1_9RCCCRBaseEES4_Lj1EE3SetIS3_vEEvv
+     26           // while (RCC::CR::HSIRDY::NotReady::IsSet())
+     27            {
+     28          
+     29            }
+     30            //Switch system clock on external oscillator
+     31            RCC::CFGR::SW::Hsi::Set();
+   \        0x6   0x.... 0x....      BL       _ZN14FieldValueBaseI18RCC_CFGR_SW_ValuesIN3RCC4CFGRELj0ELj2E13ReadWriteModeNS1_11RCCCFGRBaseEES4_Lj0EE3SetIS3_vEEvv
+     32          //  while (!RCC::CFGR::SWS::Hsi::IsSet())
+     33           {
+     34          
+     35            }
+     36            //Switch on clock on PortA and PortC
+     37            RCC::AHB1ENRPack<
+     38                RCC::AHB1ENR::GPIOCEN::Enable
+     39               // RCC::AHB1ENR::GPIOAEN::Enable
+     40            >::Set();
+   \        0xA   0x.... 0x....      BL       _ZN8RegisterILj1073887280ELj32E13ReadWriteModeN3RCC14RCCAHB1ENRBaseEJ10FieldValueI26RCC_AHB1ENR_GPIOCEN_ValuesINS1_7AHB1ENRELj2ELj1ES0_S2_ES2_Lj1EvEEE3SetIS0_vEEvv
+     41          
+     42            RCC::APB2ENR::SYSCFGEN::Enable::Set();
+   \        0xE   0x.... 0x....      BL       _ZN14FieldValueBaseI25RCC_AHB1ENR_DMA2EN_ValuesIN3RCC7APB2ENRELj14ELj1E13ReadWriteModeNS1_14RCCAPB2ENRBaseEES4_Lj1EE3SetIS3_vEEvv
+     43          
+     44            //LED1 on PortA.5, set PortA.5 as output
+     45            //GPIOA::MODER::MODER5::Output::Set();
+     46          
+     47            /* LED2 on PortC.9, LED3 on PortC.8, LED4 on PortC.5 so set PortC.5,8,9 as output */
+     48            GPIOC::MODERPack<
+     49               // GPIOC::MODER::MODER5::Output,
+     50                GPIOC::MODER::MODER8::Output,
+     51                GPIOC::MODER::MODER9::Output
+     52            >::Set();
+   \       0x12   0x.... 0x....      BL       _ZN8RegisterILj1073874944ELj32E13ReadWriteModeN5GPIOC14GPIOCMODERBaseEJ10FieldValueI26GPIOC_MODER_MODER15_ValuesINS1_5MODERELj16ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj18ELj2ES0_S2_ES2_Lj1EvEEE3SetIS0_vEEvv
+     53          
+     54            return 1;
+   \       0x16   0x2001             MOVS     R0,#+1
+   \       0x18   0xBD02             POP      {R1,PC}
+     55          } 
+     56          }
+     57          
+     58          //OsWrapper::Event event{500ms, 1};
+     59          
+     60          //MyTask myTask(event, UserButton::GetInstance());
+     61          //Led1Task led1Task(event, LedsController::GetInstance());
+     62          
+     63          //OsWrapper::Event buttonEvent(500ms, 1);
+     64          //OsWrapper::MailBox<int, 1> buttonMailBox;
+     65          //ButtonTask buttonTask(buttonMailBox);
+     66          //MyFirstTask myFirstTask;
+
+   \                                 In section .text, align 2, keep-with-next
+   \   static __intrinsic __vfp void __sti__routine()
+   \                     __sti__routine: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+     67          MyLED<GPIOC::ODR, 8> myledTask(200ms); 
+   \        0x2   0x....             LDR.N    R0,??DataTable1
+   \        0x4   0xE9D0 0x2300      LDRD     R2,R3,[R0, #+0]
+   \        0x8   0x....             LDR.N    R0,??DataTable1_1
+   \        0xA   0x.... 0x....      BL       _ZN5MyLEDIN5GPIOC3ODRELj8EEC1ENSt6chrono8durationIxSt5ratioILx1ELx1000EEEE
+     68          MyLED<GPIOC::ODR, 9> myled9Task(100ms); 
+   \        0xE   0x....             LDR.N    R0,??DataTable1_2
+   \       0x10   0xE9D0 0x2300      LDRD     R2,R3,[R0, #+0]
+   \       0x14   0x....             LDR.N    R0,??DataTable1_3
+   \       0x16   0x.... 0x....      BL       _ZN5MyLEDIN5GPIOC3ODRELj9EEC1ENSt6chrono8durationIxSt5ratioILx1ELx1000EEEE
+   \       0x1A   0xBD01             POP      {R0,PC}
+
+   \                                 In section .bss, align 8
+   \                     myledTask:
+   \        0x0                      DS8 616
+
+   \                                 In section .bss, align 8
+   \                     myled9Task:
+   \        0x0                      DS8 616
+     69          
+
+   \                                 In section .text, align 2, keep-with-next
+     70          int main()
+     71          {
+   \                     main: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+     72            using namespace OsWrapper;
+     73            //Rtos::CreateThread(myTask, "myTask", ThreadPriority::lowest);
+     74           // Rtos::CreateThread(led1Task, "Led1Task");
+     75          //  Rtos::CreateThread(myFirstTask, "MyFirstTask", ThreadPriority::highest);
+     76          //  Rtos::CreateThread(buttonTask, "ButtonTask", ThreadPriority::normal);
+     77              Rtos::CreateThread(myledTask, "myledTask");
+   \        0x2   0x221E             MOVS     R2,#+30
+   \        0x4   0x....             LDR.N    R1,??DataTable1_4
+   \        0x6   0x....             LDR.N    R0,??DataTable1_1
+   \        0x8   0x.... 0x....      BL       _ZN9OsWrapper4Rtos12CreateThreadI5MyLEDIN5GPIOC3ODRELj8EEEEvRT_PKcNS_14ThreadPriorityE
+     78              Rtos::CreateThread(myled9Task, "myled9Task",ThreadPriority::highest);
+   \        0xC   0x225A             MOVS     R2,#+90
+   \        0xE   0x....             LDR.N    R1,??DataTable1_5
+   \       0x10   0x....             LDR.N    R0,??DataTable1_3
+   \       0x12   0x.... 0x....      BL       _ZN9OsWrapper4Rtos12CreateThreadI5MyLEDIN5GPIOC3ODRELj9EEEEvRT_PKcNS_14ThreadPriorityE
+     79             Rtos::Start();
+   \       0x16   0x.... 0x....      BL       _ZN9OsWrapper4Rtos5StartEv
+     80          
+     81            return 0;
+   \       0x1A   0x2000             MOVS     R0,#+0
+   \       0x1C   0xBD02             POP      {R1,PC}
+     82          }
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1:
+   \        0x0   0x....'....        DC32     ?_2
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_1:
+   \        0x0   0x....'....        DC32     myledTask
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_2:
+   \        0x0   0x....'....        DC32     ?_3
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_3:
+   \        0x0   0x....'....        DC32     myled9Task
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_4:
+   \        0x0   0x....'....        DC32     ?_0
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_5:
+   \        0x0   0x....'....        DC32     ?_1
+
+   \                                 In section .rodata, align 4
+   \                     ?_0:
+   \        0x0   0x6D 0x79          DC8 "myledTask"
+
+   \              0x6C 0x65    
+
+   \              0x64 0x54    
+
+   \              0x61 0x73    
+
+   \              0x6B 0x00
+   \        0xA                      DS8 2
+
+   \                                 In section .rodata, align 4
+   \                     ?_1:
+   \        0x0   0x6D 0x79          DC8 "myled9Task"
+
+   \              0x6C 0x65    
+
+   \              0x64 0x39    
+
+   \              0x54 0x61    
+
+   \              0x73 0x6B    
+
+   \              0x00
+   \        0xB                      DS8 1
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       0   FieldValueBase<RCC_AHB1ENR_DMA2EN_Values<RCC::APB2ENR, 14U, 1U, ReadWriteMode, RCC::RCCAPB2ENRBase>, RCC::RCCAPB2ENRBase, 1U>::Set<ReadWriteMode, void>()
+       0   FieldValueBase<RCC_CFGR_SW_Values<RCC::CFGR, 0U, 2U, ReadWriteMode, RCC::RCCCFGRBase>, RCC::RCCCFGRBase, 0U>::Set<ReadWriteMode, void>()
+       0   FieldValueBase<RCC_CR_HSION_Values<RCC::CR, 0U, 1U, ReadWriteMode, RCC::RCCCRBase>, RCC::RCCCRBase, 1U>::Set<ReadWriteMode, void>()
+       8   MyLED<GPIOC::ODR, 8U>::Execute()
+         8   -> OsWrapper::IThread::Sleep(std::chrono::milliseconds)
+         8   -> RegisterBase<1'073'874'964U, 32U, ReadWriteMode>::Toggle<ReadWriteMode, void>(uint32_t)
+      16   MyLED<GPIOC::ODR, 8U>::MyLED(std::chrono::milliseconds)
+        16   -> OsWrapper::Thread<128U>::subobject Thread() noexcept
+       8   MyLED<GPIOC::ODR, 9U>::Execute()
+         8   -> OsWrapper::IThread::Sleep(std::chrono::milliseconds)
+         8   -> RegisterBase<1'073'874'964U, 32U, ReadWriteMode>::Toggle<ReadWriteMode, void>(uint32_t)
+      16   MyLED<GPIOC::ODR, 9U>::MyLED(std::chrono::milliseconds)
+        16   -> OsWrapper::Thread<128U>::subobject Thread() noexcept
+       0   OsWrapper::IThread::IThread() noexcept
+       8   OsWrapper::IThread::Run()
+         8   -- Indirect call
+         8   -> OsWrapper::RtosWrapper::wGetTicks()
+      24   OsWrapper::IThread::Sleep(std::chrono::milliseconds)
+        24   -> OsWrapper::RtosWrapper::wSleep(uint32_t)
+        24   -> std::chrono::duration<uint32_t, std::ratio<10LL, 1'000LL>>::count() const
+        24   -> std::chrono::duration_cast<OsWrapper::TicksPerSecond, __int64_t, std::milli>(std::chrono::duration<__int64_t, std::milli> const &)
+       8   OsWrapper::IThread::subobject IThread() noexcept
+         8   -> OsWrapper::IThread::IThread() noexcept
+      24   OsWrapper::Rtos::CreateThread<MyLED<GPIOC::ODR, 8U>>(MyLED<GPIOC::ODR, 8U> &, char const *, OsWrapper::ThreadPriority)
+        24   -> OsWrapper::RtosWrapper::wCreateThread<OsWrapper::Rtos, MyLED<GPIOC::ODR, 8U>>(MyLED<GPIOC::ODR, 8U> &, char const *, OsWrapper::ThreadPriority, uint16_t, uint32_t *)
+        24   -> std::array<uint32_t, 128U>::data() noexcept
+      24   OsWrapper::Rtos::CreateThread<MyLED<GPIOC::ODR, 9U>>(MyLED<GPIOC::ODR, 9U> &, char const *, OsWrapper::ThreadPriority)
+        24   -> OsWrapper::RtosWrapper::wCreateThread<OsWrapper::Rtos, MyLED<GPIOC::ODR, 9U>>(MyLED<GPIOC::ODR, 9U> &, char const *, OsWrapper::ThreadPriority, uint16_t, uint32_t *)
+        24   -> std::array<uint32_t, 128U>::data() noexcept
+       8   OsWrapper::Rtos::Run(void *)
+         8   -> OsWrapper::IThread::Run()
+       8   OsWrapper::Rtos::Start()
+         8   -> OsWrapper::RtosWrapper::wStart()
+      24   OsWrapper::RtosWrapper::wCreateThread<OsWrapper::Rtos, MyLED<GPIOC::ODR, 8U>>(MyLED<GPIOC::ODR, 8U> &, char const *, OsWrapper::ThreadPriority, uint16_t, uint32_t *)
+        24   -> xTaskCreateStatic
+      24   OsWrapper::RtosWrapper::wCreateThread<OsWrapper::Rtos, MyLED<GPIOC::ODR, 9U>>(MyLED<GPIOC::ODR, 9U> &, char const *, OsWrapper::ThreadPriority, uint16_t, uint32_t *)
+        24   -> xTaskCreateStatic
+       8   OsWrapper::RtosWrapper::wGetTicks()
+         8   -> xTaskGetTickCount
+       8   OsWrapper::RtosWrapper::wSleep(uint32_t)
+         8   -> vTaskDelay
+       8   OsWrapper::RtosWrapper::wStart()
+         8   -> vTaskStartScheduler
+       8   OsWrapper::Thread<128U>::Thread() noexcept
+         8   -> OsWrapper::IThread::subobject IThread() noexcept
+       8   OsWrapper::Thread<128U>::subobject Thread() noexcept
+         8   -> OsWrapper::Thread<128U>::Thread() noexcept
+       0   Register<1'073'874'944U, 32U, ReadWriteMode, GPIOC::GPIOCMODERBase, GPIOC_MODER_MODER15_Values<GPIOC::MODER, 16U, 2U, ReadWriteMode, GPIOC::GPIOCMODERBase>::Output, GPIOC_MODER_MODER15_Values<GPIOC::MODER, 18U, 2U, ReadWriteMode, GPIOC::GPIOCMODERBase>::Output>::Set<ReadWriteMode, void>()
+       0   Register<1'073'887'280U, 32U, ReadWriteMode, RCC::RCCAHB1ENRBase, RCC_AHB1ENR_GPIOCEN_Values<RCC::AHB1ENR, 2U, 1U, ReadWriteMode, RCC::RCCAHB1ENRBase>::Enable>::Set<ReadWriteMode, void>()
+       0   RegisterBase<1'073'874'964U, 32U, ReadWriteMode>::Toggle<ReadWriteMode, void>(uint32_t)
+       8   __low_level_init
+         8   -> FieldValueBase<RCC_AHB1ENR_DMA2EN_Values<RCC::APB2ENR, 14U, 1U, ReadWriteMode, RCC::RCCAPB2ENRBase>, RCC::RCCAPB2ENRBase, 1U>::Set<ReadWriteMode, void>()
+         8   -> FieldValueBase<RCC_CFGR_SW_Values<RCC::CFGR, 0U, 2U, ReadWriteMode, RCC::RCCCFGRBase>, RCC::RCCCFGRBase, 0U>::Set<ReadWriteMode, void>()
+         8   -> FieldValueBase<RCC_CR_HSION_Values<RCC::CR, 0U, 1U, ReadWriteMode, RCC::RCCCRBase>, RCC::RCCCRBase, 1U>::Set<ReadWriteMode, void>()
+         8   -> Register<1'073'874'944U, 32U, ReadWriteMode, GPIOC::GPIOCMODERBase, GPIOC_MODER_MODER15_Values<GPIOC::MODER, 16U, 2U, ReadWriteMode, GPIOC::GPIOCMODERBase>::Output, GPIOC_MODER_MODER15_Values<GPIOC::MODER, 18U, 2U, ReadWriteMode, GPIOC::GPIOCMODERBase>::Output>::Set<ReadWriteMode, void>()
+         8   -> Register<1'073'887'280U, 32U, ReadWriteMode, RCC::RCCAHB1ENRBase, RCC_AHB1ENR_GPIOCEN_Values<RCC::AHB1ENR, 2U, 1U, ReadWriteMode, RCC::RCCAHB1ENRBase>::Enable>::Set<ReadWriteMode, void>()
+       8   __sti__routine()
+         8   -> MyLED<GPIOC::ODR, 8U>::MyLED(std::chrono::milliseconds)
+         8   -> MyLED<GPIOC::ODR, 9U>::MyLED(std::chrono::milliseconds)
+       8   main
+         8   -> OsWrapper::Rtos::CreateThread<MyLED<GPIOC::ODR, 8U>>(MyLED<GPIOC::ODR, 8U> &, char const *, OsWrapper::ThreadPriority)
+         8   -> OsWrapper::Rtos::CreateThread<MyLED<GPIOC::ODR, 9U>>(MyLED<GPIOC::ODR, 9U> &, char const *, OsWrapper::ThreadPriority)
+         8   -> OsWrapper::Rtos::Start()
+       0   std::array<uint32_t, 128U>::data() noexcept
+       0   std::chrono::duration<__int64_t, std::milli>::count() const
+       0   std::chrono::duration<uint32_t, std::ratio<10LL, 1'000LL>>::count() const
+       0   std::chrono::duration<uint32_t, std::ratio<10LL, 1'000LL>>::duration<uint32_t, void>(uint32_t const &)
+      16   std::chrono::duration_cast<OsWrapper::TicksPerSecond, __int64_t, std::milli>(std::chrono::duration<__int64_t, std::milli> const &)
+        16   -> std::chrono::duration<__int64_t, std::milli>::count() const
+        16   -> std::chrono::duration<uint32_t, std::ratio<10LL, 1'000LL>>::duration<uint32_t, void>(uint32_t const &)
+        16 __aeabi_ldivmod
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable1
+       4  ??DataTable1_1
+       4  ??DataTable1_2
+       4  ??DataTable1_3
+       4  ??DataTable1_4
+       4  ??DataTable1_5
+      12  ?_0
+      12  ?_1
+      20  FieldValueBase<RCC_AHB1ENR_DMA2EN_Values<RCC::APB2ENR, 14U, 1U, ReadWriteMode, RCC::RCCAPB2ENRBase>, RCC::RCCAPB2ENRBase, 1U>::Set<ReadWriteMode, void>()
+      16  FieldValueBase<RCC_CFGR_SW_Values<RCC::CFGR, 0U, 2U, ReadWriteMode, RCC::RCCCFGRBase>, RCC::RCCCFGRBase, 0U>::Set<ReadWriteMode, void>()
+      20  FieldValueBase<RCC_CR_HSION_Values<RCC::CR, 0U, 1U, ReadWriteMode, RCC::RCCCRBase>, RCC::RCCCRBase, 1U>::Set<ReadWriteMode, void>()
+      26  MyLED<GPIOC::ODR, 8U>::Execute()
+      36  MyLED<GPIOC::ODR, 8U>::MyLED(std::chrono::milliseconds)
+      26  MyLED<GPIOC::ODR, 9U>::Execute()
+      36  MyLED<GPIOC::ODR, 9U>::MyLED(std::chrono::milliseconds)
+      10  OsWrapper::IThread::IThread() noexcept
+      20  OsWrapper::IThread::Run()
+      26  OsWrapper::IThread::Sleep(std::chrono::milliseconds)
+       8  OsWrapper::IThread::subobject IThread() noexcept
+      34  OsWrapper::Rtos::CreateThread<MyLED<GPIOC::ODR, 8U>>(MyLED<GPIOC::ODR, 8U> &, char const *, OsWrapper::ThreadPriority)
+      34  OsWrapper::Rtos::CreateThread<MyLED<GPIOC::ODR, 9U>>(MyLED<GPIOC::ODR, 9U> &, char const *, OsWrapper::ThreadPriority)
+       8  OsWrapper::Rtos::Run(void *)
+       8  OsWrapper::Rtos::Start()
+      44  OsWrapper::RtosWrapper::wCreateThread<OsWrapper::Rtos, MyLED<GPIOC::ODR, 8U>>(MyLED<GPIOC::ODR, 8U> &, char const *, OsWrapper::ThreadPriority, uint16_t, uint32_t *)
+      44  OsWrapper::RtosWrapper::wCreateThread<OsWrapper::Rtos, MyLED<GPIOC::ODR, 9U>>(MyLED<GPIOC::ODR, 9U> &, char const *, OsWrapper::ThreadPriority, uint16_t, uint32_t *)
+       8  OsWrapper::RtosWrapper::wGetTicks()
+       8  OsWrapper::RtosWrapper::wSleep(uint32_t)
+       8  OsWrapper::RtosWrapper::wStart()
+      14  OsWrapper::Thread<128U>::Thread() noexcept
+       8  OsWrapper::Thread<128U>::subobject Thread() noexcept
+      20  Register<1'073'874'944U, 32U, ReadWriteMode, GPIOC::GPIOCMODERBase, GPIOC_MODER_MODER15_Values<GPIOC::MODER, 16U, 2U, ReadWriteMode, GPIOC::GPIOCMODERBase>::Output, GPIOC_MODER_MODER15_Values<GPIOC::MODER, 18U, 2U, ReadWriteMode, GPIOC::GPIOCMODERBase>::Output>::Set<ReadWriteMode, void>()
+      20  Register<1'073'887'280U, 32U, ReadWriteMode, RCC::RCCAHB1ENRBase, RCC_AHB1ENR_GPIOCEN_Values<RCC::AHB1ENR, 2U, 1U, ReadWriteMode, RCC::RCCAHB1ENRBase>::Enable>::Set<ReadWriteMode, void>()
+      16  RegisterBase<1'073'874'964U, 32U, ReadWriteMode>::Toggle<ReadWriteMode, void>(uint32_t)
+       4  SystemCoreClock
+      26  __low_level_init
+      28  __sti__routine()
+      30  main
+       4  mask
+       4  mask
+     616  myled9Task
+     616  myledTask
+       2  std::array<uint32_t, 128U>::data() noexcept
+       6  std::chrono::duration<__int64_t, std::milli>::count() const
+       4  std::chrono::duration<uint32_t, std::ratio<10LL, 1'000LL>>::count() const
+       6  std::chrono::duration<uint32_t, std::ratio<10LL, 1'000LL>>::duration<uint32_t, void>(uint32_t const &)
+      28  std::chrono::duration_cast<OsWrapper::TicksPerSecond, __int64_t, std::milli>(std::chrono::duration<__int64_t, std::milli> const &)
+       4  value
+       4  value
+     220  -- Other
+
+ 
+ 1'232 bytes in section .bss
+     4 bytes in section .data
+     4 bytes in section .init_array
+   256 bytes in section .rodata
+   672 bytes in section .text
+ 
+   112 bytes of CODE  memory (+ 564 bytes shared)
+    40 bytes of CONST memory (+ 216 bytes shared)
+ 1'236 bytes of DATA  memory
+
+Errors: none
+Warnings: none

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<userOverrides>
+    <override>
+        <path>C:\GitHub\KursovoyKarkas\main.cpp</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
+        <path>C:\GitHub\RtosWrapper\MyTasks\buttontask.cpp</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
+        <path>C:\GitHub\RtosWrapper\MyTasks\myfirsttask.cpp</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
+        <path>C:\GitHub\RtosWrapper\Rtos\wrapper\thread.hpp</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
+        <path>C:\Users\Home\Documents\GitHub\RtosWrapper\MyTasks\myled.cpp</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
+        <path>C:\Users\Home\Documents\GitHub\RtosWrapper\MyTasks\myled.h</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
+        <path>C:\Users\Home\Documents\GitHub\RtosWrapper\main.cpp</path>
+        <encoding>Win-1251</encoding>
+    </override>
+</userOverrides>
